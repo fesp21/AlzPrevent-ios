@@ -8,13 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCA11BEF296B00968C7D /* AppDelegate.swift */; };
-		308ABCA41BEF296B00968C7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCA31BEF296B00968C7D /* ViewController.swift */; };
-		308ABCA71BEF296B00968C7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCA51BEF296B00968C7D /* Main.storyboard */; };
+		308ABCA71BEF296B00968C7D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCA51BEF296B00968C7D /* TabBar.storyboard */; };
 		308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCA81BEF296B00968C7D /* researchline.xcdatamodeld */; };
 		308ABCAC1BEF296C00968C7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCAB1BEF296C00968C7D /* Assets.xcassets */; };
 		308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCAD1BEF296C00968C7D /* LaunchScreen.storyboard */; };
 		308ABCBA1BEF296C00968C7D /* researchlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCB91BEF296C00968C7D /* researchlineTests.swift */; };
 		308ABCC51BEF296C00968C7D /* researchlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCC41BEF296C00968C7D /* researchlineUITests.swift */; };
+		30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */; };
+		30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */; };
+		30BFD4521BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */; };
+		30BFD4541BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4531BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift */; };
+		30BFD4561BEF31D1002E52E4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4551BEF31D1002E52E4 /* LoginViewController.swift */; };
+		30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */; };
+		30BFD45A1BEF3214002E52E4 /* EligibilitySurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */; };
+		30BFD45C1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */; };
+		30BFD45E1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */; };
+		30BFD4601BEF32EB002E52E4 /* ReviewConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45F1BEF32EB002E52E4 /* ReviewConsentViewController.swift */; };
+		30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */; };
+		30BFD4641BEF330D002E52E4 /* ConsentSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */; };
+		30BFD4661BEF3324002E52E4 /* WhatToExpectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */; };
+		30BFD46A1BEF3366002E52E4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4691BEF3366002E52E4 /* RegistrationViewController.swift */; };
+		30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46B1BEF339B002E52E4 /* AdditionInfoViewController.swift */; };
+		30BFD46E1BEF33AC002E52E4 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46D1BEF33AC002E52E4 /* EnterPasswordViewController.swift */; };
+		30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46F1BEF33CC002E52E4 /* EmailVerificationViewController.swift */; };
+		30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */; };
+		30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */; };
+		30BFD4761BEF33FE002E52E4 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */; };
+		30BFD4781BEF3407002E52E4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */; };
+		30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */; };
+		30BFD47C1BEF341A002E52E4 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD47B1BEF341A002E52E4 /* Welcome.storyboard */; };
+		30BFD47E1BEF341F002E52E4 /* Session.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD47D1BEF341F002E52E4 /* Session.storyboard */; };
+		30BFD4801BEF3426002E52E4 /* Activities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD47F1BEF3426002E52E4 /* Activities.storyboard */; };
+		30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */; };
+		30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4831BEF3431002E52E4 /* Learn.storyboard */; };
+		30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4851BEF3436002E52E4 /* Profile.storyboard */; };
+		CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B653A1581DAD6C773D9491C /* Pods_researchline.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.release.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.release.xcconfig"; sourceTree = "<group>"; };
 		308ABC9E1BEF296B00968C7D /* researchline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = researchline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308ABCA11BEF296B00968C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		308ABCA31BEF296B00968C7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		308ABCA61BEF296B00968C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		308ABCA61BEF296B00968C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		308ABCA91BEF296B00968C7D /* researchline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = researchline.xcdatamodel; sourceTree = "<group>"; };
 		308ABCAB1BEF296C00968C7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		308ABCAE1BEF296C00968C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +77,36 @@
 		308ABCC01BEF296C00968C7D /* researchlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = researchlineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		308ABCC41BEF296C00968C7D /* researchlineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = researchlineUITests.swift; sourceTree = "<group>"; };
 		308ABCC61BEF296C00968C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardController.swift; sourceTree = "<group>"; };
+		30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadConsentDocumentViewController.swift; sourceTree = "<group>"; };
+		30BFD4531BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConsentDocumentViewController.swift; sourceTree = "<group>"; };
+		30BFD4551BEF31D1002E52E4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilitySurveyViewController.swift; sourceTree = "<group>"; };
+		30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentLearnMoreViewController.swift; sourceTree = "<group>"; };
+		30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSharingOptionsViewController.swift; sourceTree = "<group>"; };
+		30BFD45F1BEF32EB002E52E4 /* ReviewConsentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewConsentViewController.swift; sourceTree = "<group>"; };
+		30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentFormViewController.swift; sourceTree = "<group>"; };
+		30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSignatureViewController.swift; sourceTree = "<group>"; };
+		30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatToExpectViewController.swift; sourceTree = "<group>"; };
+		30BFD4691BEF3366002E52E4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		30BFD46B1BEF339B002E52E4 /* AdditionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionInfoViewController.swift; sourceTree = "<group>"; };
+		30BFD46D1BEF33AC002E52E4 /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		30BFD46F1BEF33CC002E52E4 /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
+		30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSetViewController.swift; sourceTree = "<group>"; };
+		30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		30BFD47B1BEF341A002E52E4 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		30BFD47D1BEF341F002E52E4 /* Session.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Session.storyboard; sourceTree = "<group>"; };
+		30BFD47F1BEF3426002E52E4 /* Activities.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activities.storyboard; sourceTree = "<group>"; };
+		30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		30BFD4831BEF3431002E52E4 /* Learn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learn.storyboard; sourceTree = "<group>"; };
+		30BFD4851BEF3436002E52E4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3B653A1581DAD6C773D9491C /* Pods_researchline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_researchline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +142,8 @@
 				308ABCB81BEF296C00968C7D /* researchlineTests */,
 				308ABCC31BEF296C00968C7D /* researchlineUITests */,
 				308ABC9F1BEF296B00968C7D /* Products */,
+				41704D1676E9EE22FFAA1F2A /* Pods */,
+				FB9027D3FEB347B650B98177 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +160,11 @@
 		308ABCA01BEF296B00968C7D /* researchline */ = {
 			isa = PBXGroup;
 			children = (
+				30BFD4471BEF3061002E52E4 /* Models */,
+				30BFD4461BEF304A002E52E4 /* Servant */,
+				30BFD4451BEF3048002E52E4 /* Views */,
+				30BFD4441BEF303C002E52E4 /* Controllers */,
 				308ABCA11BEF296B00968C7D /* AppDelegate.swift */,
-				308ABCA31BEF296B00968C7D /* ViewController.swift */,
-				308ABCA51BEF296B00968C7D /* Main.storyboard */,
 				308ABCAB1BEF296C00968C7D /* Assets.xcassets */,
 				308ABCAD1BEF296C00968C7D /* LaunchScreen.storyboard */,
 				308ABCB01BEF296C00968C7D /* Info.plist */,
@@ -128,6 +191,128 @@
 			path = researchlineUITests;
 			sourceTree = "<group>";
 		};
+		30BFD4441BEF303C002E52E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				308ABCA51BEF296B00968C7D /* TabBar.storyboard */,
+				30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */,
+				30BFD4501BEF317C002E52E4 /* Welcome */,
+				30BFD4481BEF307A002E52E4 /* Session */,
+				30BFD4491BEF30C8002E52E4 /* Activities */,
+				30BFD44A1BEF30D2002E52E4 /* Dashboard */,
+				30BFD44B1BEF30DE002E52E4 /* Learn */,
+				30BFD44C1BEF30F1002E52E4 /* Profile */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30BFD4451BEF3048002E52E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		30BFD4461BEF304A002E52E4 /* Servant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Servant;
+			sourceTree = "<group>";
+		};
+		30BFD4471BEF3061002E52E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		30BFD4481BEF307A002E52E4 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD4551BEF31D1002E52E4 /* LoginViewController.swift */,
+				30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */,
+				30BFD4691BEF3366002E52E4 /* RegistrationViewController.swift */,
+				30BFD46B1BEF339B002E52E4 /* AdditionInfoViewController.swift */,
+				30BFD46D1BEF33AC002E52E4 /* EnterPasswordViewController.swift */,
+				30BFD46F1BEF33CC002E52E4 /* EmailVerificationViewController.swift */,
+				30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */,
+				30BFD47D1BEF341F002E52E4 /* Session.storyboard */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+		30BFD4491BEF30C8002E52E4 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */,
+				30BFD47F1BEF3426002E52E4 /* Activities.storyboard */,
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
+		30BFD44A1BEF30D2002E52E4 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */,
+				30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		30BFD44B1BEF30DE002E52E4 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */,
+				30BFD4831BEF3431002E52E4 /* Learn.storyboard */,
+			);
+			name = Learn;
+			sourceTree = "<group>";
+		};
+		30BFD44C1BEF30F1002E52E4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */,
+				30BFD4851BEF3436002E52E4 /* Profile.storyboard */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		30BFD4501BEF317C002E52E4 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */,
+				30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */,
+				30BFD4531BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift */,
+				30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */,
+				30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */,
+				30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */,
+				30BFD45F1BEF32EB002E52E4 /* ReviewConsentViewController.swift */,
+				30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */,
+				30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */,
+				30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */,
+				30BFD47B1BEF341A002E52E4 /* Welcome.storyboard */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		41704D1676E9EE22FFAA1F2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */,
+				2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB9027D3FEB347B650B98177 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B653A1581DAD6C773D9491C /* Pods_researchline.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +320,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 308ABCC91BEF296C00968C7D /* Build configuration list for PBXNativeTarget "researchline" */;
 			buildPhases = (
+				8CB746EAC6DE22F4EEFFDB03 /* Check Pods Manifest.lock */,
 				308ABC9A1BEF296B00968C7D /* Sources */,
 				308ABC9B1BEF296B00968C7D /* Frameworks */,
 				308ABC9C1BEF296B00968C7D /* Resources */,
+				84CDAB0DEB715080CF1C8D32 /* Embed Pods Frameworks */,
+				8B269053C704F064CC44C74A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,8 +421,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */,
+				30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */,
+				30BFD4801BEF3426002E52E4 /* Activities.storyboard in Resources */,
+				30BFD47E1BEF341F002E52E4 /* Session.storyboard in Resources */,
+				30BFD47C1BEF341A002E52E4 /* Welcome.storyboard in Resources */,
 				308ABCAC1BEF296C00968C7D /* Assets.xcassets in Resources */,
-				308ABCA71BEF296B00968C7D /* Main.storyboard in Resources */,
+				30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */,
+				30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */,
+				308ABCA71BEF296B00968C7D /* TabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +448,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84CDAB0DEB715080CF1C8D32 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-researchline/Pods-researchline-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B269053C704F064CC44C74A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-researchline/Pods-researchline-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CB746EAC6DE22F4EEFFDB03 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		308ABC9A1BEF296B00968C7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308ABCA41BEF296B00968C7D /* ViewController.swift in Sources */,
+				30BFD4761BEF33FE002E52E4 /* ActivitiesViewController.swift in Sources */,
+				30BFD45A1BEF3214002E52E4 /* EligibilitySurveyViewController.swift in Sources */,
+				30BFD45E1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift in Sources */,
+				30BFD4641BEF330D002E52E4 /* ConsentSignatureViewController.swift in Sources */,
+				30BFD4521BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift in Sources */,
+				30BFD4661BEF3324002E52E4 /* WhatToExpectViewController.swift in Sources */,
+				30BFD45C1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift in Sources */,
+				30BFD4781BEF3407002E52E4 /* DashboardViewController.swift in Sources */,
+				30BFD4541BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift in Sources */,
+				30BFD46E1BEF33AC002E52E4 /* EnterPasswordViewController.swift in Sources */,
+				30BFD46A1BEF3366002E52E4 /* RegistrationViewController.swift in Sources */,
+				30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */,
+				30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */,
+				30BFD4561BEF31D1002E52E4 /* LoginViewController.swift in Sources */,
+				30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */,
 				308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */,
+				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
+				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
+				30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */,
+				30BFD4601BEF32EB002E52E4 /* ReviewConsentViewController.swift in Sources */,
+				30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */,
+				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
+				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +560,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		308ABCA51BEF296B00968C7D /* Main.storyboard */ = {
+		308ABCA51BEF296B00968C7D /* TabBar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				308ABCA61BEF296B00968C7D /* Base */,
 			);
-			name = Main.storyboard;
+			name = TabBar.storyboard;
 			sourceTree = "<group>";
 		};
 		308ABCAD1BEF296C00968C7D /* LaunchScreen.storyboard */ = {
@@ -399,9 +662,12 @@
 		};
 		308ABCCA1BEF296C00968C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.researchline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,9 +676,12 @@
 		};
 		308ABCCB1BEF296C00968C7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.researchline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +755,7 @@
 				308ABCCB1BEF296C00968C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		308ABCCC1BEF296C00968C7D /* Build configuration list for PBXNativeTarget "researchlineTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +764,7 @@
 				308ABCCE1BEF296C00968C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		308ABCCF1BEF296C00968C7D /* Build configuration list for PBXNativeTarget "researchlineUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +773,7 @@
 				308ABCD11BEF296C00968C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
