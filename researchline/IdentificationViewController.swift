@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnterPasswordViewController: UIViewController {
+class IdentificationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

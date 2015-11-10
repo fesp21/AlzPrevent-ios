@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nNN-hC-atu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Consent Welcome View Controller-->
+        <scene sceneID="035-Ab-97c">
+            <objects>
+                <viewController id="nNN-hC-atu" customClass="ConsentWelcomeViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m86-Xz-Tzd"/>
+                        <viewControllerLayoutGuide type="bottom" id="URb-us-Ysg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A19-fI-Ppn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMr-Dc-8aw">
+                                <rect key="frame" x="260" y="389" width="80" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <segue destination="UzX-nv-MqU" kind="show" id="8Xn-y8-BEu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgp-UM-sSa">
+                                <rect key="frame" x="189" y="327" width="223" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Learn more about this study first"/>
+                                <connections>
+                                    <segue destination="xFq-tY-Vjf" kind="show" id="q8P-OU-qvu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0o-ML-4M4">
+                                <rect key="frame" x="238" y="182" width="124" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3Y-h3-ROg">
+                                <rect key="frame" x="66" y="234" width="468" height="61"/>
+                                <animations/>
+                                <string key="text">The simple walkthrough will help you to understand the study, the impact it will have on your life, and will allow you to provide consent to participate.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A3Y-h3-ROg" firstAttribute="top" secondItem="f0o-ML-4M4" secondAttribute="bottom" constant="16" id="EJe-2S-U7M"/>
+                            <constraint firstItem="f0o-ML-4M4" firstAttribute="centerX" secondItem="A19-fI-Ppn" secondAttribute="centerX" id="OPD-Hp-8uj"/>
+                            <constraint firstItem="vMr-Dc-8aw" firstAttribute="centerX" secondItem="A19-fI-Ppn" secondAttribute="centerX" id="S7f-lJ-gpy"/>
+                            <constraint firstItem="xgp-UM-sSa" firstAttribute="top" secondItem="A3Y-h3-ROg" secondAttribute="bottom" constant="32" id="YAy-yN-amc"/>
+                            <constraint firstAttribute="trailing" secondItem="A3Y-h3-ROg" secondAttribute="trailing" constant="66" id="YVD-SC-Sgi"/>
+                            <constraint firstItem="xgp-UM-sSa" firstAttribute="centerX" secondItem="A19-fI-Ppn" secondAttribute="centerX" id="g7B-HU-P2j"/>
+                            <constraint firstItem="f0o-ML-4M4" firstAttribute="centerY" secondItem="A19-fI-Ppn" secondAttribute="centerY" constant="-100" id="gQI-lv-tEC"/>
+                            <constraint firstItem="vMr-Dc-8aw" firstAttribute="top" secondItem="xgp-UM-sSa" secondAttribute="bottom" constant="32" id="n4A-UB-bbr"/>
+                            <constraint firstItem="A3Y-h3-ROg" firstAttribute="leading" secondItem="A19-fI-Ppn" secondAttribute="leading" constant="66" id="okO-TK-0xI"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJF-VN-0Eo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="434"/>
+        </scene>
+        <!--Consent Slide View Controller-->
+        <scene sceneID="jrq-Rh-bhF">
+            <objects>
+                <viewController id="UzX-nv-MqU" customClass="ConsentSlideViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LYV-gh-nDT"/>
+                        <viewControllerLayoutGuide type="bottom" id="rgX-a4-jcg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ov-EK-v0g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avC-Uk-cbO">
+                                <rect key="frame" x="284" y="520" width="32" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="GkG-fp-qQ5" kind="show" id="Gan-bz-LG6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rgX-a4-jcg" firstAttribute="top" secondItem="avC-Uk-cbO" secondAttribute="bottom" constant="50" id="1LK-bM-4za"/>
+                            <constraint firstItem="avC-Uk-cbO" firstAttribute="centerX" secondItem="8Ov-EK-v0g" secondAttribute="centerX" id="bdp-4g-dCk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMZ-1o-cL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="434"/>
+        </scene>
+        <!--Consent Review View Controller-->
+        <scene sceneID="xe7-ck-6a6">
+            <objects>
+                <viewController id="GkG-fp-qQ5" customClass="ConsentReviewViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ivL-Py-W9x"/>
+                        <viewControllerLayoutGuide type="bottom" id="jUd-zn-T0L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NDe-nA-KbI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeg-QG-b9O">
+                                <rect key="frame" x="280" y="550" width="41" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Agree"/>
+                                <connections>
+                                    <segue destination="MjP-fM-gnB" kind="show" id="Iea-U7-Jam"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jUd-zn-T0L" firstAttribute="top" secondItem="aeg-QG-b9O" secondAttribute="bottom" constant="20" id="I6B-N7-v3D"/>
+                            <constraint firstItem="aeg-QG-b9O" firstAttribute="centerX" secondItem="NDe-nA-KbI" secondAttribute="centerX" id="KKq-f0-idp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHS-2u-9eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="434"/>
+        </scene>
+        <!--Consent Form View Controller-->
+        <scene sceneID="9ae-NH-Df8">
+            <objects>
+                <viewController id="MjP-fM-gnB" customClass="ConsentFormViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wwt-LP-T9m"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnC-IQ-5NC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WwE-AK-mL8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-dG-yJE">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="J8i-6u-8qT" kind="show" id="0Sn-fJ-mhq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t6K-dG-yJE" firstAttribute="centerX" secondItem="WwE-AK-mL8" secondAttribute="centerX" id="APa-gt-Iti"/>
+                            <constraint firstItem="cnC-IQ-5NC" firstAttribute="top" secondItem="t6K-dG-yJE" secondAttribute="bottom" constant="20" id="HAN-WY-RTr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNR-0V-WeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="434"/>
+        </scene>
+        <!--Consent Signature View Controller-->
+        <scene sceneID="fgB-j2-12A">
+            <objects>
+                <viewController id="J8i-6u-8qT" customClass="ConsentSignatureViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GiT-Mc-Ah3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nkw-ar-dCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Tg-sM-zKL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-JV-Iu6">
+                                <rect key="frame" x="284" y="534" width="32" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="XXV-mc-P9l" kind="show" id="wdK-Nt-0cR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BNR-JV-Iu6" firstAttribute="centerX" secondItem="1Tg-sM-zKL" secondAttribute="centerX" id="HDA-Je-2cg"/>
+                            <constraint firstItem="Nkw-ar-dCb" firstAttribute="top" secondItem="BNR-JV-Iu6" secondAttribute="bottom" constant="36" id="lwi-GJ-usx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGn-Ww-9HB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3512" y="434"/>
+        </scene>
+        <!--What To Expect View Controller-->
+        <scene sceneID="BFN-eY-60p">
+            <objects>
+                <viewController id="XXV-mc-P9l" customClass="WhatToExpectViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vp6-cM-gi9"/>
+                        <viewControllerLayoutGuide type="bottom" id="QEm-UI-bhe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HFO-DK-eXi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIs-el-r2O">
+                                <rect key="frame" x="281" y="518" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Got It"/>
+                                <connections>
+                                    <action selector="touchUpInsideGotItButton:" destination="XXV-mc-P9l" eventType="touchUpInside" id="Ngf-ac-5x2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QEm-UI-bhe" firstAttribute="top" secondItem="RIs-el-r2O" secondAttribute="bottom" constant="52" id="EZO-4x-Bhy"/>
+                            <constraint firstItem="RIs-el-r2O" firstAttribute="centerX" secondItem="HFO-DK-eXi" secondAttribute="centerX" id="ywv-Ry-rCZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXr-tB-PvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4242" y="434"/>
+        </scene>
+        <!--Learn More-->
+        <scene sceneID="fnX-9b-wqi">
+            <objects>
+                <viewController id="xFq-tY-Vjf" customClass="ConsentLearnMoreViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g51-oG-wyd"/>
+                        <viewControllerLayoutGuide type="bottom" id="v7E-dG-yy2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xND-SV-6T4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-e3-GLa">
+                                <rect key="frame" x="20" y="80" width="560" height="520"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qZN-e3-GLa" firstAttribute="leading" secondItem="xND-SV-6T4" secondAttribute="leading" constant="20" id="6SY-vl-ckr"/>
+                            <constraint firstItem="qZN-e3-GLa" firstAttribute="top" secondItem="g51-oG-wyd" secondAttribute="bottom" constant="16" id="U4N-8p-lqV"/>
+                            <constraint firstAttribute="trailing" secondItem="qZN-e3-GLa" secondAttribute="trailing" constant="20" id="mNc-PC-oHS"/>
+                            <constraint firstItem="v7E-dG-yy2" firstAttribute="top" secondItem="qZN-e3-GLa" secondAttribute="bottom" id="nPn-Ob-51v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Learn More" id="A3s-J2-ZlA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6P-X5-0aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="-300"/>
+        </scene>
+    </scenes>
+</document>

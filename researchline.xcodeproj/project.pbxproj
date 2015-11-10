@@ -23,13 +23,13 @@
 		30BFD45A1BEF3214002E52E4 /* EligibilitySurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */; };
 		30BFD45C1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */; };
 		30BFD45E1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */; };
-		30BFD4601BEF32EB002E52E4 /* ReviewConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45F1BEF32EB002E52E4 /* ReviewConsentViewController.swift */; };
+		30BFD4601BEF32EB002E52E4 /* ConsentReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD45F1BEF32EB002E52E4 /* ConsentReviewViewController.swift */; };
 		30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */; };
 		30BFD4641BEF330D002E52E4 /* ConsentSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */; };
 		30BFD4661BEF3324002E52E4 /* WhatToExpectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */; };
 		30BFD46A1BEF3366002E52E4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4691BEF3366002E52E4 /* RegistrationViewController.swift */; };
 		30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46B1BEF339B002E52E4 /* AdditionInfoViewController.swift */; };
-		30BFD46E1BEF33AC002E52E4 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46D1BEF33AC002E52E4 /* EnterPasswordViewController.swift */; };
+		30BFD46E1BEF33AC002E52E4 /* IdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46D1BEF33AC002E52E4 /* IdentificationViewController.swift */; };
 		30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD46F1BEF33CC002E52E4 /* EmailVerificationViewController.swift */; };
 		30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */; };
 		30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */; };
@@ -42,7 +42,13 @@
 		30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */; };
 		30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4831BEF3431002E52E4 /* Learn.storyboard */; };
 		30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4851BEF3436002E52E4 /* Profile.storyboard */; };
-		CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B653A1581DAD6C773D9491C /* Pods_researchline.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		30D519D21BEF554B00306B1A /* Consent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D519D11BEF554B00306B1A /* Consent.storyboard */; };
+		30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D519D31BEF555100306B1A /* Eligibility.storyboard */; };
+		30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */; };
+		30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */; };
+		30D519DA1BEF6ADD00306B1A /* ConsentSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D91BEF6ADD00306B1A /* ConsentSlideViewController.swift */; };
+		30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519DB1BEF6F5E00306B1A /* ChangeEmailViewController.swift */; };
+		CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B653A1581DAD6C773D9491C /* Pods_researchline.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,13 +92,13 @@
 		30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilitySurveyViewController.swift; sourceTree = "<group>"; };
 		30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentLearnMoreViewController.swift; sourceTree = "<group>"; };
 		30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSharingOptionsViewController.swift; sourceTree = "<group>"; };
-		30BFD45F1BEF32EB002E52E4 /* ReviewConsentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewConsentViewController.swift; sourceTree = "<group>"; };
+		30BFD45F1BEF32EB002E52E4 /* ConsentReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentReviewViewController.swift; sourceTree = "<group>"; };
 		30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentFormViewController.swift; sourceTree = "<group>"; };
 		30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSignatureViewController.swift; sourceTree = "<group>"; };
 		30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatToExpectViewController.swift; sourceTree = "<group>"; };
 		30BFD4691BEF3366002E52E4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		30BFD46B1BEF339B002E52E4 /* AdditionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionInfoViewController.swift; sourceTree = "<group>"; };
-		30BFD46D1BEF33AC002E52E4 /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		30BFD46D1BEF33AC002E52E4 /* IdentificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentificationViewController.swift; sourceTree = "<group>"; };
 		30BFD46F1BEF33CC002E52E4 /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
 		30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSetViewController.swift; sourceTree = "<group>"; };
 		30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,12 @@
 		30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		30BFD4831BEF3431002E52E4 /* Learn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learn.storyboard; sourceTree = "<group>"; };
 		30BFD4851BEF3436002E52E4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		30D519D11BEF554B00306B1A /* Consent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consent.storyboard; sourceTree = "<group>"; };
+		30D519D31BEF555100306B1A /* Eligibility.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Eligibility.storyboard; sourceTree = "<group>"; };
+		30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityResultViewController.swift; sourceTree = "<group>"; };
+		30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentWelcomeViewController.swift; sourceTree = "<group>"; };
+		30D519D91BEF6ADD00306B1A /* ConsentSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSlideViewController.swift; sourceTree = "<group>"; };
+		30D519DB1BEF6F5E00306B1A /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		3B653A1581DAD6C773D9491C /* Pods_researchline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_researchline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,14 +242,13 @@
 		30BFD4481BEF307A002E52E4 /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				30BFD4551BEF31D1002E52E4 /* LoginViewController.swift */,
-				30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */,
+				30BFD47D1BEF341F002E52E4 /* Session.storyboard */,
 				30BFD4691BEF3366002E52E4 /* RegistrationViewController.swift */,
 				30BFD46B1BEF339B002E52E4 /* AdditionInfoViewController.swift */,
-				30BFD46D1BEF33AC002E52E4 /* EnterPasswordViewController.swift */,
+				30BFD46D1BEF33AC002E52E4 /* IdentificationViewController.swift */,
 				30BFD46F1BEF33CC002E52E4 /* EmailVerificationViewController.swift */,
 				30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */,
-				30BFD47D1BEF341F002E52E4 /* Session.storyboard */,
+				30D519DB1BEF6F5E00306B1A /* ChangeEmailViewController.swift */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -245,8 +256,8 @@
 		30BFD4491BEF30C8002E52E4 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */,
 				30BFD47F1BEF3426002E52E4 /* Activities.storyboard */,
+				30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -254,8 +265,8 @@
 		30BFD44A1BEF30D2002E52E4 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */,
 				30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */,
+				30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -263,8 +274,8 @@
 		30BFD44B1BEF30DE002E52E4 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
-				30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */,
 				30BFD4831BEF3431002E52E4 /* Learn.storyboard */,
+				30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */,
 			);
 			name = Learn;
 			sourceTree = "<group>";
@@ -272,8 +283,8 @@
 		30BFD44C1BEF30F1002E52E4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */,
 				30BFD4851BEF3436002E52E4 /* Profile.storyboard */,
+				30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -281,19 +292,42 @@
 		30BFD4501BEF317C002E52E4 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				30BFD47B1BEF341A002E52E4 /* Welcome.storyboard */,
+				30D519D01BEF552D00306B1A /* Consent */,
+				30D519CF1BEF552800306B1A /* Eligibility */,
 				30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */,
+				30BFD4551BEF31D1002E52E4 /* LoginViewController.swift */,
+				30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */,
 				30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */,
 				30BFD4531BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift */,
-				30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */,
-				30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */,
-				30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */,
-				30BFD45F1BEF32EB002E52E4 /* ReviewConsentViewController.swift */,
-				30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */,
-				30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */,
 				30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */,
-				30BFD47B1BEF341A002E52E4 /* Welcome.storyboard */,
 			);
 			name = Welcome;
+			sourceTree = "<group>";
+		};
+		30D519CF1BEF552800306B1A /* Eligibility */ = {
+			isa = PBXGroup;
+			children = (
+				30D519D31BEF555100306B1A /* Eligibility.storyboard */,
+				30BFD4591BEF3214002E52E4 /* EligibilitySurveyViewController.swift */,
+				30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */,
+			);
+			name = Eligibility;
+			sourceTree = "<group>";
+		};
+		30D519D01BEF552D00306B1A /* Consent */ = {
+			isa = PBXGroup;
+			children = (
+				30D519D11BEF554B00306B1A /* Consent.storyboard */,
+				30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */,
+				30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */,
+				30D519D91BEF6ADD00306B1A /* ConsentSlideViewController.swift */,
+				30BFD45D1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift */,
+				30BFD45F1BEF32EB002E52E4 /* ConsentReviewViewController.swift */,
+				30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */,
+				30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */,
+			);
+			name = Consent;
 			sourceTree = "<group>";
 		};
 		41704D1676E9EE22FFAA1F2A /* Pods */ = {
@@ -421,12 +455,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */,
+				30D519D21BEF554B00306B1A /* Consent.storyboard in Resources */,
 				30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */,
 				30BFD4801BEF3426002E52E4 /* Activities.storyboard in Resources */,
 				30BFD47E1BEF341F002E52E4 /* Session.storyboard in Resources */,
 				30BFD47C1BEF341A002E52E4 /* Welcome.storyboard in Resources */,
 				308ABCAC1BEF296C00968C7D /* Assets.xcassets in Resources */,
 				30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */,
+				30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */,
 				30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */,
 				308ABCA71BEF296B00968C7D /* TabBar.storyboard in Resources */,
 			);
@@ -501,27 +537,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */,
 				30BFD4761BEF33FE002E52E4 /* ActivitiesViewController.swift in Sources */,
 				30BFD45A1BEF3214002E52E4 /* EligibilitySurveyViewController.swift in Sources */,
 				30BFD45E1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift in Sources */,
 				30BFD4641BEF330D002E52E4 /* ConsentSignatureViewController.swift in Sources */,
 				30BFD4521BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift in Sources */,
+				30D519DA1BEF6ADD00306B1A /* ConsentSlideViewController.swift in Sources */,
 				30BFD4661BEF3324002E52E4 /* WhatToExpectViewController.swift in Sources */,
 				30BFD45C1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift in Sources */,
 				30BFD4781BEF3407002E52E4 /* DashboardViewController.swift in Sources */,
 				30BFD4541BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift in Sources */,
-				30BFD46E1BEF33AC002E52E4 /* EnterPasswordViewController.swift in Sources */,
+				30BFD46E1BEF33AC002E52E4 /* IdentificationViewController.swift in Sources */,
 				30BFD46A1BEF3366002E52E4 /* RegistrationViewController.swift in Sources */,
 				30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */,
 				30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */,
+				30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */,
 				30BFD4561BEF31D1002E52E4 /* LoginViewController.swift in Sources */,
 				30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */,
 				308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */,
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
+				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
 				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
 				30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */,
-				30BFD4601BEF32EB002E52E4 /* ReviewConsentViewController.swift in Sources */,
+				30BFD4601BEF32EB002E52E4 /* ConsentReviewViewController.swift in Sources */,
 				30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */,
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,

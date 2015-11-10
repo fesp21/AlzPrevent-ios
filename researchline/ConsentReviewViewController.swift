@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewConsentViewController: UIViewController {
+class ConsentReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

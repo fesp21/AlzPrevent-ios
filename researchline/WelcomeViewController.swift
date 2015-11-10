@@ -8,28 +8,42 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var pageControl: UIPageControl!
+  @IBOutlet weak var collectionView: UICollectionView!
 
-        // Do any additional setup after loading the view.
-    }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    navigationController?.navigationBarHidden = true
+  }
 
-    /*
-    // MARK: - Navigation
+  @IBAction func touchUpInsideJoinStudyButton(sender: UIButton) {
+    let storyboard = UIStoryboard(name: "Eligibility", bundle: nil)
+    let controller = storyboard.instantiateInitialViewController()!
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    navigationController?.pushViewController(controller, animated: true)
+  }
 
+  // MARK: Scroll View Delegate
+
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    let currentPage = Int(collectionView.contentOffset.x / self.collectionView.frame.size.width)
+    pageControl.currentPage = currentPage
+  }
+
+  // MARK: Collection View Delegate
+
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    return collectionView.bounds.size
+  }
+
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 4;
+  }
+
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    return collectionView.dequeueReusableCellWithReuseIdentifier(String(indexPath.item), forIndexPath: indexPath)
+  }
 }
