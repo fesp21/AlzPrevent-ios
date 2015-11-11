@@ -14,6 +14,8 @@
 		308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCAD1BEF296C00968C7D /* LaunchScreen.storyboard */; };
 		308ABCBA1BEF296C00968C7D /* researchlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCB91BEF296C00968C7D /* researchlineTests.swift */; };
 		308ABCC51BEF296C00968C7D /* researchlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCC41BEF296C00968C7D /* researchlineUITests.swift */; };
+		30963D7D1BF3AB6E0090E7A9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30963D7C1BF3AB6E0090E7A9 /* HealthKit.framework */; };
+		30963D831BF3C4DF0090E7A9 /* Consent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30963D821BF3C4DF0090E7A9 /* Consent.storyboard */; };
 		30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */; };
 		30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */; };
 		30BFD4521BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */; };
@@ -42,7 +44,6 @@
 		30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */; };
 		30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4831BEF3431002E52E4 /* Learn.storyboard */; };
 		30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4851BEF3436002E52E4 /* Profile.storyboard */; };
-		30D519D21BEF554B00306B1A /* Consent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D519D11BEF554B00306B1A /* Consent.storyboard */; };
 		30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D519D31BEF555100306B1A /* Eligibility.storyboard */; };
 		30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */; };
 		30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */; };
@@ -83,6 +84,8 @@
 		308ABCC01BEF296C00968C7D /* researchlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = researchlineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		308ABCC41BEF296C00968C7D /* researchlineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = researchlineUITests.swift; sourceTree = "<group>"; };
 		308ABCC61BEF296C00968C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30963D7C1BF3AB6E0090E7A9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		30963D821BF3C4DF0090E7A9 /* Consent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consent.storyboard; sourceTree = "<group>"; };
 		30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardController.swift; sourceTree = "<group>"; };
 		30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadConsentDocumentViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +114,6 @@
 		30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		30BFD4831BEF3431002E52E4 /* Learn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learn.storyboard; sourceTree = "<group>"; };
 		30BFD4851BEF3436002E52E4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		30D519D11BEF554B00306B1A /* Consent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consent.storyboard; sourceTree = "<group>"; };
 		30D519D31BEF555100306B1A /* Eligibility.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Eligibility.storyboard; sourceTree = "<group>"; };
 		30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityResultViewController.swift; sourceTree = "<group>"; };
 		30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentWelcomeViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30963D7D1BF3AB6E0090E7A9 /* HealthKit.framework in Frameworks */,
 				CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +321,7 @@
 		30D519D01BEF552D00306B1A /* Consent */ = {
 			isa = PBXGroup;
 			children = (
-				30D519D11BEF554B00306B1A /* Consent.storyboard */,
+				30963D821BF3C4DF0090E7A9 /* Consent.storyboard */,
 				30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */,
 				30BFD45B1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift */,
 				30D519D91BEF6ADD00306B1A /* ConsentSlideViewController.swift */,
@@ -342,6 +345,7 @@
 		FB9027D3FEB347B650B98177 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30963D7C1BF3AB6E0090E7A9 /* HealthKit.framework */,
 				3B653A1581DAD6C773D9491C /* Pods_researchline.framework */,
 			);
 			name = Frameworks;
@@ -418,6 +422,7 @@
 				TargetAttributes = {
 					308ABC9D1BEF296B00968C7D = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = FRWJ8P5Q79;
 					};
 					308ABCB41BEF296C00968C7D = {
 						CreatedOnToolsVersion = 7.1;
@@ -455,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */,
-				30D519D21BEF554B00306B1A /* Consent.storyboard in Resources */,
 				30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */,
 				30BFD4801BEF3426002E52E4 /* Activities.storyboard in Resources */,
 				30BFD47E1BEF341F002E52E4 /* Session.storyboard in Resources */,
@@ -465,6 +469,7 @@
 				30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */,
 				30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */,
 				308ABCA71BEF296B00968C7D /* TabBar.storyboard in Resources */,
+				30963D831BF3C4DF0090E7A9 /* Consent.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

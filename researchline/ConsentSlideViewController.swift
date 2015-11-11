@@ -8,28 +8,36 @@
 
 import UIKit
 
-class ConsentSlideViewController: UIViewController {
+class ConsentSlideViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var collectionView: UICollectionView!
 
-        // Do any additional setup after loading the view.
+  @IBAction func touchUpInsideNextButton(sender: UIButton) {
+    let nextPage = Int(collectionView.contentOffset.x / self.collectionView.frame.size.width) + 1
+
+    if nextPage == 11 {
+      let storyboard = UIStoryboard(name: "Consent", bundle: nil)
+      let controller = storyboard.instantiateViewControllerWithIdentifier("ConsentSharingOptionsViewController")
+
+      navigationController?.pushViewController(controller, animated: true)
+    } else {
+      let contentOffset = CGPoint(x: Int(collectionView.bounds.width) * nextPage, y: 0)
+      debugPrint("nextPage", nextPage, contentOffset)
+      collectionView.setContentOffset(contentOffset, animated: true)
     }
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  // MARK: Collection View Delegate
 
-    /*
-    // MARK: - Navigation
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 11
+  }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    return collectionView.dequeueReusableCellWithReuseIdentifier(String(indexPath.item), forIndexPath: indexPath)
+  }
 
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    return collectionView.bounds.size
+  }
 }
