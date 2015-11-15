@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30714CFB1BF850D700AC2C96 /* DrawImageView.swift */; };
+		30714D001BF86BB900AC2C96 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30714CFF1BF86BB900AC2C96 /* HealthManager.swift */; };
 		308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCA11BEF296B00968C7D /* AppDelegate.swift */; };
 		308ABCA71BEF296B00968C7D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCA51BEF296B00968C7D /* TabBar.storyboard */; };
 		308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCA81BEF296B00968C7D /* researchline.xcdatamodeld */; };
@@ -71,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.release.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.release.xcconfig"; sourceTree = "<group>"; };
+		30714CFB1BF850D700AC2C96 /* DrawImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawImageView.swift; sourceTree = "<group>"; };
+		30714CFD1BF8542500AC2C96 /* researchline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = researchline.entitlements; sourceTree = "<group>"; };
+		30714CFE1BF859BA00AC2C96 /* SaveMyTime.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SaveMyTime.playground; sourceTree = "<group>"; };
+		30714CFF1BF86BB900AC2C96 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		308ABC9E1BEF296B00968C7D /* researchline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = researchline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308ABCA11BEF296B00968C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308ABCA61BEF296B00968C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
@@ -150,6 +156,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306741D91BF8E4E8000B8D0B /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				30BFD4491BEF30C8002E52E4 /* Activities */,
+				30BFD44A1BEF30D2002E52E4 /* Dashboard */,
+				30BFD44B1BEF30DE002E52E4 /* Learn */,
+				30BFD44C1BEF30F1002E52E4 /* Profile */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
 		308ABC951BEF296B00968C7D = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +192,7 @@
 		308ABCA01BEF296B00968C7D /* researchline */ = {
 			isa = PBXGroup;
 			children = (
+				30714CFD1BF8542500AC2C96 /* researchline.entitlements */,
 				30BFD4471BEF3061002E52E4 /* Models */,
 				30BFD4461BEF304A002E52E4 /* Servant */,
 				30BFD4451BEF3048002E52E4 /* Views */,
@@ -202,6 +220,7 @@
 			children = (
 				308ABCC41BEF296C00968C7D /* researchlineUITests.swift */,
 				308ABCC61BEF296C00968C7D /* Info.plist */,
+				30714CFE1BF859BA00AC2C96 /* SaveMyTime.playground */,
 			);
 			path = researchlineUITests;
 			sourceTree = "<group>";
@@ -213,10 +232,7 @@
 				30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */,
 				30BFD4501BEF317C002E52E4 /* Welcome */,
 				30BFD4481BEF307A002E52E4 /* Session */,
-				30BFD4491BEF30C8002E52E4 /* Activities */,
-				30BFD44A1BEF30D2002E52E4 /* Dashboard */,
-				30BFD44B1BEF30DE002E52E4 /* Learn */,
-				30BFD44C1BEF30F1002E52E4 /* Profile */,
+				306741D91BF8E4E8000B8D0B /* Tabs */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +247,7 @@
 		30BFD4461BEF304A002E52E4 /* Servant */ = {
 			isa = PBXGroup;
 			children = (
+				30714CFF1BF86BB900AC2C96 /* HealthManager.swift */,
 			);
 			name = Servant;
 			sourceTree = "<group>";
@@ -296,14 +313,13 @@
 			isa = PBXGroup;
 			children = (
 				30BFD47B1BEF341A002E52E4 /* Welcome.storyboard */,
-				30D519D01BEF552D00306B1A /* Consent */,
 				30D519CF1BEF552800306B1A /* Eligibility */,
+				30D519D01BEF552D00306B1A /* Consent */,
 				30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */,
 				30BFD4551BEF31D1002E52E4 /* LoginViewController.swift */,
 				30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */,
 				30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */,
 				30BFD4531BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift */,
-				30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */,
 			);
 			name = Welcome;
 			sourceTree = "<group>";
@@ -329,6 +345,8 @@
 				30BFD45F1BEF32EB002E52E4 /* ConsentReviewViewController.swift */,
 				30BFD4611BEF3300002E52E4 /* ConsentFormViewController.swift */,
 				30BFD4631BEF330D002E52E4 /* ConsentSignatureViewController.swift */,
+				30BFD4651BEF3324002E52E4 /* WhatToExpectViewController.swift */,
+				30714CFB1BF850D700AC2C96 /* DrawImageView.swift */,
 			);
 			name = Consent;
 			sourceTree = "<group>";
@@ -423,6 +441,11 @@
 					308ABC9D1BEF296B00968C7D = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = FRWJ8P5Q79;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					308ABCB41BEF296C00968C7D = {
 						CreatedOnToolsVersion = 7.1;
@@ -561,8 +584,10 @@
 				30BFD4561BEF31D1002E52E4 /* LoginViewController.swift in Sources */,
 				30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */,
 				308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */,
+				30714D001BF86BB900AC2C96 /* HealthManager.swift in Sources */,
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
+				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
 				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
 				30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */,
@@ -710,12 +735,15 @@
 			baseConfigurationReference = 9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.researchline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.ios.ResearchLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -724,12 +752,15 @@
 			baseConfigurationReference = 2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.researchline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.ios.ResearchLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
