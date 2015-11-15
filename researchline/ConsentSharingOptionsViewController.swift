@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConsentSharingOptionsViewController: UIViewController {
+class ConsentSharingOptionsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
