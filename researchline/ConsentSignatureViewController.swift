@@ -10,4 +10,9 @@ import UIKit
 
 class ConsentSignatureViewController: UIViewController {
 
+    @IBOutlet weak var drawImageView: DrawImageView!
+    
+    @IBAction func touchUpInsideClearSignatureButton(sender: UIButton) {
+        drawImageView.image = UIImage()
+    }
 }

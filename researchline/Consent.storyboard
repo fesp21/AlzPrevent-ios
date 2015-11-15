@@ -1103,6 +1103,9 @@
                                 <rect key="frame" x="247" y="392" width="106" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Clear Signature"/>
+                                <connections>
+                                    <action selector="touchUpInsideClearSignatureButton:" destination="J8i-6u-8qT" eventType="touchUpInside" id="0bC-4g-VYi"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43k-C1-t7G" userLabel="Signature View">
                                 <rect key="frame" x="24" y="193" width="552" height="190"/>
@@ -1167,6 +1170,9 @@
                             <constraint firstItem="43k-C1-t7G" firstAttribute="top" secondItem="aKv-yH-K7J" secondAttribute="bottom" constant="32" id="tmm-Gp-qb5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drawImageView" destination="oPf-cj-fUP" id="1n2-2k-mp6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGn-Ww-9HB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
