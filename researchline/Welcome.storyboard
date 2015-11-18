@@ -430,7 +430,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="fQR-AU-MET">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="6Z3-Gv-bgI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="6Z3-Gv-bgI">
+                            <connections>
+                                <action selector="touchUpInsideDoneBarButtonItem:" destination="Rvv-il-hTs" id="LGv-RG-96H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
