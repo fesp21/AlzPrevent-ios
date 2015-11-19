@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9L0-rC-FlE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9L0-rC-FlE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Memory Activity View Controller-->
         <scene sceneID="2IM-Y1-LXD">
             <objects>
-                <viewController id="9L0-rC-FlE" sceneMemberID="viewController">
+                <viewController id="9L0-rC-FlE" customClass="MemoryActivityViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nVg-MI-99e"/>
                         <viewControllerLayoutGuide type="bottom" id="FhY-OR-j2t"/>
@@ -16,13 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="xUQ-Bd-ca1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyG-gI-qn5">
+                                <rect key="frame" x="215" y="121" width="170" height="170"/>
+                                <state key="normal" image="cat"/>
+                                <connections>
+                                    <action selector="check:" destination="9L0-rC-FlE" eventType="touchDown" id="tdY-3b-NGf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X" translatesAutoresizingMaskIntoConstraints="NO" id="akr-vT-jN7">
+                                <rect key="frame" x="249" y="300" width="102" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bES-Jf-olT"/>
+                                    <constraint firstAttribute="width" constant="1550" id="t8o-uc-aIQ"/>
+                                    <constraint firstAttribute="width" constant="102" id="tax-F6-g0z"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="t8o-uc-aIQ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uyG-gI-qn5" firstAttribute="top" secondItem="nVg-MI-99e" secondAttribute="bottom" constant="101" id="BJy-Uj-yb7"/>
+                            <constraint firstItem="akr-vT-jN7" firstAttribute="top" secondItem="uyG-gI-qn5" secondAttribute="bottom" constant="9" id="htY-tO-KGp"/>
+                            <constraint firstItem="uyG-gI-qn5" firstAttribute="centerX" secondItem="akr-vT-jN7" secondAttribute="centerX" id="jsS-qI-5eT"/>
+                            <constraint firstItem="uyG-gI-qn5" firstAttribute="centerX" secondItem="xUQ-Bd-ca1" secondAttribute="centerX" id="tid-5W-Iwf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CheckButton" destination="uyG-gI-qn5" id="45n-s7-0Qa"/>
+                        <outlet property="resultUIImageView" destination="akr-vT-jN7" id="wo1-SU-Yxw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUG-ET-Qjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="310" y="421"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="X" width="1550" height="1514"/>
+        <image name="cat" width="170" height="170"/>
+    </resources>
 </document>
