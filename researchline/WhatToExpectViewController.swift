@@ -11,12 +11,15 @@ import HealthKit
 
 class WhatToExpectViewController: UIViewController {
     
+    var signFileData: UIImage?
+    
     @IBAction func touchUpInsideGotItButton(sender: UIButton) {
         HealthManager.requestAuthorizationToShareTypes { (success, unavailables: [String]) -> Void in
             if success {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     let storyboard = UIStoryboard(name: "Session", bundle: nil)
-                    let controller = storyboard.instantiateInitialViewController()!
+                    let controller = storyboard.instantiateInitialViewController() as! RegistrationViewController
+                    controller.signFileData = self.signFileData
                     
                     self.navigationController?.pushViewController(controller, animated: true)
                 })

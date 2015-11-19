@@ -8,7 +8,7 @@
         <!--Registration-->
         <scene sceneID="Kxl-EV-MaE">
             <objects>
-                <viewController id="gsR-PB-u1R" sceneMemberID="viewController">
+                <viewController id="gsR-PB-u1R" customClass="RegistrationViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BBg-nY-MvX"/>
                         <viewControllerLayoutGuide type="bottom" id="qI7-MJ-dJm"/>
@@ -17,6 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR8-Xb-W3D">
+                                <rect key="frame" x="24" y="298" width="552" height="82"/>
+                                <animations/>
+                                <string key="text">Sage Bionetworks, a non-profit biomedical research institute, is helping to collect data for this study and distribute it to the study investigators and other researchers. Please provide a unique email address and password to create a secure account.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg6-eH-TlV" userLabel="Form View">
                                 <rect key="frame" x="24" y="88" width="552" height="186"/>
                                 <subviews>
@@ -28,12 +36,6 @@
                                             <constraint firstAttribute="height" constant="1" id="GDz-Qv-nNC"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tl3-RW-jB5">
-                                        <rect key="frame" x="0.0" y="66" width="552" height="17"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCk-Ti-ZaF" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="99" width="552" height="1"/>
                                         <animations/>
@@ -66,6 +68,12 @@
                                     </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Real Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vro-E9-8Jq">
                                         <rect key="frame" x="0.0" y="16" width="552" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tl3-RW-jB5">
+                                        <rect key="frame" x="0.0" y="66" width="552" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -104,14 +112,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR8-Xb-W3D">
-                                <rect key="frame" x="24" y="298" width="552" height="82"/>
-                                <animations/>
-                                <string key="text">Sage Bionetworks, a non-profit biomedical research institute, is helping to collect data for this study and distribute it to the study investigators and other researchers. Please provide a unique email address and password to create a secure account.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,11 +127,16 @@
                     <navigationItem key="navigationItem" title="Registration" id="ayJ-hf-zYT">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="215-ey-aN4">
                             <connections>
-                                <segue destination="t9D-2d-xLu" kind="show" id="m3N-J0-tfK"/>
+                                <action selector="touchUpInsideNextBarButtonItem:" destination="gsR-PB-u1R" id="KLA-oh-SEj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="tl3-RW-jB5" id="4q9-2r-i50"/>
+                        <outlet property="passwordTextField" destination="5Jy-2M-pBb" id="lCi-A3-epj"/>
+                        <outlet property="realNameTextField" destination="vro-E9-8Jq" id="gaW-mO-erb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9z-j6-w6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +145,7 @@
         <!--Additional Information-->
         <scene sceneID="1Mx-L2-WDD">
             <objects>
-                <viewController id="t9D-2d-xLu" customClass="AdditionInfoViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdditionInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t9D-2d-xLu" customClass="AdditionInfoViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UVb-fI-RaC"/>
                         <viewControllerLayoutGuide type="bottom" id="zW8-o9-uYg"/>
@@ -150,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MsR-v6-DK4" userLabel="Form View">
-                                <rect key="frame" x="24" y="83" width="552" height="150"/>
+                                <rect key="frame" x="24" y="39" width="552" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-Ud-Gh0" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="49" width="552" height="1"/>

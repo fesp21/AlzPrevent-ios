@@ -14,12 +14,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="JZa-bZ-B4o">
+                            <rect key="frame" x="0.0" y="64" width="600" height="401"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCR-36-4Re">
+                                    <rect key="frame" x="271.5" y="26" width="57" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="Memory"/>
+                                    <connections>
+                                        <segue destination="jXZ-5p-hsI" kind="show" id="eN0-qT-hJk"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmC-IQ-OzP">
+                                    <rect key="frame" x="253.5" y="103" width="93" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="ColorReading"/>
+                                    <connections>
+                                        <segue destination="gRu-PL-qWS" kind="show" id="TlP-rA-aJ7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhL-C8-FhP">
+                                    <rect key="frame" x="254.5" y="165" width="91" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="FastCounting"/>
+                                    <connections>
+                                        <segue destination="pOS-s3-kX7" kind="show" id="iN6-uS-yhm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB2-Z5-z1E">
+                                    <rect key="frame" x="254" y="222" width="92" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="VisualActivity"/>
+                                    <connections>
+                                        <segue destination="qhc-mW-n3Q" kind="show" id="bFF-OS-rUG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6E-el-4hp">
+                                    <rect key="frame" x="239.5" y="64" width="121" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="ItemSpanForward"/>
+                                    <connections>
+                                        <segue destination="epH-gW-bcn" kind="show" id="Cgo-N4-Meo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-Zb-0jq">
+                                    <rect key="frame" x="233.5" y="274" width="133" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="ItemSpanBackward"/>
+                                    <connections>
+                                        <segue destination="wdM-8D-Ox8" kind="show" id="y2c-91-qKA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="mCR-36-4Re" firstAttribute="top" secondItem="JZa-bZ-B4o" secondAttribute="top" constant="26" id="2Ls-dY-ZEx"/>
+                                <constraint firstItem="MhL-C8-FhP" firstAttribute="centerX" secondItem="JZa-bZ-B4o" secondAttribute="centerX" id="2Nj-g9-CxY"/>
+                                <constraint firstItem="4NY-Zb-0jq" firstAttribute="centerX" secondItem="JZa-bZ-B4o" secondAttribute="centerX" id="DVT-r7-wwr"/>
+                                <constraint firstItem="MhL-C8-FhP" firstAttribute="top" secondItem="NmC-IQ-OzP" secondAttribute="bottom" constant="32" id="GS2-Fz-vhM"/>
+                                <constraint firstItem="4NY-Zb-0jq" firstAttribute="top" secondItem="GB2-Z5-z1E" secondAttribute="bottom" constant="22" id="N8N-n8-arS"/>
+                                <constraint firstItem="mCR-36-4Re" firstAttribute="centerX" secondItem="JZa-bZ-B4o" secondAttribute="centerX" id="NjL-mV-nMi"/>
+                                <constraint firstItem="GB2-Z5-z1E" firstAttribute="top" secondItem="MhL-C8-FhP" secondAttribute="bottom" constant="27" id="TTM-As-zWv"/>
+                                <constraint firstItem="GB2-Z5-z1E" firstAttribute="centerX" secondItem="JZa-bZ-B4o" secondAttribute="centerX" id="aMa-az-fcY"/>
+                                <constraint firstItem="NmC-IQ-OzP" firstAttribute="top" secondItem="o6E-el-4hp" secondAttribute="bottom" constant="9" id="g6L-Fm-hVt"/>
+                                <constraint firstItem="o6E-el-4hp" firstAttribute="top" secondItem="mCR-36-4Re" secondAttribute="bottom" constant="8" id="n4h-hj-4ro"/>
+                                <constraint firstItem="NmC-IQ-OzP" firstAttribute="centerX" secondItem="JZa-bZ-B4o" secondAttribute="centerX" id="vpo-pH-0Ku"/>
+                                <constraint firstItem="o6E-el-4hp" firstAttribute="centerX" secondItem="JZa-bZ-B4o" secondAttribute="centerX" id="zFM-Cc-uNA"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zYD-9D-PWm">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="493" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zYD-9D-PWm" id="vNg-1H-Fq8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -53,6 +123,120 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHt-oe-7qg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-375" y="-116"/>
+        </scene>
+        <!--Memory View Controller-->
+        <scene sceneID="rTc-2S-teT">
+            <objects>
+                <viewController id="jXZ-5p-hsI" customClass="MemoryViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D42-zT-QLT"/>
+                        <viewControllerLayoutGuide type="bottom" id="yNM-nb-cfa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KYG-17-htW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuv-LC-JX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="625"/>
+        </scene>
+        <!--Color Reading View Controller-->
+        <scene sceneID="K4Z-9p-c6j">
+            <objects>
+                <viewController id="gRu-PL-qWS" customClass="ColorReadingViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zyg-1T-Rc7"/>
+                        <viewControllerLayoutGuide type="bottom" id="kn8-Hy-ICa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uIs-Al-gnz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDz-8b-0Ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="625"/>
+        </scene>
+        <!--Fast Counting View Controller-->
+        <scene sceneID="uFy-TO-4RF">
+            <objects>
+                <viewController id="pOS-s3-kX7" customClass="FastCountingViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N7p-Wy-Hkn"/>
+                        <viewControllerLayoutGuide type="bottom" id="FfW-68-sMB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="98h-ZJ-vGk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laB-8i-zlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="641"/>
+        </scene>
+        <!--Visual Activity View Controller-->
+        <scene sceneID="njx-xk-Mjr">
+            <objects>
+                <viewController id="qhc-mW-n3Q" customClass="VisualActivityViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="akr-vU-e6j"/>
+                        <viewControllerLayoutGuide type="bottom" id="DbQ-dF-I00"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uph-CZ-jqi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAA-Vp-vs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="1417"/>
+        </scene>
+        <!--Item Span Forward View Controller-->
+        <scene sceneID="PJJ-Xh-ZHa">
+            <objects>
+                <viewController id="epH-gW-bcn" customClass="ItemSpanForwardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w53-Np-7eF"/>
+                        <viewControllerLayoutGuide type="bottom" id="sDQ-Fs-sId"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rRv-O6-W2p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14R-39-iD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="1409"/>
+        </scene>
+        <!--Item Span Backward View Controller-->
+        <scene sceneID="d2c-t4-r3c">
+            <objects>
+                <viewController id="wdM-8D-Ox8" customClass="ItemSpanBackwardViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fiQ-pm-arp"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZE-3A-66j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5F-r0-2Kt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2e-go-MgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="1449"/>
         </scene>
     </scenes>
 </document>

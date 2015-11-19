@@ -10,26 +10,23 @@ import UIKit
 
 class ConsentFormViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var firstNameTextLabel: UITextField!
+    @IBOutlet weak var lastNameTextLabel: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBAction func editingChangedTextLabel(sender: AnyObject) {
+        let firstName = firstNameTextLabel.text ?? ""
+        let lastName = lastNameTextLabel.text ?? ""
+        
+        nextButton.enabled = !firstName.isEmpty && !lastName.isEmpty
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func touchUpInsideNextButton(sender: UIButton) {
+        let firstName = firstNameTextLabel.text
+        let lastName = lastNameTextLabel.text
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(firstName, forKey: "firstName")
+        userDefaults.setObject(lastName, forKey: "lastName")
     }
-    */
-
 }

@@ -4,7 +4,8 @@
 target 'researchline' do
   use_frameworks!
 
-  pod 'Alamofire', '~> 3.1'
+  pod 'Alamofire'
+  pod 'BEMSimpleLineGraph'
 end
 
 target 'researchlineTests' do

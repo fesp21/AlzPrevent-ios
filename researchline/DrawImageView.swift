@@ -12,6 +12,7 @@ class DrawImageView: UIImageView {
     
     var swiped = false
     var lastPoint = CGPoint.zero
+    var signed = false
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
@@ -49,6 +50,7 @@ class DrawImageView: UIImageView {
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        signed = true
         swiped = true
         if let touch = touches.first {
             let currentPoint = touch.locationInView(self)
