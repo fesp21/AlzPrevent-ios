@@ -23,7 +23,7 @@
                                     <animations/>
                                     <state key="normal" title="Memory"/>
                                     <connections>
-                                        <segue destination="jXZ-5p-hsI" kind="show" id="eN0-qT-hJk"/>
+                                        <action selector="touchUpInsideMemoryButton:" destination="XEk-ws-lmy" eventType="touchUpInside" id="U6W-yE-3BT"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmC-IQ-OzP">
@@ -31,7 +31,7 @@
                                     <animations/>
                                     <state key="normal" title="ColorReading"/>
                                     <connections>
-                                        <segue destination="gRu-PL-qWS" kind="show" id="TlP-rA-aJ7"/>
+                                        <action selector="touchUpInsideColorReadingButton:" destination="XEk-ws-lmy" eventType="touchUpInside" id="y6X-fR-C7S"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhL-C8-FhP">
@@ -39,15 +39,7 @@
                                     <animations/>
                                     <state key="normal" title="FastCounting"/>
                                     <connections>
-                                        <segue destination="pOS-s3-kX7" kind="show" id="iN6-uS-yhm"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB2-Z5-z1E">
-                                    <rect key="frame" x="254" y="222" width="92" height="30"/>
-                                    <animations/>
-                                    <state key="normal" title="VisualActivity"/>
-                                    <connections>
-                                        <segue destination="qhc-mW-n3Q" kind="show" id="bFF-OS-rUG"/>
+                                        <action selector="touchUpInsideFastCountingButton:" destination="XEk-ws-lmy" eventType="touchUpInside" id="jnb-ul-tzD"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6E-el-4hp">
@@ -55,7 +47,7 @@
                                     <animations/>
                                     <state key="normal" title="ItemSpanForward"/>
                                     <connections>
-                                        <segue destination="epH-gW-bcn" kind="show" id="Cgo-N4-Meo"/>
+                                        <action selector="touchUpInsideItemSpanForwardButton:" destination="XEk-ws-lmy" eventType="touchUpInside" id="EXl-qX-fkh"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-Zb-0jq">
@@ -63,7 +55,15 @@
                                     <animations/>
                                     <state key="normal" title="ItemSpanBackward"/>
                                     <connections>
-                                        <segue destination="wdM-8D-Ox8" kind="show" id="y2c-91-qKA"/>
+                                        <action selector="touchUpInsideItemSpanBackwardButton:" destination="XEk-ws-lmy" eventType="touchUpInside" id="FYu-iJ-i9R"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB2-Z5-z1E">
+                                    <rect key="frame" x="254" y="222" width="92" height="30"/>
+                                    <animations/>
+                                    <state key="normal" title="VisualActivity"/>
+                                    <connections>
+                                        <action selector="touchUpInsideVisualActivityButton:" destination="XEk-ws-lmy" eventType="touchUpInside" id="vQK-37-cNg"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -123,120 +123,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHt-oe-7qg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-375" y="-116"/>
-        </scene>
-        <!--Memory View Controller-->
-        <scene sceneID="rTc-2S-teT">
-            <objects>
-                <viewController id="jXZ-5p-hsI" customClass="MemoryViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D42-zT-QLT"/>
-                        <viewControllerLayoutGuide type="bottom" id="yNM-nb-cfa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KYG-17-htW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iuv-LC-JX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-692" y="625"/>
-        </scene>
-        <!--Color Reading View Controller-->
-        <scene sceneID="K4Z-9p-c6j">
-            <objects>
-                <viewController id="gRu-PL-qWS" customClass="ColorReadingViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zyg-1T-Rc7"/>
-                        <viewControllerLayoutGuide type="bottom" id="kn8-Hy-ICa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uIs-Al-gnz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jDz-8b-0Ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-36" y="625"/>
-        </scene>
-        <!--Fast Counting View Controller-->
-        <scene sceneID="uFy-TO-4RF">
-            <objects>
-                <viewController id="pOS-s3-kX7" customClass="FastCountingViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N7p-Wy-Hkn"/>
-                        <viewControllerLayoutGuide type="bottom" id="FfW-68-sMB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="98h-ZJ-vGk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="laB-8i-zlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="732" y="641"/>
-        </scene>
-        <!--Visual Activity View Controller-->
-        <scene sceneID="njx-xk-Mjr">
-            <objects>
-                <viewController id="qhc-mW-n3Q" customClass="VisualActivityViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="akr-vU-e6j"/>
-                        <viewControllerLayoutGuide type="bottom" id="DbQ-dF-I00"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uph-CZ-jqi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PAA-Vp-vs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-716" y="1417"/>
-        </scene>
-        <!--Item Span Forward View Controller-->
-        <scene sceneID="PJJ-Xh-ZHa">
-            <objects>
-                <viewController id="epH-gW-bcn" customClass="ItemSpanForwardViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w53-Np-7eF"/>
-                        <viewControllerLayoutGuide type="bottom" id="sDQ-Fs-sId"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rRv-O6-W2p">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14R-39-iD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="716" y="1409"/>
-        </scene>
-        <!--Item Span Backward View Controller-->
-        <scene sceneID="d2c-t4-r3c">
-            <objects>
-                <viewController id="wdM-8D-Ox8" customClass="ItemSpanBackwardViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fiQ-pm-arp"/>
-                        <viewControllerLayoutGuide type="bottom" id="iZE-3A-66j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h5F-r0-2Kt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k2e-go-MgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4" y="1449"/>
         </scene>
     </scenes>
 </document>

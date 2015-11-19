@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorReadingViewController: UIViewController {
+class ColorReadingActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

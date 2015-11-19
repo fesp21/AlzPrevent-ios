@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		301B399D1BFE284900499C14 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B399C1BFE284900499C14 /* RegistrationViewController.swift */; };
-		301B399F1BFE472C00499C14 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B399E1BFE472C00499C14 /* MemoryViewController.swift */; };
-		301B39A11BFE473300499C14 /* ColorReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A01BFE473300499C14 /* ColorReadingViewController.swift */; };
-		301B39A31BFE473C00499C14 /* FastCountingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A21BFE473C00499C14 /* FastCountingViewController.swift */; };
+		301B399F1BFE472C00499C14 /* MemoryActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B399E1BFE472C00499C14 /* MemoryActivityViewController.swift */; };
+		301B39A11BFE473300499C14 /* ColorReadingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A01BFE473300499C14 /* ColorReadingActivityViewController.swift */; };
+		301B39A31BFE473C00499C14 /* FastCountingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A21BFE473C00499C14 /* FastCountingActivityViewController.swift */; };
 		301B39A51BFE474400499C14 /* VisualActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A41BFE474400499C14 /* VisualActivityViewController.swift */; };
-		301B39A71BFE474E00499C14 /* ItemSpanFowardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A61BFE474E00499C14 /* ItemSpanFowardViewController.swift */; };
+		301B39A71BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A61BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift */; };
 		301B39A91BFE475600499C14 /* ItemSpanBackwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B39A81BFE475600499C14 /* ItemSpanBackwardViewController.swift */; };
+		301B39B11BFE495700499C14 /* MemoryActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B39B01BFE495700499C14 /* MemoryActivity.storyboard */; };
+		301B39B31BFE496E00499C14 /* ColorReadingActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B39B21BFE496E00499C14 /* ColorReadingActivity.storyboard */; };
+		301B39B51BFE497F00499C14 /* FastCountingActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B39B41BFE497F00499C14 /* FastCountingActivity.storyboard */; };
+		301B39B71BFE499000499C14 /* VisualActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B39B61BFE499000499C14 /* VisualActivity.storyboard */; };
+		301B39B91BFE499E00499C14 /* ItemSpanForwardActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B39B81BFE499E00499C14 /* ItemSpanForwardActivity.storyboard */; };
+		301B39BB1BFE49AF00499C14 /* ItemSpanBackwardActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B39BA1BFE49AF00499C14 /* ItemSpanBackwardActivity.storyboard */; };
 		30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30714CFB1BF850D700AC2C96 /* DrawImageView.swift */; };
 		30714D001BF86BB900AC2C96 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30714CFF1BF86BB900AC2C96 /* HealthManager.swift */; };
 		308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCA11BEF296B00968C7D /* AppDelegate.swift */; };
@@ -81,12 +87,18 @@
 /* Begin PBXFileReference section */
 		2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.release.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.release.xcconfig"; sourceTree = "<group>"; };
 		301B399C1BFE284900499C14 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		301B399E1BFE472C00499C14 /* MemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
-		301B39A01BFE473300499C14 /* ColorReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorReadingViewController.swift; sourceTree = "<group>"; };
-		301B39A21BFE473C00499C14 /* FastCountingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastCountingViewController.swift; sourceTree = "<group>"; };
+		301B399E1BFE472C00499C14 /* MemoryActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryActivityViewController.swift; sourceTree = "<group>"; };
+		301B39A01BFE473300499C14 /* ColorReadingActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorReadingActivityViewController.swift; sourceTree = "<group>"; };
+		301B39A21BFE473C00499C14 /* FastCountingActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastCountingActivityViewController.swift; sourceTree = "<group>"; };
 		301B39A41BFE474400499C14 /* VisualActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualActivityViewController.swift; sourceTree = "<group>"; };
-		301B39A61BFE474E00499C14 /* ItemSpanFowardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSpanFowardViewController.swift; sourceTree = "<group>"; };
+		301B39A61BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSpanFowardActivityViewController.swift; sourceTree = "<group>"; };
 		301B39A81BFE475600499C14 /* ItemSpanBackwardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSpanBackwardViewController.swift; sourceTree = "<group>"; };
+		301B39B01BFE495700499C14 /* MemoryActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MemoryActivity.storyboard; sourceTree = "<group>"; };
+		301B39B21BFE496E00499C14 /* ColorReadingActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorReadingActivity.storyboard; sourceTree = "<group>"; };
+		301B39B41BFE497F00499C14 /* FastCountingActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FastCountingActivity.storyboard; sourceTree = "<group>"; };
+		301B39B61BFE499000499C14 /* VisualActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VisualActivity.storyboard; sourceTree = "<group>"; };
+		301B39B81BFE499E00499C14 /* ItemSpanForwardActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemSpanForwardActivity.storyboard; sourceTree = "<group>"; };
+		301B39BA1BFE49AF00499C14 /* ItemSpanBackwardActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemSpanBackwardActivity.storyboard; sourceTree = "<group>"; };
 		30714CFB1BF850D700AC2C96 /* DrawImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawImageView.swift; sourceTree = "<group>"; };
 		30714CFD1BF8542500AC2C96 /* researchline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = researchline.entitlements; sourceTree = "<group>"; };
 		30714CFE1BF859BA00AC2C96 /* SaveMyTime.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SaveMyTime.playground; sourceTree = "<group>"; };
@@ -170,6 +182,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301B39AA1BFE48F700499C14 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				301B399E1BFE472C00499C14 /* MemoryActivityViewController.swift */,
+				301B39B01BFE495700499C14 /* MemoryActivity.storyboard */,
+			);
+			name = Memory;
+			sourceTree = "<group>";
+		};
+		301B39AB1BFE48FC00499C14 /* Color Reading */ = {
+			isa = PBXGroup;
+			children = (
+				301B39A01BFE473300499C14 /* ColorReadingActivityViewController.swift */,
+				301B39B21BFE496E00499C14 /* ColorReadingActivity.storyboard */,
+			);
+			name = "Color Reading";
+			sourceTree = "<group>";
+		};
+		301B39AC1BFE490100499C14 /* Fast Counting */ = {
+			isa = PBXGroup;
+			children = (
+				301B39A21BFE473C00499C14 /* FastCountingActivityViewController.swift */,
+				301B39B41BFE497F00499C14 /* FastCountingActivity.storyboard */,
+			);
+			name = "Fast Counting";
+			sourceTree = "<group>";
+		};
+		301B39AD1BFE490700499C14 /* Visual */ = {
+			isa = PBXGroup;
+			children = (
+				301B39A41BFE474400499C14 /* VisualActivityViewController.swift */,
+				301B39B61BFE499000499C14 /* VisualActivity.storyboard */,
+			);
+			name = Visual;
+			sourceTree = "<group>";
+		};
+		301B39AE1BFE490E00499C14 /* Item Span Forward */ = {
+			isa = PBXGroup;
+			children = (
+				301B39A61BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift */,
+				301B39B81BFE499E00499C14 /* ItemSpanForwardActivity.storyboard */,
+			);
+			name = "Item Span Forward";
+			sourceTree = "<group>";
+		};
+		301B39AF1BFE491700499C14 /* Item Span Backward */ = {
+			isa = PBXGroup;
+			children = (
+				301B39A81BFE475600499C14 /* ItemSpanBackwardViewController.swift */,
+				301B39BA1BFE49AF00499C14 /* ItemSpanBackwardActivity.storyboard */,
+			);
+			name = "Item Span Backward";
+			sourceTree = "<group>";
+		};
 		306741D91BF8E4E8000B8D0B /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,14 +357,14 @@
 		30BFD4491BEF30C8002E52E4 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				301B39AA1BFE48F700499C14 /* Memory */,
+				301B39AB1BFE48FC00499C14 /* Color Reading */,
+				301B39AC1BFE490100499C14 /* Fast Counting */,
+				301B39AD1BFE490700499C14 /* Visual */,
+				301B39AE1BFE490E00499C14 /* Item Span Forward */,
+				301B39AF1BFE491700499C14 /* Item Span Backward */,
 				30BFD47F1BEF3426002E52E4 /* Activities.storyboard */,
 				30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */,
-				301B399E1BFE472C00499C14 /* MemoryViewController.swift */,
-				301B39A01BFE473300499C14 /* ColorReadingViewController.swift */,
-				301B39A21BFE473C00499C14 /* FastCountingViewController.swift */,
-				301B39A41BFE474400499C14 /* VisualActivityViewController.swift */,
-				301B39A61BFE474E00499C14 /* ItemSpanFowardViewController.swift */,
-				301B39A81BFE475600499C14 /* ItemSpanBackwardViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -503,14 +569,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301B39B51BFE497F00499C14 /* FastCountingActivity.storyboard in Resources */,
+				301B39B71BFE499000499C14 /* VisualActivity.storyboard in Resources */,
 				308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */,
 				30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */,
+				301B39BB1BFE49AF00499C14 /* ItemSpanBackwardActivity.storyboard in Resources */,
 				30BFD4801BEF3426002E52E4 /* Activities.storyboard in Resources */,
 				30BFD47E1BEF341F002E52E4 /* Session.storyboard in Resources */,
 				30BFD47C1BEF341A002E52E4 /* Welcome.storyboard in Resources */,
 				308ABCAC1BEF296C00968C7D /* Assets.xcassets in Resources */,
+				301B39B31BFE496E00499C14 /* ColorReadingActivity.storyboard in Resources */,
+				301B39B11BFE495700499C14 /* MemoryActivity.storyboard in Resources */,
 				30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */,
 				30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */,
+				301B39B91BFE499E00499C14 /* ItemSpanForwardActivity.storyboard in Resources */,
 				30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */,
 				308ABCA71BEF296B00968C7D /* TabBar.storyboard in Resources */,
 				30963D831BF3C4DF0090E7A9 /* Consent.storyboard in Resources */,
@@ -605,13 +677,13 @@
 				30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */,
 				30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */,
 				30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */,
-				301B399F1BFE472C00499C14 /* MemoryViewController.swift in Sources */,
-				301B39A11BFE473300499C14 /* ColorReadingViewController.swift in Sources */,
+				301B399F1BFE472C00499C14 /* MemoryActivityViewController.swift in Sources */,
+				301B39A11BFE473300499C14 /* ColorReadingActivityViewController.swift in Sources */,
 				30BFD4561BEF31D1002E52E4 /* LoginViewController.swift in Sources */,
 				30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */,
 				308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */,
 				30714D001BF86BB900AC2C96 /* HealthManager.swift in Sources */,
-				301B39A71BFE474E00499C14 /* ItemSpanFowardViewController.swift in Sources */,
+				301B39A71BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift in Sources */,
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
 				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
@@ -619,7 +691,7 @@
 				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
 				30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */,
 				30BFD4601BEF32EB002E52E4 /* ConsentReviewViewController.swift in Sources */,
-				301B39A31BFE473C00499C14 /* FastCountingViewController.swift in Sources */,
+				301B39A31BFE473C00499C14 /* FastCountingActivityViewController.swift in Sources */,
 				30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */,
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,

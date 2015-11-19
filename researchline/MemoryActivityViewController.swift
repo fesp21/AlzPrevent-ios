@@ -1,5 +1,5 @@
 //
-//  ItemSpanFowardViewController.swift
+//  MemoryTestViewController.swift
 //  researchline
 //
 //  Created by Leo Kang on 11/20/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemSpanFowardViewController: UIViewController {
+class MemoryActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

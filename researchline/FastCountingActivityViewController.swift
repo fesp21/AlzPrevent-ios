@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FastCountingViewController: UIViewController {
+class FastCountingActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

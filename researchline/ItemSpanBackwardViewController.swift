@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemSpanBackwardViewController: UIViewController {
+class ItemSpanBackwardActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
