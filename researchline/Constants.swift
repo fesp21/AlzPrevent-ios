@@ -10,8 +10,8 @@ import UIKit
 
 class Constants: NSObject {
     // URLs
-//    static let host = "http://52.8.54.205/"
-    static let host = "http://192.168.0.22:9001/"
+    static let host = "http://52.8.54.205/"
+//    static let host = "http://192.168.0.22:9001/"
     static let login = host + "login_process"
     static let register = host + "api/register/all"
     

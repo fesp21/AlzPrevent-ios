@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
 
     var storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-    if true {
+    if Constants.signKey == nil {
       storyboard = UIStoryboard(name: "Welcome", bundle: nil)
     }
 
