@@ -13,17 +13,21 @@ class MemoryActivityViewController: UIViewController {
     @IBOutlet weak var resultUIImageView: UIImageView!
     @IBOutlet weak var CheckButton: UIButton!
     
+    @IBOutlet weak var successLabel: UILabel!
+    @IBOutlet weak var failureLabel: UILabel!
+    
+
     var renderingCountMap = [Int: Int]()
-    
-    
     var renderingImageMap = [Int: UIImage]()
     
     var resultCorrectMap = [Int: Int]()
+    var resultTimeMap = [Int: NSTimeInterval]()
     var resultFailImage: UIImage = UIImage(named: "X")!
     var resultSuccessImage: UIImage = UIImage(named: "O")!
     
     var suffleTimer: NSTimer? = nil
     var resultHideTimer: NSTimer? = nil
+    var timeoutTimer: NSTimer? = nil
     
     
     override func viewDidLoad() {
@@ -69,66 +73,90 @@ class MemoryActivityViewController: UIViewController {
     
     var isImage = 1;
     var value = 0;
+    var trial = 0;
+    var clicked = 0;
+    var start: NSDate? = nil
     
     internal func suffle(){
         suffleTimer?.invalidate()
-        if(isImage == 1){
-            CheckButton.hidden = false;
-            value = Int.init(arc4random_uniform(UInt32(renderingImageMap.count)))
-            CheckButton.setImage(renderingImageMap[value], forState: .Normal)
-            renderingCountMap[value]! += 1
-
-            isImage = 0
+        
+        clicked = 0
+        resultUIImageView.hidden = true
+        CheckButton.hidden = false
+        value = Int.init(arc4random_uniform(UInt32(renderingImageMap.count)))
+        CheckButton.setImage(renderingImageMap[value], forState: .Normal)
+        
+        renderingCountMap[value]! += 1
+        
+        resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector: "resultHide", userInfo: nil, repeats: false)
+        
+        debugPrint("\(value)'s count is \(renderingCountMap[value])")
+        
+        start = NSDate()
+        
+        if(renderingCountMap[value] > 1){
+            timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "timeout", userInfo: nil, repeats: false)
         }else{
-            CheckButton.hidden = true;
-            
-            debugPrint("\(value)'s count is \(renderingCountMap[value])")
-            
-            if(renderingCountMap[value] > 1){
-                resultUIImageView.image = resultFailImage
-                resultUIImageView.hidden = false
-
-                resultCorrectMap[0]! += 1
-                
-                resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
-                
-                renderingCountMap[value] = 0
-            }
-            
-            isImage = 1
+            resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
         }
-        suffleTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: "suffle", userInfo: nil, repeats: false)
+    }
+    
+    // Timeout Fail
+    internal func timeout(){
+        timeoutTimer?.invalidate()
+        clicked = 1
+        CheckButton.hidden = true
+        resultUIImageView.image = resultFailImage
+        resultUIImageView.hidden = false
+        
+        resultCorrectMap[0]! += 1
+        failureLabel.text = "Failure: \(resultCorrectMap[0]!)"
+        
+        renderingCountMap[value] = 0
+        resultTimeMap[trial] = 0
+        
+        trial += 1
+        
+        debugPrint("\(trial)th trial result is failure by timeout")
+        
+        resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
     }
     
     internal func resultHide(){
         resultHideTimer?.invalidate()
         resultUIImageView.hidden = true
-    }
-    
-    func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
-        let rect = CGRectMake(0, 0, size.width, size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        color.setFill()
-        UIRectFill(rect)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
+        
+        suffleTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     @IBAction func check(sender: AnyObject) {
-        if(isImage == 1){
+        if(clicked == 1){
             return
         }
+        clicked = 1
+        let interval = NSDate().timeIntervalSinceDate(start!)
+        resultHideTimer?.invalidate()
+        timeoutTimer?.invalidate()
+        
+        var result = ""
         resultUIImageView.hidden = false
         if(renderingCountMap[value] > 1){
             resultUIImageView.image = resultSuccessImage
             resultCorrectMap[1]! += 1
+            successLabel.text = "Success: \(resultCorrectMap[1]!)"
+            result = "success"
         }else{
             resultUIImageView.image = resultFailImage
             resultCorrectMap[0]! += 1
+            failureLabel.text = "Failure: \(resultCorrectMap[0]!)"
+            result = "failure"
         }
         renderingCountMap[value] = 0
-        resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
+        resultTimeMap[trial] = interval
+        
+        trial += 1
+        debugPrint("\(trial)th trial result is \(result) while \(interval)")
+        resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {

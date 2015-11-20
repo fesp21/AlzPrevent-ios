@@ -10,26 +10,75 @@ import UIKit
 
 class ItemSpanBackwardActivityViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var correctTextField: UITextField!
+    @IBOutlet weak var enterButton: UIButton!
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var successLabel: UILabel!
+    @IBOutlet weak var failureLabel: UILabel!
+    
+    var timer: NSTimer?
+    var repeatCount = 0
+    var successCount = 0
+    var failureCount = 0
+    var correct = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: Behavior Methods
+    
+    internal func suffle() {
+        if repeatCount < 3 {
+            numberLabel.hidden = false
+            enterButton.hidden = true
+            correctTextField.hidden = true
+            let number = String(Int(arc4random_uniform(UInt32(8))) + 1)
+            correct += number
+            numberLabel.text = number
+            debugPrint(correct)
+            
+            repeatCount++
+            timer?.invalidate()
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "suffle", userInfo: nil, repeats: false)
+        } else {
+            showsCorrectTextField()
+        }
     }
-    */
+    
+    internal func reset() {
+        repeatCount = 0
+        correct = ""
+        correctTextField.text = ""
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "suffle", userInfo: nil, repeats: false)
+    }
+    
+    @IBAction func touchUpInsideEnterButton(sender: UIButton) {
+        if correctTextField.text == correct {
+            successCount++
+        } else {
+            failureCount++
+        }
+        
+        print(successCount, failureCount)
+        successLabel.text = "Success: \(successCount)"
+        failureLabel.text = "Failure: \(failureCount)"
+        
+        reset()
+    }
+    
+    internal func showsCorrectTextField() {
+        timer?.invalidate()
+        repeatCount = 0
+        numberLabel.hidden = true
+        enterButton.hidden = false
+        correctTextField.hidden = false
+        correctTextField.becomeFirstResponder()
+    }
 
 }
