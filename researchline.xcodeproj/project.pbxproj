@@ -58,6 +58,7 @@
 		30BFD4821BEF342C002E52E4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */; };
 		30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4831BEF3431002E52E4 /* Learn.storyboard */; };
 		30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4851BEF3436002E52E4 /* Profile.storyboard */; };
+		30C58E371C01CB6B00510C3C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C58E361C01CB6B00510C3C /* ActivityViewController.swift */; };
 		30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D519D31BEF555100306B1A /* Eligibility.storyboard */; };
 		30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */; };
 		30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */; };
@@ -145,6 +146,7 @@
 		30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		30BFD4831BEF3431002E52E4 /* Learn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learn.storyboard; sourceTree = "<group>"; };
 		30BFD4851BEF3436002E52E4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		30C58E361C01CB6B00510C3C /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		30D519D31BEF555100306B1A /* Eligibility.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Eligibility.storyboard; sourceTree = "<group>"; };
 		30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityResultViewController.swift; sourceTree = "<group>"; };
 		30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentWelcomeViewController.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				301B39AF1BFE491700499C14 /* Item Span Backward */,
 				30BFD47F1BEF3426002E52E4 /* Activities.storyboard */,
 				30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */,
+				30C58E361C01CB6B00510C3C /* ActivityViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				30BFD4601BEF32EB002E52E4 /* ConsentReviewViewController.swift in Sources */,
 				301B39A31BFE473C00499C14 /* FastCountingActivityViewController.swift in Sources */,
 				30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */,
+				30C58E371C01CB6B00510C3C /* ActivityViewController.swift in Sources */,
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,
 			);
@@ -840,7 +844,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.ios.ResearchLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -860,7 +864,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.ios.ResearchLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";

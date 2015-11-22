@@ -5,6 +5,81 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
+        <!--Activity View Controller-->
+        <scene sceneID="RaE-r2-gGx">
+            <objects>
+                <viewController id="ecD-Sv-yua" customClass="ActivityViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="00d-kv-Omr"/>
+                        <viewControllerLayoutGuide type="bottom" id="17e-GG-EaJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qC9-vP-e7m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4M-4W-4ZP" userLabel="Login View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HW-q5-d1x" userLabel="Form View">
+                                        <rect key="frame" x="180" y="218" width="240" height="100"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVx-x4-J4g">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-Q3-miD">
+                                                <rect key="frame" x="0.0" y="32" width="240" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-R8-ijZ">
+                                                <rect key="frame" x="0.0" y="70" width="240" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="Login"/>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="21T-PA-v9Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="SAr-R8-ijZ" secondAttribute="bottom" id="8p2-dM-FaS"/>
+                                            <constraint firstItem="SAr-R8-ijZ" firstAttribute="top" secondItem="Ibx-Q3-miD" secondAttribute="bottom" constant="8" id="Cou-BI-f8c"/>
+                                            <constraint firstAttribute="trailing" secondItem="SAr-R8-ijZ" secondAttribute="trailing" id="FyQ-jo-SPm"/>
+                                            <constraint firstItem="zVx-x4-J4g" firstAttribute="leading" secondItem="7HW-q5-d1x" secondAttribute="leading" id="Hoj-Of-PhI"/>
+                                            <constraint firstItem="Ibx-Q3-miD" firstAttribute="leading" secondItem="7HW-q5-d1x" secondAttribute="leading" id="OfA-OL-cBE"/>
+                                            <constraint firstItem="zVx-x4-J4g" firstAttribute="top" secondItem="7HW-q5-d1x" secondAttribute="top" id="ZlG-85-gue"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ibx-Q3-miD" secondAttribute="trailing" id="bGY-pF-cio"/>
+                                            <constraint firstItem="SAr-R8-ijZ" firstAttribute="leading" secondItem="7HW-q5-d1x" secondAttribute="leading" id="eyE-2z-E9V"/>
+                                            <constraint firstAttribute="trailing" secondItem="zVx-x4-J4g" secondAttribute="trailing" id="tbp-d5-6LI"/>
+                                            <constraint firstItem="Ibx-Q3-miD" firstAttribute="top" secondItem="zVx-x4-J4g" secondAttribute="bottom" constant="2" id="uTS-rv-txR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7HW-q5-d1x" firstAttribute="centerY" secondItem="z4M-4W-4ZP" secondAttribute="centerY" id="Q0w-y8-ki8"/>
+                                    <constraint firstItem="7HW-q5-d1x" firstAttribute="centerX" secondItem="z4M-4W-4ZP" secondAttribute="centerX" id="k1q-bK-AFk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z4M-4W-4ZP" firstAttribute="top" secondItem="00d-kv-Omr" secondAttribute="bottom" id="MAK-l7-XjN"/>
+                            <constraint firstItem="z4M-4W-4ZP" firstAttribute="leading" secondItem="qC9-vP-e7m" secondAttribute="leading" id="TbT-Bs-dY2"/>
+                            <constraint firstAttribute="trailing" secondItem="z4M-4W-4ZP" secondAttribute="trailing" id="kep-qr-haI"/>
+                            <constraint firstItem="17e-GG-EaJ" firstAttribute="top" secondItem="z4M-4W-4ZP" secondAttribute="bottom" id="ld8-c7-kOF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytV-f2-O0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="-116"/>
+        </scene>
         <!--Activities-->
         <scene sceneID="KWb-4O-B71">
             <objects>
@@ -85,7 +160,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zYD-9D-PWm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivitiesCell" id="zYD-9D-PWm">
                                 <rect key="frame" x="0.0" y="493" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zYD-9D-PWm" id="vNg-1H-Fq8">
@@ -94,6 +169,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="ecD-Sv-yua" kind="show" id="eua-D2-LAX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
