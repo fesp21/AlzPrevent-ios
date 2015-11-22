@@ -59,6 +59,9 @@
 		30BFD4841BEF3431002E52E4 /* Learn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4831BEF3431002E52E4 /* Learn.storyboard */; };
 		30BFD4861BEF3436002E52E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BFD4851BEF3436002E52E4 /* Profile.storyboard */; };
 		30C58E371C01CB6B00510C3C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C58E361C01CB6B00510C3C /* ActivityViewController.swift */; };
+		30C58E391C01E17B00510C3C /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C58E381C01E17B00510C3C /* DashboardTableViewCell.swift */; };
+		30C58E3B1C01F04800510C3C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C58E3A1C01F04800510C3C /* ChangePasswordViewController.swift */; };
+		30C58E3D1C01F05200510C3C /* ReviewConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C58E3C1C01F05200510C3C /* ReviewConsentViewController.swift */; };
 		30D519D41BEF555100306B1A /* Eligibility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D519D31BEF555100306B1A /* Eligibility.storyboard */; };
 		30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */; };
 		30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */; };
@@ -147,6 +150,9 @@
 		30BFD4831BEF3431002E52E4 /* Learn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learn.storyboard; sourceTree = "<group>"; };
 		30BFD4851BEF3436002E52E4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		30C58E361C01CB6B00510C3C /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		30C58E381C01E17B00510C3C /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		30C58E3A1C01F04800510C3C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		30C58E3C1C01F05200510C3C /* ReviewConsentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewConsentViewController.swift; sourceTree = "<group>"; };
 		30D519D31BEF555100306B1A /* Eligibility.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Eligibility.storyboard; sourceTree = "<group>"; };
 		30D519D51BEF55D500306B1A /* EligibilityResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityResultViewController.swift; sourceTree = "<group>"; };
 		30D519D71BEF570300306B1A /* ConsentWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentWelcomeViewController.swift; sourceTree = "<group>"; };
@@ -274,7 +280,6 @@
 		308ABCA01BEF296B00968C7D /* researchline */ = {
 			isa = PBXGroup;
 			children = (
-				30714CFD1BF8542500AC2C96 /* researchline.entitlements */,
 				30BFD4471BEF3061002E52E4 /* Models */,
 				30BFD4461BEF304A002E52E4 /* Servant */,
 				30BFD4451BEF3048002E52E4 /* Views */,
@@ -283,6 +288,7 @@
 				308ABCAB1BEF296C00968C7D /* Assets.xcassets */,
 				308ABCAD1BEF296C00968C7D /* LaunchScreen.storyboard */,
 				308ABCB01BEF296C00968C7D /* Info.plist */,
+				30714CFD1BF8542500AC2C96 /* researchline.entitlements */,
 				308ABCA81BEF296B00968C7D /* researchline.xcdatamodeld */,
 			);
 			path = researchline;
@@ -377,6 +383,7 @@
 			children = (
 				30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */,
 				30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */,
+				30C58E381C01E17B00510C3C /* DashboardTableViewCell.swift */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -395,6 +402,8 @@
 			children = (
 				30BFD4851BEF3436002E52E4 /* Profile.storyboard */,
 				30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */,
+				30C58E3A1C01F04800510C3C /* ChangePasswordViewController.swift */,
+				30C58E3C1C01F05200510C3C /* ReviewConsentViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -692,11 +701,14 @@
 				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
 				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
+				30C58E3D1C01F05200510C3C /* ReviewConsentViewController.swift in Sources */,
 				30BFD4721BEF33D9002E52E4 /* AllSetViewController.swift in Sources */,
 				30BFD4601BEF32EB002E52E4 /* ConsentReviewViewController.swift in Sources */,
+				30C58E3B1C01F04800510C3C /* ChangePasswordViewController.swift in Sources */,
 				301B39A31BFE473C00499C14 /* FastCountingActivityViewController.swift in Sources */,
 				30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */,
 				30C58E371C01CB6B00510C3C /* ActivityViewController.swift in Sources */,
+				30C58E391C01E17B00510C3C /* DashboardTableViewCell.swift in Sources */,
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,
 			);
@@ -841,8 +853,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -861,8 +873,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

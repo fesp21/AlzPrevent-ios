@@ -9,12 +9,12 @@
         <scene sceneID="rR4-Hg-RXY">
             <objects>
                 <tableViewController id="IF3-Rx-Ylv" customClass="DashboardViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F5U-Mr-rZm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F5U-Mr-rZm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="ItG-CA-ttS">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ItG-CA-ttS" userLabel="Summary View">
                             <rect key="frame" x="0.0" y="64" width="600" height="170"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -49,31 +49,36 @@
                                 <constraint firstItem="2BE-4S-YLw" firstAttribute="top" secondItem="gNT-HC-Jqu" secondAttribute="bottom" constant="8" id="xW4-cb-Fku"/>
                             </constraints>
                         </view>
-                        <sections>
-                            <tableViewSection id="S6Q-PT-fjf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="260" id="a9F-oJ-n06">
-                                        <rect key="frame" x="0.0" y="234" width="600" height="260"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a9F-oJ-n06" id="yp1-FF-nBn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="259.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glucose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-ob-2Ty">
-                                                    <rect key="frame" x="8" y="22" width="63" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DashboardTableViewCell" rowHeight="260" id="a9F-oJ-n06" customClass="DashboardTableViewCell" customModule="researchline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="262" width="600" height="260"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a9F-oJ-n06" id="yp1-FF-nBn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="259.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glucose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-ob-2Ty">
+                                            <rect key="frame" x="8" y="9" width="584" height="20.5"/>
                                             <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4Ma-ob-2Ty" secondAttribute="trailing" constant="8" id="CLZ-Mc-EZd"/>
+                                        <constraint firstItem="4Ma-ob-2Ty" firstAttribute="leading" secondItem="yp1-FF-nBn" secondAttribute="leading" constant="8" id="Cik-mJ-Gf3"/>
+                                        <constraint firstItem="4Ma-ob-2Ty" firstAttribute="top" secondItem="yp1-FF-nBn" secondAttribute="top" constant="9" id="prx-r3-bez"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="4Ma-ob-2Ty" id="0LG-6E-aT0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="IF3-Rx-Ylv" id="Fbj-bY-vCl"/>
                             <outlet property="delegate" destination="IF3-Rx-Ylv" id="zHU-fD-cFr"/>

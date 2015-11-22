@@ -12,7 +12,7 @@ class ConsentFormViewController: UIViewController {
 
     @IBOutlet weak var firstNameTextLabel: UITextField!
     @IBOutlet weak var lastNameTextLabel: UITextField!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     
     @IBAction func editingChangedTextLabel(sender: AnyObject) {
         let firstName = firstNameTextLabel.text ?? ""
@@ -21,7 +21,7 @@ class ConsentFormViewController: UIViewController {
         nextButton.enabled = !firstName.isEmpty && !lastName.isEmpty
     }
     
-    @IBAction func touchUpInsideNextButton(sender: UIButton) {
+    @IBAction func touchUpInsideNextButton(sender: UIBarButtonItem) {
         let firstName = firstNameTextLabel.text
         let lastName = lastNameTextLabel.text
         

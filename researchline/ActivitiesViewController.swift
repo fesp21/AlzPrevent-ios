@@ -10,6 +10,10 @@ import UIKit
 
 class ActivitiesViewController: UITableViewController {
 
+    // MARK: Table View Delegate
+    
+    // MARK: IBAction Methods
+    
     @IBAction func touchUpInsideMemoryButton(sender: UIButton) {
         let storybard = UIStoryboard(name: "MemoryActivity", bundle: nil)
         let controller = storybard.instantiateInitialViewController()!

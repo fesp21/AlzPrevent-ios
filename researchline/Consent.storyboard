@@ -680,9 +680,7 @@
                             <constraint firstAttribute="trailing" secondItem="S6J-3P-Yra" secondAttribute="trailing" id="jKh-ZC-ab6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Consent" id="yyj-c6-jsr">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="6eX-pH-bFh"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Consent" id="yyj-c6-jsr"/>
                     <connections>
                         <outlet property="collectionView" destination="S6J-3P-Yra" id="kHF-HG-exp"/>
                     </connections>
@@ -798,9 +796,7 @@
                             <outlet property="delegate" destination="PB8-LW-6ub" id="Mvr-G0-JJ7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="t99-IM-eHG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="fhK-pL-4Yp"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="t99-IM-eHG"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzO-zh-J6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -945,9 +941,7 @@
                             <constraint firstItem="8Tm-eW-1e4" firstAttribute="top" secondItem="XTo-ms-8jD" secondAttribute="bottom" constant="13" id="wFb-fB-Xyw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Consent" id="KAb-MG-wT2">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="IR9-EJ-Ran"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Consent" id="KAb-MG-wT2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdj-zt-gWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -965,15 +959,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-dG-yJE">
-                                <rect key="frame" x="284" y="550" width="32" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="touchUpInsideNextButton:" destination="MjP-fM-gnB" eventType="touchUpInside" id="Qpp-NH-0N9"/>
-                                    <segue destination="J8i-6u-8qT" kind="show" id="zpc-8Q-Gua"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Di-cQ-yrj">
                                 <rect key="frame" x="244" y="108" width="112" height="36"/>
                                 <animations/>
@@ -982,7 +967,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5i-sr-M7r" userLabel="Form View">
-                                <rect key="frame" x="24" y="173" width="552" height="85"/>
+                                <rect key="frame" x="24" y="173" width="552" height="115"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-nW-SSN" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="0.0" width="552" height="1"/>
@@ -993,8 +978,11 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7U-xN-IOQ">
-                                        <rect key="frame" x="0.0" y="13" width="552" height="17"/>
+                                        <rect key="frame" x="0.0" y="13" width="552" height="32"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="QXe-xC-0GK"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1002,7 +990,7 @@
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-32-JTE" userLabel="Line View">
-                                        <rect key="frame" x="0.0" y="42" width="552" height="1"/>
+                                        <rect key="frame" x="0.0" y="57" width="552" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.9400359948" green="0.9400359948" blue="0.9400359948" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1011,8 +999,11 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-os-8Ul">
-                                        <rect key="frame" x="0.0" y="55" width="552" height="17"/>
+                                        <rect key="frame" x="0.0" y="70" width="552" height="32"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="VjF-5h-Suq"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1020,7 +1011,7 @@
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fr8-C1-xEp" userLabel="Line View">
-                                        <rect key="frame" x="0.0" y="84" width="552" height="1"/>
+                                        <rect key="frame" x="0.0" y="114" width="552" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.9400359948" green="0.9400359948" blue="0.9400359948" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1056,21 +1047,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C5i-sr-M7r" firstAttribute="leading" secondItem="WwE-AK-mL8" secondAttribute="leading" constant="24" id="9B4-i3-Ljf"/>
-                            <constraint firstItem="t6K-dG-yJE" firstAttribute="centerX" secondItem="WwE-AK-mL8" secondAttribute="centerX" id="APa-gt-Iti"/>
                             <constraint firstItem="6Di-cQ-yrj" firstAttribute="top" secondItem="wwt-LP-T9m" secondAttribute="bottom" constant="44" id="F73-1A-Z5f"/>
-                            <constraint firstItem="cnC-IQ-5NC" firstAttribute="top" secondItem="t6K-dG-yJE" secondAttribute="bottom" constant="20" id="HAN-WY-RTr"/>
                             <constraint firstAttribute="trailing" secondItem="C5i-sr-M7r" secondAttribute="trailing" constant="24" id="PQX-eL-d4a"/>
                             <constraint firstItem="6Di-cQ-yrj" firstAttribute="centerX" secondItem="WwE-AK-mL8" secondAttribute="centerX" id="Q4D-A8-anI"/>
                             <constraint firstItem="C5i-sr-M7r" firstAttribute="top" secondItem="6Di-cQ-yrj" secondAttribute="bottom" constant="29" id="h4r-Ra-XhE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Consent" id="DA0-rF-peu">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="9MQ-LT-Bc9"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="9MQ-LT-Bc9">
+                            <connections>
+                                <action selector="touchUpInsideNextButton:" destination="MjP-fM-gnB" id="bDc-RA-igy"/>
+                                <segue destination="J8i-6u-8qT" kind="show" id="SaJ-xh-d18"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="firstNameTextLabel" destination="H7U-xN-IOQ" id="lTs-BA-ZF2"/>
                         <outlet property="lastNameTextLabel" destination="e7j-os-8Ul" id="P2g-8y-5lx"/>
-                        <outlet property="nextButton" destination="t6K-dG-yJE" id="edx-Wf-koZ"/>
+                        <outlet property="nextButton" destination="9MQ-LT-Bc9" id="AQh-5H-B1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNR-0V-WeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

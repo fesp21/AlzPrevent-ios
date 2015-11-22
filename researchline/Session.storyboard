@@ -48,7 +48,10 @@
                                         <rect key="frame" x="0.0" y="112" width="552" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="editChangedTextField:" destination="gsR-PB-u1R" eventType="editingChanged" id="gLZ-KM-iip"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmk-yf-aOc" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="141" width="552" height="1"/>
@@ -71,12 +74,18 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editChangedTextField:" destination="gsR-PB-u1R" eventType="editingChanged" id="wrv-m1-93d"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tl3-RW-jB5">
                                         <rect key="frame" x="0.0" y="66" width="552" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="editChangedTextField:" destination="gsR-PB-u1R" eventType="editingChanged" id="U1s-Pg-7kd"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -125,7 +134,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="ayJ-hf-zYT">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="215-ey-aN4">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Join" id="215-ey-aN4">
                             <connections>
                                 <action selector="touchUpInsideNextBarButtonItem:" destination="gsR-PB-u1R" id="KLA-oh-SEj"/>
                             </connections>
@@ -134,8 +143,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailTextField" destination="tl3-RW-jB5" id="4q9-2r-i50"/>
+                        <outlet property="joinBarButtonItem" destination="215-ey-aN4" id="JUe-lW-EXJ"/>
                         <outlet property="passwordTextField" destination="5Jy-2M-pBb" id="lCi-A3-epj"/>
                         <outlet property="realNameTextField" destination="vro-E9-8Jq" id="gaW-mO-erb"/>
+                        <outlet property="sexSegmentedControl" destination="SCV-jX-5iq" id="tU3-fs-LHx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9z-j6-w6O" userLabel="First Responder" sceneMemberID="firstResponder"/>

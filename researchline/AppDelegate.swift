@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         if Constants.signKey == nil {
+//        if false {
             storyboard = UIStoryboard(name: "Welcome", bundle: nil)
         }
         
@@ -46,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .stringByReplacingOccurrencesOfString(" ", withString: "")
         
         self.deviceToken = deviceTokenString
+        print(deviceToken)
         Alamofire.request(.POST, Constants.token,
             parameters: [
                 "deviceKey": Constants.deviceKey,

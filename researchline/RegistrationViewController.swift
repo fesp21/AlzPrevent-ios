@@ -16,9 +16,17 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var realNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+
+    @IBOutlet weak var joinBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var sexSegmentedControl: UISegmentedControl!
+
+    @IBAction func editChangedTextField(sender: UITextField) {
+        joinBarButtonItem.enabled = !emailTextField.text!.isEmpty && !realNameTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+    }
     
     @IBAction func touchUpInsideNextBarButtonItem(sender: UIBarButtonItem) {
         let data = UIImagePNGRepresentation(self.signFileData!)!
+        let sex = sexSegmentedControl.selectedSegmentIndex == 0 ? "male" : "female"
         Alamofire.upload(.POST, Constants.register, multipartFormData: { (formData: MultipartFormData) -> Void in
             formData.appendBodyPart(data: data, name: "file", fileName: "file.jpg", mimeType: "image/png")
             formData.appendBodyPart(data: (self.emailTextField.text ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "email")
@@ -28,17 +36,27 @@ class RegistrationViewController: UIViewController {
             formData.appendBodyPart(data: Constants.deviceType.dataUsingEncoding(NSUTF8StringEncoding)!, name: "deviceType")
             formData.appendBodyPart(data: (Constants.firstName ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "firstName")
             formData.appendBodyPart(data: (Constants.lastName ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "lastName")
-            formData.appendBodyPart(data: "male".dataUsingEncoding(NSUTF8StringEncoding)!, name: "sex")
+            formData.appendBodyPart(data: sex.dataUsingEncoding(NSUTF8StringEncoding)!, name: "sex")
             }, encodingCompletion: { (result: Manager.MultipartFormDataEncodingResult) -> Void in
                 switch result {
                 case .Success(let upload, _, _):
                     upload.responseJSON { response in
-                        let userDefaults = NSUserDefaults.standardUserDefaults()
-                        userDefaults.setObject(response.result.value!["signKey"], forKey: "signKey")
-                        
-                        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                        let controller = storyboard.instantiateInitialViewController()!
-                        self.presentViewController(controller, animated: true, completion: nil)
+                        debugPrint(response)
+                        if let _response = response.response {
+                            if _response.statusCode < 300 {
+                                let userDefaults = NSUserDefaults.standardUserDefaults()
+                                let signKey = response.result.value!["data"]!!["signKey"]
+                                if signKey != nil {
+                                    userDefaults.setObject(response.result.value!["data"]!!["signKey"], forKey: "signKey")
+                                    
+                                    let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                                    let controller = storyboard.instantiateInitialViewController()!
+                                    self.presentViewController(controller, animated: true, completion: nil)
+                                } else {
+                                    print("no signKey")
+                                }
+                            }
+                        }
                     }
                 case .Failure(let encodingError):
                     print(encodingError)

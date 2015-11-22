@@ -41,17 +41,6 @@
                                                         <constraint firstAttribute="height" constant="85" id="gcH-YO-Faf"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-Nt-laU">
-                                                    <rect key="frame" x="300" y="49" width="300" height="133"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                    <state key="normal" title="NO">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djf-p7-gXb" userLabel="Line View">
                                                     <rect key="frame" x="0.0" y="190" width="600" height="1"/>
                                                     <animations/>
@@ -68,7 +57,7 @@
                                                         <constraint firstAttribute="height" constant="10" id="CBH-aK-ynU"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-fe-v2O">
+                                                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-fe-v2O">
                                                     <rect key="frame" x="0.0" y="49" width="300" height="133"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -78,6 +67,23 @@
                                                     <state key="selected">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="touchUpInsideServeyButton:" destination="yLL-NL-qcx" eventType="touchUpInside" id="4Op-n9-r3l"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-Nt-laU">
+                                                    <rect key="frame" x="300" y="49" width="300" height="133"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <state key="normal" title="NO">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchUpInsideServeyButton:" destination="yLL-NL-qcx" eventType="touchUpInside" id="snb-48-bbs"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -129,17 +135,6 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-YS-kzu">
-                                                    <rect key="frame" x="0.0" y="49" width="300" height="133"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                    <state key="normal" title="YES">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                </button>
                                                 <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRH-wK-ZPl" userLabel="Line View">
                                                     <rect key="frame" x="300" y="76" width="1" height="85"/>
                                                     <animations/>
@@ -149,7 +144,7 @@
                                                         <constraint firstAttribute="height" constant="85" id="Lfh-0x-crW"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISO-Mm-Co4">
+                                                <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISO-Mm-Co4">
                                                     <rect key="frame" x="300" y="49" width="300" height="133"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -159,6 +154,9 @@
                                                     <state key="selected">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="touchUpInsideServeyButton:" destination="yLL-NL-qcx" eventType="touchUpInside" id="GL4-OU-ls2"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzv-Fv-dip" userLabel="Line View">
                                                     <rect key="frame" x="0.0" y="190" width="600" height="1"/>
@@ -176,6 +174,20 @@
                                                         <constraint firstAttribute="height" constant="10" id="kCQ-By-Pyw"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-YS-kzu">
+                                                    <rect key="frame" x="0.0" y="49" width="300" height="133"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <state key="normal" title="YES">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchUpInsideServeyButton:" destination="yLL-NL-qcx" eventType="touchUpInside" id="bU8-dg-SKw"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                             <constraints>
@@ -219,7 +231,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="201.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-ah-LE9">
+                                                <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-ah-LE9">
                                                     <rect key="frame" x="0.0" y="69" width="300" height="113"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -229,6 +241,9 @@
                                                     <state key="selected">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="touchUpInsideServeyButton:" destination="yLL-NL-qcx" eventType="touchUpInside" id="2NV-4A-Bj7"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4x-hF-9iw" userLabel="Line View">
                                                     <rect key="frame" x="300" y="76" width="1" height="85"/>
@@ -239,7 +254,7 @@
                                                         <constraint firstAttribute="width" constant="1" id="bgQ-u3-Gfe"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og3-o6-YvR">
+                                                <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og3-o6-YvR">
                                                     <rect key="frame" x="300" y="69" width="300" height="113"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -249,6 +264,9 @@
                                                     <state key="selected">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="touchUpInsideServeyButton:" destination="yLL-NL-qcx" eventType="touchUpInside" id="Fx8-fd-XV4"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9D-Pn-XoM" userLabel="Line View">
                                                     <rect key="frame" x="0.0" y="190" width="600" height="1"/>
@@ -318,13 +336,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Eligibility" id="JTW-TF-VJD">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="uTJ-4r-5OV">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="uTJ-4r-5OV">
                             <connections>
                                 <segue destination="fe0-1Q-cIH" kind="show" id="Txf-gw-Psi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="nextBarButtonItem" destination="uTJ-4r-5OV" id="e0N-BV-xuC"/>
+                        <outlet property="surveyOneNoButton" destination="Zs6-Nt-laU" id="Xiu-BE-dLR"/>
+                        <outlet property="surveyOneYesButton" destination="WmQ-fe-v2O" id="zWQ-sQ-zcm"/>
+                        <outlet property="surveyThreeNoButton" destination="og3-o6-YvR" id="2wv-bc-yWb"/>
+                        <outlet property="surveyThreeYesButton" destination="xQu-ah-LE9" id="i0P-CK-g37"/>
+                        <outlet property="surveyTwoNoButton" destination="ISO-Mm-Co4" id="ceV-yU-UBG"/>
+                        <outlet property="surveyTwoYesButton" destination="tdf-YS-kzu" id="Ahq-cg-h2Q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWB-DF-9gH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,33 +378,58 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are eligible to join the study." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-S0-SiC">
-                                <rect key="frame" x="168" y="290" width="264" height="21"/>
+                                <rect key="frame" x="168" y="290.5" width="264" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab the button below to begin the consent process" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-os-s21">
-                                <rect key="frame" x="60" y="319" width="480" height="21"/>
+                                <rect key="frame" x="60" y="319" width="480" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1m4-4O-0Zt" userLabel="Block View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-p3-N7c">
+                                        <rect key="frame" x="259.5" y="257.5" width="81.5" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="DC0-p3-N7c" firstAttribute="centerY" secondItem="1m4-4O-0Zt" secondAttribute="centerY" id="PXM-Jm-bGl"/>
+                                    <constraint firstItem="DC0-p3-N7c" firstAttribute="centerX" secondItem="1m4-4O-0Zt" secondAttribute="centerX" id="a6Y-U2-2g2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1m4-4O-0Zt" firstAttribute="top" secondItem="bXP-4E-PjW" secondAttribute="bottom" id="Icg-Vh-11Y"/>
                             <constraint firstItem="O6K-os-s21" firstAttribute="leading" secondItem="VFs-5A-bbT" secondAttribute="leading" constant="60" id="M6a-Wp-H5p"/>
+                            <constraint firstItem="1m4-4O-0Zt" firstAttribute="leading" secondItem="VFs-5A-bbT" secondAttribute="leading" id="RpX-P2-ZWX"/>
+                            <constraint firstItem="zeA-sq-s0A" firstAttribute="top" secondItem="1m4-4O-0Zt" secondAttribute="bottom" id="aOz-If-BnZ"/>
                             <constraint firstItem="zeA-sq-s0A" firstAttribute="top" secondItem="NgB-XT-4nl" secondAttribute="bottom" constant="41" id="dGB-3y-3A1"/>
                             <constraint firstAttribute="trailing" secondItem="O6K-os-s21" secondAttribute="trailing" constant="60" id="l0N-ES-Ize"/>
                             <constraint firstItem="O6K-os-s21" firstAttribute="top" secondItem="eaf-S0-SiC" secondAttribute="bottom" constant="8" id="oXk-rS-1Np"/>
+                            <constraint firstAttribute="trailing" secondItem="1m4-4O-0Zt" secondAttribute="trailing" id="q5H-bK-sbs"/>
                             <constraint firstItem="eaf-S0-SiC" firstAttribute="centerY" secondItem="VFs-5A-bbT" secondAttribute="centerY" id="xIq-wh-TxS"/>
                             <constraint firstItem="eaf-S0-SiC" firstAttribute="centerX" secondItem="VFs-5A-bbT" secondAttribute="centerX" id="xMM-HC-ejD"/>
                             <constraint firstItem="NgB-XT-4nl" firstAttribute="centerX" secondItem="VFs-5A-bbT" secondAttribute="centerX" id="yLB-ov-hIT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Eligibility" id="WW1-To-sA6"/>
+                    <connections>
+                        <outlet property="blockView" destination="1m4-4O-0Zt" id="aHE-AV-zSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIG-F8-xSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

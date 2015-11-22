@@ -15,6 +15,9 @@ class Constants: NSObject {
     static let login = host + "login_process"
     static let register = host + "api/register/all"
     static let token = host + "api/register/token"
+    static let findPassword = host + "support/reset/password"
+
+    static let userDefaults = NSUserDefaults.standardUserDefaults()
     
     // Device
     static let deviceType = "ios"
@@ -25,18 +28,23 @@ class Constants: NSObject {
     
     // Token
     static var signKey: String? {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
         return userDefaults.stringForKey("signKey")
     }
     
     // First, Last Name
-    static var firstName: String? {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        return userDefaults.stringForKey("firstName")
+    static var username: String {
+        return "\(userDefaults.stringForKey("firstName")) \(userDefaults.stringForKey("lastName"))"
     }
     
-    static var lastName: String? {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        return userDefaults.stringForKey("lastName")
+    static var firstName: String {
+        return userDefaults.stringForKey("firstName") ?? ""
+    }
+    
+    static var lastName: String {
+        return userDefaults.stringForKey("lastName") ?? ""
+    }
+    
+    static var email: String {
+        return userDefaults.stringForKey("email") ?? ""
     }
 }

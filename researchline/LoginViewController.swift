@@ -14,13 +14,22 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBarHidden = false
     }
     
+    // MARK: IBAction Methods
+    
+    @IBAction func editChangedTextField(sender: UITextField) {
+        doneBarButtonItem.enabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+    }
+    
     @IBAction func touchUpInsideDoneBarButtonItem(sender: UIBarButtonItem) {
+        sender.enabled = false
         Alamofire.request(.POST, Constants.login,
             parameters: [
                 "email": emailTextField.text ?? "",
@@ -31,20 +40,30 @@ class LoginViewController: UIViewController {
                 "deviceType": Constants.deviceType
             ])
             .responseJSON { (response: Response) -> Void in
-                switch response.response!.statusCode {
-                case 200:
-                    // signKey를 저장한다.
-                    let userDefaults = NSUserDefaults.standardUserDefaults()
-                    userDefaults.setObject(response.result.value!["signKey"]!, forKey: "signKey")
-                    
-                    // 탭바를 실행한다.
-                    let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                    let controller = storyboard.instantiateInitialViewController()!
-                    self.presentViewController(controller, animated: true, completion: nil)
+                debugPrint(response)
+                sender.enabled = true
+                
+                switch response.result {
+                case .Success:
+                    switch response.response!.statusCode {
+                    case 200:
+                        // save the sign key
+                        let userDefaults = NSUserDefaults.standardUserDefaults()
+                        userDefaults.setObject(response.result.value!["signKey"]!, forKey: "signKey")
+                        
+                        // shows tab bar
+                        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                        let controller = storyboard.instantiateInitialViewController()!
+                        self.presentViewController(controller, animated: true, completion: nil)
+                        break
+                    default:
+                        let alertView = UIAlertView(title: nil, message: response.result.value!["message"] as? String, delegate: nil, cancelButtonTitle: "Okay")
+                        alertView.show()
+                        break
+                    }
                     break
-                default:
-                    debugPrint(response)
-                    let alertView = UIAlertView(title: nil, message: response.result.value!["message"] as? String, delegate: nil, cancelButtonTitle: "Okay")
+                case .Failure:
+                    let alertView = UIAlertView(title: "Server Error", message: nil, delegate: nil, cancelButtonTitle: "Okay")
                     alertView.show()
                     break
                 }

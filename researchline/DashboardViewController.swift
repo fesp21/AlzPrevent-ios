@@ -7,8 +7,20 @@
 //
 
 import UIKit
-import BEMSimpleLineGraph
 
 class DashboardViewController: UITableViewController {
 
+    // MARK: Table View Delgate
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCellWithIdentifier("DashboardTableViewCell", forIndexPath: indexPath)
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 400;
+    }
 }

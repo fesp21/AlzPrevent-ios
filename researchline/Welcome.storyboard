@@ -379,6 +379,9 @@
                                         <accessibility key="accessibilityConfiguration" label=""/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editChangedTextField:" destination="Rvv-il-hTs" eventType="editingChanged" id="S8N-dB-eq1"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-aR-xoF" userLabel="Line View">
                                         <rect key="frame" x="10" y="41" width="590" height="1"/>
@@ -430,7 +433,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="fQR-AU-MET">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="6Z3-Gv-bgI">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="6Z3-Gv-bgI">
                             <connections>
                                 <action selector="touchUpInsideDoneBarButtonItem:" destination="Rvv-il-hTs" id="LGv-RG-96H"/>
                             </connections>
@@ -438,6 +441,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="doneBarButtonItem" destination="6Z3-Gv-bgI" id="9r7-Uz-044"/>
                         <outlet property="emailTextField" destination="MZh-bb-VEO" id="YD8-Wa-y7A"/>
                         <outlet property="passwordTextField" destination="608-Ox-4Wn" id="um5-5v-AFl"/>
                     </connections>
@@ -449,7 +453,7 @@
         <!--Forgot Password-->
         <scene sceneID="7lG-Cp-9Xe">
             <objects>
-                <viewController id="dby-qM-Zbg" sceneMemberID="viewController">
+                <viewController id="dby-qM-Zbg" customClass="ForgotPasswordViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="prg-ZN-baK"/>
                         <viewControllerLayoutGuide type="bottom" id="h3E-fa-IeO"/>
@@ -458,42 +462,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlt-dr-N7H">
-                                <rect key="frame" x="0.0" y="99" width="600" height="41"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-9o-eog">
-                                        <rect key="frame" x="16" y="12" width="568" height="17"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY3-Mu-eQg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="T2E-9o-eog" secondAttribute="bottom" constant="12" id="DRT-kw-XbL"/>
-                                    <constraint firstAttribute="trailing" secondItem="T2E-9o-eog" secondAttribute="trailing" constant="16" id="I4d-Mf-Aeb"/>
-                                    <constraint firstItem="T2E-9o-eog" firstAttribute="leading" secondItem="hlt-dr-N7H" secondAttribute="leading" constant="16" id="MnM-eE-IAJ"/>
-                                    <constraint firstItem="T2E-9o-eog" firstAttribute="top" secondItem="hlt-dr-N7H" secondAttribute="top" constant="12" id="wAg-vk-DhV"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppz-P4-u8T">
-                                <rect key="frame" x="246" y="156" width="109" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Reset Password"/>
-                            </button>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="r0L-f9-opk" id="WGx-vF-Fd0"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hlt-dr-N7H" firstAttribute="leading" secondItem="r0L-f9-opk" secondAttribute="leading" id="Zbf-sT-deE"/>
-                            <constraint firstItem="ppz-P4-u8T" firstAttribute="top" secondItem="hlt-dr-N7H" secondAttribute="bottom" constant="16" id="cnH-9u-9ky"/>
-                            <constraint firstAttribute="trailing" secondItem="hlt-dr-N7H" secondAttribute="trailing" id="hkB-K7-snq"/>
-                            <constraint firstItem="ppz-P4-u8T" firstAttribute="centerX" secondItem="r0L-f9-opk" secondAttribute="centerX" id="l9W-rP-2qk"/>
-                            <constraint firstItem="hlt-dr-N7H" firstAttribute="top" secondItem="prg-ZN-baK" secondAttribute="bottom" constant="35" id="mRF-xk-8Av"/>
+                            <constraint firstItem="wY3-Mu-eQg" firstAttribute="leading" secondItem="r0L-f9-opk" secondAttribute="leading" id="Ao5-qb-wNl"/>
+                            <constraint firstItem="h3E-fa-IeO" firstAttribute="top" secondItem="wY3-Mu-eQg" secondAttribute="bottom" id="LqM-pD-ldC"/>
+                            <constraint firstItem="wY3-Mu-eQg" firstAttribute="top" secondItem="prg-ZN-baK" secondAttribute="bottom" id="c60-76-Iyf"/>
+                            <constraint firstAttribute="trailing" secondItem="wY3-Mu-eQg" secondAttribute="trailing" id="zf5-T7-967"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot Password" id="gm6-QW-wgY"/>
+                    <connections>
+                        <outlet property="webView" destination="wY3-Mu-eQg" id="znb-f7-gVG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KS-tJ-VvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -513,6 +503,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cw7-Fp-0fG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
