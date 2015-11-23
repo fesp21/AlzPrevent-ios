@@ -50,6 +50,7 @@ class LoginViewController: UIViewController {
                         // save the sign key
                         let userDefaults = NSUserDefaults.standardUserDefaults()
                         userDefaults.setObject(response.result.value!["signKey"]!, forKey: "signKey")
+                        userDefaults.setObject(self.emailTextField.text, forKey: "email")
                         
                         // shows tab bar
                         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
@@ -68,5 +69,6 @@ class LoginViewController: UIViewController {
                     break
                 }
         }
+        
     }
 }

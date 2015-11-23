@@ -15,7 +15,7 @@ class ChangePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let request = NSURLRequest(URL: NSURL(string: "http://naver.com")!)
+        let request = NSURLRequest(URL: NSURL(string: Constants.urlChangePassword)!)
         webView.loadRequest(request)
     }
 }

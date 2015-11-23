@@ -12,10 +12,19 @@ class Constants: NSObject {
     // URLs
 //    static let host = "http://52.8.54.205/"
     static let host = "http://192.168.0.12:9001/"
+//    static let host = "http://localhost:9001/"
     static let login = host + "login_process"
+    static let glucoseLogin = host + "api/glucose/auth"
+    static let profile = host + "api/profile"
     static let register = host + "api/register/all"
     static let token = host + "api/register/token"
     static let findPassword = host + "support/reset/password"
+    static let todayActivity = host + "api/activity/today"
+    static let yesterdayActivity = host + "api/activity/yesterday"
+    static let activity = host + "api/activity"
+    
+    static let urlChangePassword = host + "support/reset/password"
+    static let urlFileConsent = host + "file/consent.pdf"
 
     static let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -33,7 +42,7 @@ class Constants: NSObject {
     
     // First, Last Name
     static var username: String {
-        return "\(userDefaults.stringForKey("firstName")) \(userDefaults.stringForKey("lastName"))"
+        return "\(userDefaults.stringForKey("firstName")!) \(userDefaults.stringForKey("lastName")!)"
     }
     
     static var firstName: String {

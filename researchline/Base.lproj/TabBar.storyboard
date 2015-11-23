@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W4f-T2-8AW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W4f-T2-8AW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -40,7 +40,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Activities" id="VDU-MT-XiO"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="tab_activities" id="VDU-MT-XiO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fI-nj-Df3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +60,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="Qe8-Ix-5Pq"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="tab_dashboard" id="Qe8-Ix-5Pq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1d-A3-hVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +80,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Learn" id="qSf-Pm-fNy"/>
+                    <tabBarItem key="tabBarItem" title="Learn" image="tab_learn" id="qSf-Pm-fNy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcO-fO-lIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,11 +100,17 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="Fvc-qY-Wzc"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" id="Fvc-qY-Wzc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVD-OU-NAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1309" y="2906"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_activities" width="23" height="23"/>
+        <image name="tab_dashboard" width="29" height="21"/>
+        <image name="tab_learn" width="25" height="22"/>
+        <image name="tab_profile" width="24" height="24"/>
+    </resources>
 </document>

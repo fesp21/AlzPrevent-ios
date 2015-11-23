@@ -68,6 +68,10 @@
 		30D519DA1BEF6ADD00306B1A /* ConsentSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D91BEF6ADD00306B1A /* ConsentSlideViewController.swift */; };
 		30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519DB1BEF6F5E00306B1A /* ChangeEmailViewController.swift */; };
 		30F81E621BFDFFE200861611 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F81E611BFDFFE200861611 /* Constants.swift */; };
+		BC0B30AB1C025BAA00E42526 /* ActivitiesTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */; };
+		BC0B30AF1C02623600E42526 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */; };
+		BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */; };
+		BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */; };
 		CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B653A1581DAD6C773D9491C /* Pods_researchline.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +165,10 @@
 		30F81E611BFDFFE200861611 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B653A1581DAD6C773D9491C /* Pods_researchline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_researchline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.debug.xcconfig"; sourceTree = "<group>"; };
+		BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell2.swift; sourceTree = "<group>"; };
+		BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesterdayTableViewCell.swift; sourceTree = "<group>"; };
+		BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +382,10 @@
 				30BFD47F1BEF3426002E52E4 /* Activities.storyboard */,
 				30BFD4751BEF33FE002E52E4 /* ActivitiesViewController.swift */,
 				30C58E361C01CB6B00510C3C /* ActivityViewController.swift */,
+				BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */,
+				BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */,
+				BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */,
+				BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -681,6 +693,7 @@
 				30BFD45C1BEF326E002E52E4 /* ConsentLearnMoreViewController.swift in Sources */,
 				30F81E621BFDFFE200861611 /* Constants.swift in Sources */,
 				301B399D1BFE284900499C14 /* RegistrationViewController.swift in Sources */,
+				BC0B30AF1C02623600E42526 /* TodayTableViewCell.swift in Sources */,
 				30BFD4781BEF3407002E52E4 /* DashboardViewController.swift in Sources */,
 				30BFD4541BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift in Sources */,
 				301B39A91BFE475600499C14 /* ItemSpanBackwardViewController.swift in Sources */,
@@ -695,10 +708,12 @@
 				30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */,
 				308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */,
 				30714D001BF86BB900AC2C96 /* HealthManager.swift in Sources */,
+				BC0B30AB1C025BAA00E42526 /* ActivitiesTableViewCell2.swift in Sources */,
 				301B39A71BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift in Sources */,
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
 				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
+				BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
 				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
 				30C58E3D1C01F05200510C3C /* ReviewConsentViewController.swift in Sources */,
@@ -710,6 +725,7 @@
 				30C58E371C01CB6B00510C3C /* ActivityViewController.swift in Sources */,
 				30C58E391C01E17B00510C3C /* DashboardTableViewCell.swift in Sources */,
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
+				BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,6 +798,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -826,6 +843,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -853,8 +871,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -873,8 +891,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yong Ku Lee (6EZ2S4NH7H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

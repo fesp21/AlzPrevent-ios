@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileViewController: UITableViewController {
 
@@ -16,7 +17,25 @@ class ProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameLabel.text = Constants.username
-        emailLabel.text = Constants.email
-    }
+        Alamofire.request(.GET, Constants.profile,
+            headers: [
+                "deviceKey": Constants.deviceKey,
+                "deviceType": Constants.deviceType,
+                "signKey": Constants.signKey!
+            ]).responseJSON { (response:Response) -> Void in
+                debugPrint(response)
+                switch response.result{
+                case.Success(let json):
+                    Constants.userDefaults.setValue(json["data"]!!["firstName"]!, forKey: "firstName")
+                    Constants.userDefaults.setValue(json["data"]!!["lastName"]!, forKey: "lastName")
+                    self.usernameLabel.text = Constants.username
+                    self.emailLabel.text = Constants.email
+                    break
+                default:
+                    self.usernameLabel.text = Constants.username
+                    self.emailLabel.text = Constants.email
+                    break
+                }
+            }
+        }
 }

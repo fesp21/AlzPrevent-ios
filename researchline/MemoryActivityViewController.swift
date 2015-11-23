@@ -17,7 +17,6 @@ class MemoryActivityViewController: UIViewController {
     @IBOutlet weak var failureLabel: UILabel!
     
 
-    var renderingCountMap = [Int: Int]()
     var renderingImageMap = [Int: UIImage]()
     
     var resultCorrectMap = [Int: Int]()
@@ -28,6 +27,11 @@ class MemoryActivityViewController: UIViewController {
     var suffleTimer: NSTimer? = nil
     var resultHideTimer: NSTimer? = nil
     var timeoutTimer: NSTimer? = nil
+    
+    var finished: Int = 0
+    
+    var answer: Int = -1
+    var answerNext: Int = -1
     
     
     override func viewDidLoad() {
@@ -55,9 +59,6 @@ class MemoryActivityViewController: UIViewController {
         renderingImageMap[8] = shoesImage
         renderingImageMap[9] = spoonImage
         
-        for i in 0...9 {
-            renderingCountMap[i] = 0
-        }
         resultCorrectMap[0] = 0
         resultCorrectMap[1] = 0
         
@@ -78,6 +79,9 @@ class MemoryActivityViewController: UIViewController {
     var start: NSDate? = nil
     
     internal func suffle(){
+        if finished > 0{
+            return
+        }
         suffleTimer?.invalidate()
         
         clicked = 0
@@ -85,16 +89,18 @@ class MemoryActivityViewController: UIViewController {
         CheckButton.hidden = false
         value = Int.init(arc4random_uniform(UInt32(renderingImageMap.count)))
         CheckButton.setImage(renderingImageMap[value], forState: .Normal)
-        
-        renderingCountMap[value]! += 1
+
+ 
+
         
         resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector: "resultHide", userInfo: nil, repeats: false)
         
-        debugPrint("\(value)'s count is \(renderingCountMap[value])")
+        debugPrint("Answer is \(answer) and Now is \(value)")
+        
         
         start = NSDate()
         
-        if(renderingCountMap[value] > 1){
+        if(answer == value){
             timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "timeout", userInfo: nil, repeats: false)
         }else{
             resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
@@ -103,6 +109,10 @@ class MemoryActivityViewController: UIViewController {
     
     // Timeout Fail
     internal func timeout(){
+        if finished > 0{
+            return
+        }
+        
         timeoutTimer?.invalidate()
         clicked = 1
         CheckButton.hidden = true
@@ -112,7 +122,6 @@ class MemoryActivityViewController: UIViewController {
         resultCorrectMap[0]! += 1
         failureLabel.text = "Failure: \(resultCorrectMap[0]!)"
         
-        renderingCountMap[value] = 0
         resultTimeMap[trial] = 0
         
         trial += 1
@@ -123,10 +132,16 @@ class MemoryActivityViewController: UIViewController {
     }
     
     internal func resultHide(){
+        if finished > 0{
+            return
+        }
         resultHideTimer?.invalidate()
+        CheckButton.hidden = true
         resultUIImageView.hidden = true
         
         suffleTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: "suffle", userInfo: nil, repeats: false)
+        answer = answerNext
+        answerNext = value
     }
     
     @IBAction func check(sender: AnyObject) {
@@ -140,7 +155,9 @@ class MemoryActivityViewController: UIViewController {
         
         var result = ""
         resultUIImageView.hidden = false
-        if(renderingCountMap[value] > 1){
+        if(answer < 0 || answerNext < 0){
+            return
+        }else if(answer == value){
             resultUIImageView.image = resultSuccessImage
             resultCorrectMap[1]! += 1
             successLabel.text = "Success: \(resultCorrectMap[1]!)"
@@ -151,7 +168,6 @@ class MemoryActivityViewController: UIViewController {
             failureLabel.text = "Failure: \(resultCorrectMap[0]!)"
             result = "failure"
         }
-        renderingCountMap[value] = 0
         resultTimeMap[trial] = interval
         
         trial += 1
@@ -164,6 +180,13 @@ class MemoryActivityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.suffleTimer?.invalidate()
+        self.resultHideTimer?.invalidate()
+        self.timeoutTimer?.invalidate()
+        self.finished = 1
+    }
 
     /*
     // MARK: - Navigation
