@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FastCountingActivityViewController: UIViewController {
     
@@ -56,11 +57,89 @@ class FastCountingActivityViewController: UIViewController {
     var pointCount: Int?
     var successCount = 0;
     var failureCount = 0;
+    var trial = 0
+    let totalTrial = 5
+    var startFlag = false
     
+    var resultTimeMap = [Int: NSTimeInterval]()
+    var resultTrials = [Bool]()
+    let taskName = "Fast Counting"
+    var activityId: String? = nil
+    var start: NSDate? = nil
+    
+    @IBOutlet weak var descriptionText: UITextView!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBAction func clickStartButton(sender: AnyObject) {
+        
+        startButton.hidden = true
+        descriptionText.hidden = true
+        containerView.hidden = false
+        successLabel.hidden = false
+        failureLabel.hidden = false
+        
+        startFlag = true
+        
+        timer2?.invalidate()
+        timer1 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
+    }
+    
+    internal func finish(){
+        descriptionText.text = "Test is finished. Your success score is \(successCount)."
+        descriptionText.hidden = false
+//        renderedWord.hidden = true
+//        resultView.hidden = true
+        containerView.hidden = true
+        startFlag = false
+        
+        var jsonResult = ""
+        for i in 0...(resultTimeMap.count-1) {
+            let timestamp = resultTimeMap[i]
+            let correct: String = String.init(resultTrials[i])
+            
+            let trialJson = "{\"name\":\"\(taskName)\",\"timestamp\":\"\(timestamp!)\",\"correct\":\"\(correct)\",\"trial\":\"\(i)\"}";
+            if(i == 0){
+                jsonResult = "[\(trialJson)"
+            }else{
+                jsonResult = "\(jsonResult),\(trialJson)"
+            }
+        }
+        jsonResult += "]"
+        debugPrint(jsonResult)
+        
+        Alamofire.request(.POST, Constants.activity, headers: [
+            "deviceKey": Constants.deviceKey,
+            "deviceType": Constants.deviceType,
+            "signKey": Constants.signKey!], parameters: [
+                "value": jsonResult,
+                "activityId": activityId!
+            ])
+            .responseJSON { (response: Response) -> Void in
+                switch response.result{
+                case.Success(let json):
+                    debugPrint(json)
+                    if(json["success"] as? Int == 0){
+                        break
+                    }
+                    break
+                default:
+                    break
+                }
+                
+        }
+    }
     
     override func viewDidLoad() {
-        timer2?.invalidate()
-        timer1 = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "suffle", userInfo: nil, repeats: false)
+        super.viewDidLoad()
+        let activityKey = "id_\(self.taskName)"
+        debugPrint(activityKey)
+        self.activityId = Constants.userDefaults.stringForKey(activityKey)
+        debugPrint(activityId)
+        
+        successLabel.hidden = true
+        failureLabel.hidden = true
+        containerView.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -69,19 +148,41 @@ class FastCountingActivityViewController: UIViewController {
     }
     
     @IBAction func touchUpInsideNumberButton(sender: UIButton) {
+        
+        if !startFlag {
+            return
+        }
+        
+        var result = ""
         if sender.tag == pointCount {
             successCount++
+            result = "correct"
+            resultTrials.append(true)
         } else {
             failureCount++
+            result = "fail"
+            resultTrials.append(false)
         }
         
         successLabel.text = "Success: \(successCount)"
         failureLabel.text = "Failure: \(failureCount)"
+        
+        let interval = NSDate().timeIntervalSinceDate(start!)
+        resultTimeMap[trial] = interval
+        
+        debugPrint("\(trial)th trial result is \(result) while \(interval)")
+        
+        trial += 1
     }
 
     // MARK: Behavior Methods
     
     internal func suffle() {
+        if trial >= totalTrial {
+            finish()
+            return
+        }
+        
         usedTops.removeAll()
         usedLeadings.removeAll()
         pointCount = 0
@@ -134,12 +235,14 @@ class FastCountingActivityViewController: UIViewController {
         pointCount! += Int(point8ViewVisible)
         point8View.hidden = point8ViewVisible
         
+        start = NSDate()
+        
         timer1?.invalidate()
-        timer2 = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "showsSelectNumber", userInfo: nil, repeats: false)
+        timer2 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "showsSelectNumber", userInfo: nil, repeats: false)
     }
     
     internal func showsSelectNumber() {
-        NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "suffle", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     internal func getRandomTop() -> CGFloat {

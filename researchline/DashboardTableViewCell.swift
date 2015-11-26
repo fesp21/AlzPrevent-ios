@@ -47,6 +47,7 @@ class DashboardTableViewCell: UITableViewCell, BEMSimpleLineGraphDataSource, BEM
     }
     
     func lineGraph(graph: BEMSimpleLineGraphView, labelOnXAxisForIndex index: Int) -> String {
-        return "test"
+        let result: String? = "test"
+        return result!
     }
 }

@@ -17,6 +17,10 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var loginButtonView: UIButton!
     
+    @IBOutlet weak var successTextView: UITextField!
+    
+    @IBOutlet weak var loginView: UIView!
+    
     @IBAction func loginButtonClickEvent(sender: AnyObject) {
         
         let email = usernameTextView.text
@@ -34,11 +38,14 @@ class ActivityViewController: UIViewController {
                 switch response.result{
                 case.Success(let json):
                     if(json["success"] as? Int > 0){
-                        let alert = UIAlertController(title: "Alert", message: "Success to glucose login.", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                        self.presentViewController(alert, animated: true, completion: nil)
-                        self.navigationController?.popToRootViewControllerAnimated(true)
-                        self.navigationController?.popViewControllerAnimated(true)
+//                        let alert = UIAlertController(title: "Alert", message: "Success to glucose login.", preferredStyle: UIAlertControllerStyle.Alert)
+//                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+//                        self.presentViewController(alert, animated: true, completion: nil)
+//                        self.navigationController?.popToRootViewControllerAnimated(true)
+//                        self.navigationController?.popViewControllerAnimated(true)
+                        self.loginView.hidden = true
+                        self.successTextView.hidden = false
+                        
                     }else{
                         let alert = UIAlertController(title: "Alert", message: "Fail to glucose login.", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
@@ -57,7 +64,7 @@ class ActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        successTextView.hidden = true
         // Do any additional setup after loading the view.
     }
 

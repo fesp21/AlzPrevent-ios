@@ -288,9 +288,7 @@
 		308ABCA01BEF296B00968C7D /* researchline */ = {
 			isa = PBXGroup;
 			children = (
-				30BFD4471BEF3061002E52E4 /* Models */,
 				30BFD4461BEF304A002E52E4 /* Servant */,
-				30BFD4451BEF3048002E52E4 /* Views */,
 				30BFD4441BEF303C002E52E4 /* Controllers */,
 				308ABCA11BEF296B00968C7D /* AppDelegate.swift */,
 				308ABCAB1BEF296C00968C7D /* Assets.xcassets */,
@@ -333,13 +331,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		30BFD4451BEF3048002E52E4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		30BFD4461BEF304A002E52E4 /* Servant */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,13 +338,6 @@
 				30F81E611BFDFFE200861611 /* Constants.swift */,
 			);
 			name = Servant;
-			sourceTree = "<group>";
-		};
-		30BFD4471BEF3061002E52E4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		30BFD4481BEF307A002E52E4 /* Session */ = {

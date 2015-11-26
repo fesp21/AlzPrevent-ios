@@ -22,16 +22,19 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HW-q5-d1x" userLabel="Form View">
-                                        <rect key="frame" x="180" y="240" width="240" height="100"/>
+                                        <rect key="frame" x="50" y="200" width="500" height="180"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="patient1@test.com" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVx-x4-J4g">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="apg-5c-JNU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-R8-ijZ">
-                                                <rect key="frame" x="0.0" y="70" width="240" height="30"/>
+                                                <rect key="frame" x="0.0" y="110" width="500" height="70"/>
                                                 <animations/>
                                                 <state key="normal" title="Login"/>
                                                 <connections>
@@ -39,9 +42,12 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-Q3-miD">
-                                                <rect key="frame" x="0.0" y="32" width="240" height="30"/>
+                                                <rect key="frame" x="0.0" y="52" width="500" height="50"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5Ip-rV-vsI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -62,7 +68,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Glucose Sign In" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEw-Gz-Rgj">
-                                        <rect key="frame" x="218.5" y="59" width="164" height="28"/>
+                                        <rect key="frame" x="218" y="59" width="164" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -70,25 +76,45 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="7HW-q5-d1x" firstAttribute="top" secondItem="z4M-4W-4ZP" secondAttribute="top" constant="200" id="Gbd-0v-yJB"/>
+                                    <constraint firstItem="7HW-q5-d1x" firstAttribute="leading" secondItem="z4M-4W-4ZP" secondAttribute="leading" constant="50" id="IGS-Rh-gBf"/>
+                                    <constraint firstAttribute="trailing" secondItem="7HW-q5-d1x" secondAttribute="trailing" constant="50" id="Kl2-zw-sWA"/>
                                     <constraint firstItem="7HW-q5-d1x" firstAttribute="centerY" secondItem="z4M-4W-4ZP" secondAttribute="centerY" id="Q0w-y8-ki8"/>
                                     <constraint firstItem="ZEw-Gz-Rgj" firstAttribute="top" secondItem="z4M-4W-4ZP" secondAttribute="top" constant="59" id="USd-wf-vu9"/>
                                     <constraint firstItem="ZEw-Gz-Rgj" firstAttribute="centerX" secondItem="z4M-4W-4ZP" secondAttribute="centerX" id="dhx-kh-an4"/>
+                                    <constraint firstItem="7HW-q5-d1x" firstAttribute="top" secondItem="ZEw-Gz-Rgj" secondAttribute="bottom" constant="80" id="gXD-34-dUc"/>
                                     <constraint firstItem="7HW-q5-d1x" firstAttribute="centerX" secondItem="z4M-4W-4ZP" secondAttribute="centerX" id="k1q-bK-AFk"/>
+                                    <constraint firstItem="ZEw-Gz-Rgj" firstAttribute="top" secondItem="z4M-4W-4ZP" secondAttribute="top" constant="59" id="ynq-E4-Svk"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gXD-34-dUc"/>
+                                        <exclude reference="ynq-E4-Svk"/>
+                                    </mask>
+                                </variation>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Success to glucose login." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-8E-tjF">
+                                <rect key="frame" x="195" y="289" width="210" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Wx6-8E-tjF" firstAttribute="centerX" secondItem="qC9-vP-e7m" secondAttribute="centerX" id="J5o-pT-kB0"/>
                             <constraint firstItem="z4M-4W-4ZP" firstAttribute="top" secondItem="00d-kv-Omr" secondAttribute="bottom" id="MAK-l7-XjN"/>
                             <constraint firstItem="z4M-4W-4ZP" firstAttribute="leading" secondItem="qC9-vP-e7m" secondAttribute="leading" id="TbT-Bs-dY2"/>
                             <constraint firstAttribute="trailing" secondItem="z4M-4W-4ZP" secondAttribute="trailing" id="kep-qr-haI"/>
                             <constraint firstItem="17e-GG-EaJ" firstAttribute="top" secondItem="z4M-4W-4ZP" secondAttribute="bottom" id="ld8-c7-kOF"/>
+                            <constraint firstItem="Wx6-8E-tjF" firstAttribute="centerY" secondItem="qC9-vP-e7m" secondAttribute="centerY" id="pTY-Zg-hi5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButtonView" destination="SAr-R8-ijZ" id="LU4-RA-cRq"/>
+                        <outlet property="loginView" destination="z4M-4W-4ZP" id="sND-st-zDS"/>
                         <outlet property="passwordTextView" destination="Ibx-Q3-miD" id="83p-kI-osp"/>
+                        <outlet property="successTextView" destination="Wx6-8E-tjF" id="gsD-n7-yTB"/>
                         <outlet property="usernameTextView" destination="zVx-x4-J4g" id="u5r-Sv-GZT"/>
                     </connections>
                 </viewController>
@@ -110,7 +136,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" tableViewCell="dUQ-eS-XXj" id="HZG-3m-01T">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yesterday, June 23rd " textAlignment="natural" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="m4J-Vn-TaR">
@@ -133,16 +159,16 @@
                                 <rect key="frame" x="0.0" y="152" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" tableViewCell="PRS-ci-sZL" id="N86-7k-F4C">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Today, June 24th" textAlignment="natural" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-y4-aTR">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Today, June 24th" textAlignment="natural" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-y4-aTR">
                                             <rect key="frame" x="228" y="8" width="143" height="22"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="To start an activity, select from the list below." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-6k-Il2">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="To start an activity, select from the list below." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-6k-Il2">
                                             <rect key="frame" x="161" y="35" width="278" height="16"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -165,7 +191,7 @@
                                 <rect key="frame" x="0.0" y="212" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" tableViewCell="zYD-9D-PWm" id="vNg-1H-Fq8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyCircle" translatesAutoresizingMaskIntoConstraints="NO" id="2tv-0K-CrP">
@@ -178,13 +204,13 @@
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNm-tv-7zI">
                                             <rect key="frame" x="56" y="5" width="526" height="50"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fast Counting" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tw4-zJ-Ppm">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fast Counting" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tw4-zJ-Ppm">
                                                     <rect key="frame" x="0.0" y="33" width="503" height="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cognitive Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-3U-B8p">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cognitive Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-3U-B8p">
                                                     <rect key="frame" x="0.0" y="8" width="501" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -222,7 +248,7 @@
                                 <rect key="frame" x="0.0" y="272" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" tableViewCell="6qX-Aj-3NA" id="vWH-fx-OXa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyCircle" translatesAutoresizingMaskIntoConstraints="NO" id="4rP-gM-2ME">
@@ -235,7 +261,7 @@
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ueg-uc-B3Y">
                                             <rect key="frame" x="56" y="5" width="526" height="50"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Task Glucose Blood Sample" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-dh-bQ9">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Task Glucose Blood Sample" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-dh-bQ9">
                                                     <rect key="frame" x="0.0" y="13" width="253" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>

@@ -55,6 +55,6 @@ class EligibilitySurveyViewController: UITableViewController {
         
         sender.selected = !sender.selected
         nextBarButtonItem.enabled = true
-        isAvailabled = surveyOneYesButton.selected && surveyTwoYesButton.selected && surveyThreeYesButton.selected
+        isAvailabled = surveyOneYesButton.selected && !surveyTwoYesButton.selected && surveyThreeYesButton.selected
     }
 }

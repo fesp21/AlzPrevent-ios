@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ColorReadingActivityViewController: UIViewController {
     
@@ -21,11 +22,26 @@ class ColorReadingActivityViewController: UIViewController {
     @IBOutlet weak var successLabel: UILabel!
     @IBOutlet weak var failureLabel: UILabel!
     
+    
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var startButton: UIButton!
+    
     var resultCorrectMap = [Int: Int]()
     var resultTimeMap = [Int: NSTimeInterval]()
+    var resultTrials = [Bool]()
     var resultFailImage: UIImage = UIImage(named: "X")!
     var resultSuccessImage: UIImage = UIImage(named: "O")!
 
+    var taskName = "Color Reading"
+    var activityId: String? = ""
+    
+    @IBAction func clickStartButton(sender: AnyObject) {
+        suffleTimer = NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector: "suffle", userInfo: nil, repeats: false)
+        descriptionText.hidden = true
+        startButton.hidden = true
+        startFlag = true
+    }
+    
     
     @IBAction func clickBlue(sender: AnyObject) {
         processClick(0)
@@ -52,7 +68,7 @@ class ColorReadingActivityViewController: UIViewController {
     }
     
     internal func processClick(number: Int){
-        if(answerFlag){
+        if(answerFlag || !startFlag){
             return
         }
         answerFlag = true
@@ -65,11 +81,13 @@ class ColorReadingActivityViewController: UIViewController {
             resultCorrectMap[1]? += 1
             successLabel.text = "Success: \(resultCorrectMap[1]!)"
             result = "correct"
+            resultTrials.append(true)
         }else{
             resultView.image = resultFailImage
             resultCorrectMap[0]? += 1
             failureLabel.text = "Failure: \(resultCorrectMap[0]!)"
             result = "fail"
+            resultTrials.append(false)
         }
         
         trial += 1
@@ -85,15 +103,23 @@ class ColorReadingActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let activityKey = "id_\(self.taskName)"
+        debugPrint(activityKey)
+        self.activityId = Constants.userDefaults.stringForKey(activityKey)
+        debugPrint(activityId)
+        
         renderedWord.hidden = true
         resultView.hidden = true
+        successLabel.hidden = true
+        failureLabel.hidden = true
+        
         resultCorrectMap[0] = 0
         resultCorrectMap[1] = 0
-        suffleTimer = NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     
     var answerFlag = false
+    var startFlag = false
     var value = 0
     var answer = 0
     var color = 0
@@ -101,6 +127,12 @@ class ColorReadingActivityViewController: UIViewController {
     var start: NSDate? = nil
     internal func suffle(){
         suffleTimer?.invalidate()
+        
+        if(trial >= 5){
+            finish()
+            return
+        }
+        
         renderedWord.hidden = false
         resultView.hidden = true
         answerFlag = false
@@ -139,6 +171,51 @@ class ColorReadingActivityViewController: UIViewController {
     
     internal func hideResult(){
         resultView.hidden = true
+    }
+    
+    internal func finish(){
+        descriptionText.text = "Test is finished. Your success score is \(resultCorrectMap[1]!)."
+        descriptionText.hidden = false
+        renderedWord.hidden = true
+        resultView.hidden = true
+        startFlag = false
+        
+        var jsonResult = ""
+        for i in 0...(resultTimeMap.count-1) {
+            let timestamp = resultTimeMap[i]
+            let correct: String = String.init(resultTrials[i])
+            
+            let trialJson = "{\"name\":\"\(taskName)\",\"timestamp\":\"\(timestamp!)\",\"correct\":\"\(correct)\",\"trial\":\"\(i)\"}";
+            if(i == 0){
+                jsonResult = "[\(trialJson)"
+            }else{
+                jsonResult = "\(jsonResult),\(trialJson)"
+            }
+        }
+        jsonResult += "]"
+        debugPrint(jsonResult)
+        
+        Alamofire.request(.POST, Constants.activity, headers: [
+            "deviceKey": Constants.deviceKey,
+            "deviceType": Constants.deviceType,
+            "signKey": Constants.signKey!], parameters: [
+                "value": jsonResult,
+                "activityId": activityId!
+            ])
+            .responseJSON { (response: Response) -> Void in
+                switch response.result{
+                case.Success(let json):
+                    debugPrint(json)
+                    if(json["success"] as? Int == 0){
+                        break
+                    }
+                    break
+                default:
+                    break
+                }
+                
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

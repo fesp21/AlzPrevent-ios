@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MemoryActivityViewController: UIViewController {
     
@@ -16,7 +17,20 @@ class MemoryActivityViewController: UIViewController {
     @IBOutlet weak var successLabel: UILabel!
     @IBOutlet weak var failureLabel: UILabel!
     
-
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var descriptionText: UITextView!
+    
+    @IBAction func clickStartButton(sender: AnyObject) {
+        suffleTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: "suffle", userInfo: nil, repeats: false)
+        
+        self.startButton.hidden = true
+        self.descriptionText.hidden = true
+        self.successLabel.hidden = false
+        self.failureLabel.hidden = false
+    }
+    
+    var taskName = "Memory"
+    
     var renderingImageMap = [Int: UIImage]()
     
     var resultCorrectMap = [Int: Int]()
@@ -30,12 +44,16 @@ class MemoryActivityViewController: UIViewController {
     
     var finished: Int = 0
     
-    var answer: Int = -1
-    var answerNext: Int = -1
+    var answerOrder = [Int]()
     
+    var activityId: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let activityKey = "id_\(self.taskName)"
+        debugPrint(activityKey)
+        self.activityId = Constants.userDefaults.stringForKey(activityKey)
+        debugPrint(activityId)
         
         let baseballImage: UIImage = UIImage(named: "baseball")!
         let bookImage: UIImage = UIImage(named: "book")!
@@ -64,22 +82,86 @@ class MemoryActivityViewController: UIViewController {
         
         CheckButton.hidden = true
         resultUIImageView.hidden = true
+        successLabel.hidden = true
+        failureLabel.hidden = true
         
-        suffleTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: "suffle", userInfo: nil, repeats: false)
-        // Do any additional setup after loading the view.
+        generateAnswerOrder()
         
     }
     
-
+    internal func generateAnswerOrder(){
+        var answerPosition = [Bool]()
+        
+        for _ in 0...9{
+            answerPosition.append(false)
+            answerOrder.append(-1)
+        }
+        
+        var count = 0;
+        while true {
+            let random = Int.init(arc4random_uniform(UInt32(8))) + 2
+            
+            if(!answerPosition[random]){
+                count += 1
+                answerPosition[random] = true
+                debugPrint("Answer position is \(random)")
+            }
+            
+            if(count > 2){
+                break
+            }
+        }
+        
+        for i in 0...9{
+            while true{
+                let value = Int.init(arc4random_uniform(UInt32(renderingImageMap.count)))
+                if(i > 1){
+                    if(answerPosition[i]){
+                        if(value == answerOrder[i-2]){
+                            // is answer
+                            self.answerOrder[i] = value
+                            debugPrint("\(i)'s picture is \(value)")
+                            break
+                        }else{
+                            // is not answer
+                            continue
+                        }
+                    }else{
+                        if(value != answerOrder[i-2]){
+                            // is answer
+                            self.answerOrder[i] = value
+                            debugPrint("\(i)'s picture is \(value)")
+                            break
+                        }else{
+                            // is not answer
+                            continue
+                        }
+                    }
+                }else{
+                    answerOrder[i] = value
+                    debugPrint("\(i)'s picture is \(value)")
+                    break
+                }
+            }
+        }
+        debugPrint(answerOrder)
+    }
     
+
+    let totalCount = 10
     var isImage = 1;
     var value = 0;
     var trial = 0;
     var clicked = 0;
     var start: NSDate? = nil
+    var location = 0;
     
     internal func suffle(){
         if finished > 0{
+            return
+        }
+        if(location >= totalCount){
+            self.finish()
             return
         }
         suffleTimer?.invalidate()
@@ -87,20 +169,18 @@ class MemoryActivityViewController: UIViewController {
         clicked = 0
         resultUIImageView.hidden = true
         CheckButton.hidden = false
-        value = Int.init(arc4random_uniform(UInt32(renderingImageMap.count)))
+        value = answerOrder[location]
         CheckButton.setImage(renderingImageMap[value], forState: .Normal)
-
- 
-
         
-        resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector: "resultHide", userInfo: nil, repeats: false)
-        
-        debugPrint("Answer is \(answer) and Now is \(value)")
-        
+        if(location > 1){
+            debugPrint("Answer is \(answerOrder[location - 2]) and Now is \(value)")
+        }else{
+            debugPrint("Start state : Now is \(value)")
+        }
         
         start = NSDate()
         
-        if(answer == value){
+        if(location >= 2 && answerOrder[location-2] == value){
             timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "timeout", userInfo: nil, repeats: false)
         }else{
             resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
@@ -109,7 +189,7 @@ class MemoryActivityViewController: UIViewController {
     
     // Timeout Fail
     internal func timeout(){
-        if finished > 0{
+        if finished > 0 || location >= totalCount{
             return
         }
         
@@ -129,23 +209,24 @@ class MemoryActivityViewController: UIViewController {
         debugPrint("\(trial)th trial result is failure by timeout")
         
         resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
+        
     }
     
     internal func resultHide(){
-        if finished > 0{
+        if finished > 0 || location >= totalCount{
             return
         }
         resultHideTimer?.invalidate()
         CheckButton.hidden = true
         resultUIImageView.hidden = true
         
+        location += 1
+        
         suffleTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: "suffle", userInfo: nil, repeats: false)
-        answer = answerNext
-        answerNext = value
     }
     
     @IBAction func check(sender: AnyObject) {
-        if(clicked == 1){
+        if(clicked == 1 || location >= totalCount || location < 2){
             return
         }
         clicked = 1
@@ -155,9 +236,7 @@ class MemoryActivityViewController: UIViewController {
         
         var result = ""
         resultUIImageView.hidden = false
-        if(answer < 0 || answerNext < 0){
-            return
-        }else if(answer == value){
+        if(answerOrder[location-2] == value){
             resultUIImageView.image = resultSuccessImage
             resultCorrectMap[1]! += 1
             successLabel.text = "Success: \(resultCorrectMap[1]!)"
@@ -173,6 +252,50 @@ class MemoryActivityViewController: UIViewController {
         trial += 1
         debugPrint("\(trial)th trial result is \(result) while \(interval)")
         resultHideTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target:self, selector: "resultHide", userInfo: nil, repeats: false)
+    }
+    
+    internal func finish(){
+        descriptionText.text = "Test is finished. Your success score is \(resultCorrectMap[1]!)."
+        descriptionText.hidden = false
+        finished = 1
+        var jsonResult = ""
+        for i in 0...(resultTimeMap.count-1) {
+            let timestamp = resultTimeMap[i]
+            var correct: String = "false"
+            if(timestamp > 0){
+                correct = "true"
+            }
+            let trialJson = "{\"name\":\"\(taskName)\",\"timestamp\":\"\(timestamp!)\",\"correct\":\"\(correct)\",\"trial\":\"\(i)\"}";
+            if(i == 0){
+                jsonResult = "[\(trialJson)"
+            }else{
+                jsonResult = "\(jsonResult),\(trialJson)"
+            }
+        }
+        jsonResult += "]"
+        debugPrint(jsonResult)
+        
+        Alamofire.request(.POST, Constants.activity, headers: [
+            "deviceKey": Constants.deviceKey,
+            "deviceType": Constants.deviceType,
+            "signKey": Constants.signKey!], parameters: [
+                "value": jsonResult,
+                "activityId": activityId!
+            ])
+            .responseJSON { (response: Response) -> Void in
+                switch response.result{
+                case.Success(let json):
+                    debugPrint(json)
+                    if(json["success"] as? Int == 0){
+                        break
+                    }
+                    break
+                default:
+                    break
+                }
+                
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

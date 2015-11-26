@@ -25,7 +25,9 @@ class ActivitiesViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         refresh()
     }
     
@@ -118,7 +120,7 @@ class ActivitiesViewController: UITableViewController {
         }else if(indexPath.row > (data.count + 1)){
             // Yesterday Logic
             
-            let cellData = self.data[indexPath.row - 2 - data.count]
+            let cellData = self.yesterdayData[indexPath.row - 2 - data.count]
             
             let todayTask = cellData["todayTask"]! as? String
             
@@ -129,9 +131,9 @@ class ActivitiesViewController: UITableViewController {
                 cell.today = 0
                 cell.titleTextView.text = cellData["description"]! as? String
                 if(cellData["hasDone"] as? Int > 0){
-                    cell.checkImageView.image = failCircleImage
-                }else{
                     cell.checkImageView.image = checkedCircleImage
+                }else{
+                    cell.checkImageView.image = failCircleImage
                 }
                 cell.userInteractionEnabled = false
                 return cell
@@ -143,9 +145,9 @@ class ActivitiesViewController: UITableViewController {
                 cell.titleTextView.text = cellData["description"]! as? String
                 cell.subTitleTextView.text = todayTask
                 if(cellData["hasDone"] as? Int > 0){
-                    cell.checkImageView.image = failCircleImage
-                }else{
                     cell.checkImageView.image = checkedCircleImage
+                }else{
+                    cell.checkImageView.image = failCircleImage
                 }
                 cell.userInteractionEnabled = false
                 return cell
@@ -242,11 +244,13 @@ class ActivitiesViewController: UITableViewController {
                         
                 }
             }else{
+                debugPrint("key : id_\(activityName!), value : \(activityId!)")
+                Constants.userDefaults.setObject(activityId!, forKey: "id_\(activityName!)")
                 switch (todayTask!){
                 case "Memory":
                     let storybard = UIStoryboard(name: "MemoryActivity", bundle: nil)
                     let controller = storybard.instantiateInitialViewController()!
-                    
+
                     self.navigationController?.pushViewController(controller, animated: true)
                 break
                 case "Color Reading":
