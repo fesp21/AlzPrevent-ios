@@ -25,6 +25,30 @@ class ActivitiesViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
+        
+        Alamofire.request(.GET, Constants.profile,
+            headers: [
+                "deviceKey": Constants.deviceKey,
+                "deviceType": Constants.deviceType,
+                "signKey": Constants.signKey()
+            ]).responseJSON { (response:Response) -> Void in
+                debugPrint(response)
+                switch response.result{
+                case.Success(let json):
+                    if(json["success"] as? Int == 0){
+                        break
+                    }
+                    Constants.userDefaults.setValue(json["data"]!!["firstName"]!, forKey: "firstName")
+                    Constants.userDefaults.setValue(json["data"]!!["lastName"]!, forKey: "lastName")
+                    Constants.userDefaults.setValue(json["data"]!!["height"]!, forKey: "height")
+                    Constants.userDefaults.setValue(json["data"]!!["weight"]!, forKey: "weight")
+                    Constants.userDefaults.setValue(json["data"]!!["sex"]!, forKey: "sex")
+                    Constants.userDefaults.setValue(json["data"]!!["birth"]!, forKey: "birth")
+                    break
+                default:
+                    break
+                }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -37,20 +61,32 @@ class ActivitiesViewController: UITableViewController {
         Alamofire.request(.GET, Constants.todayActivity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!])
+            "signKey": Constants.signKey()])
             .responseJSON { (response: Response) -> Void in
                 switch response.result{
                 case.Success(let json):
                     debugPrint(json)
                     if(json["success"] as? Int == 0){
                         Constants.userDefaults.removeObjectForKey("signKey")
-//                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Welcome", bundle: nil)
-//                        let viewController = mainStoryboard.instantiateInitialViewController()
-//                        UIApplication.sharedApplication().keyWindow!.rootViewController = viewController;
-                        exit(0)
+                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Welcome", bundle: nil)
+                        let viewController = mainStoryboard.instantiateInitialViewController()
+                        UIApplication.sharedApplication().keyWindow!.rootViewController = viewController;
                         break
                     }
                     self.data = (json["data"]! as? NSArray)!
+                    
+                    var total: Float = 0
+                    var success: Float = 0
+                    for i in 0...self.data.count-1 {
+                        if(self.data[i]["hasDone"]!! as! Int > 0){
+                            success += 1
+                        }
+                        total += 1
+                    }
+                    let doRate: Float = success / total
+                    debugPrint("The rate of completion is \(doRate)%")
+                    Constants.userDefaults.setObject(doRate, forKey: "completion")
+                    
                     finishToday = 1
                     if(finishYesterday > 0){
                         self.tableView.reloadData()
@@ -66,17 +102,16 @@ class ActivitiesViewController: UITableViewController {
         Alamofire.request(.GET, Constants.yesterdayActivity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!])
+            "signKey": Constants.signKey()])
             .responseJSON { (response: Response) -> Void in
                 switch response.result{
                 case.Success(let json):
                     debugPrint(json)
                     if(json["success"] as? Int == 0){
                         Constants.userDefaults.removeObjectForKey("signKey")
-//                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Welcome", bundle: nil)
-//                        let viewController = mainStoryboard.instantiateInitialViewController()
-//                        UIApplication.sharedApplication().keyWindow!.rootViewController = viewController;
-                        exit(0)
+                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Welcome", bundle: nil)
+                        let viewController = mainStoryboard.instantiateInitialViewController()
+                        UIApplication.sharedApplication().keyWindow!.rootViewController = viewController;
                         break
                     }
                     self.yesterdayData = (json["data"]! as? NSArray)!
@@ -171,6 +206,7 @@ class ActivitiesViewController: UITableViewController {
                     cell.checkImageView.image = emptyCircleImage
                 }
                 cell.activitiesViewController = self
+                cell.userInteractionEnabled = true
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("ActivitiesTableViewCell", forIndexPath: indexPath) as! ActivitiesTableViewCell
@@ -185,6 +221,7 @@ class ActivitiesViewController: UITableViewController {
                     cell.checkImageView.image = emptyCircleImage
                 }
                 cell.activitiesViewController = self
+                cell.userInteractionEnabled = true
                 return cell
             }
         }
@@ -208,7 +245,7 @@ class ActivitiesViewController: UITableViewController {
                 Alamofire.request(.POST, Constants.activity, headers: [
                     "deviceKey": Constants.deviceKey,
                     "deviceType": Constants.deviceType,
-                    "signKey": Constants.signKey!],
+                    "signKey": Constants.signKey()],
                     parameters:[
                         "activityId": activityId!,
                         "value": ""
@@ -219,16 +256,21 @@ class ActivitiesViewController: UITableViewController {
                             debugPrint(json)
                             if let _response = response.response {
                                 if _response.statusCode < 300 {
+                                    let storybard = UIStoryboard(name: "Activities", bundle: nil)
+                                    let controller = storybard.instantiateViewControllerWithIdentifier("GlucoseSuccessViewController") as! GlucoseSuccessViewController
                                     if json["data"]!!["hasDone"] as! Int > 0{
-                                        let alert = UIAlertController(title: "Alert", message: "Success to Take Glucose Blood Sample.", preferredStyle: UIAlertControllerStyle.Alert)
-                                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                                        self.presentViewController(alert, animated: true, completion: nil)
+                                        controller.success = true
+                                        controller.score = json["data"]!!["value"] as! String
+//                                        let alert = UIAlertController(title: "Alert", message: "Success to Take Glucose Blood Sample.", preferredStyle: UIAlertControllerStyle.Alert)
+//                                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+//                                        self.presentViewController(alert, animated: true, completion: nil)
                                     }else{
-                                        let alert = UIAlertController(title: "Alert", message: "Fail to Take Glucose Blood Sample.", preferredStyle: UIAlertControllerStyle.Alert)
-                                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                                        self.presentViewController(alert, animated: true, completion: nil)
+                                        controller.success = false
+//                                        let alert = UIAlertController(title: "Alert", message: "Fail to Take Glucose Blood Sample.", preferredStyle: UIAlertControllerStyle.Alert)
+//                                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+//                                        self.presentViewController(alert, animated: true, completion: nil)
                                     }
-                                    
+                                    self.navigationController?.pushViewController(controller, animated: true)
                                 }else{
                                     let storybard = UIStoryboard(name: "Activities", bundle: nil)
                                     let controller = storybard.instantiateViewControllerWithIdentifier("ActivityViewController")

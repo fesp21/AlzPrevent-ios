@@ -25,7 +25,7 @@ class HealthManager: NSObject {
     ]
     
     internal static let writeTypes = [
-        "bloodClucose": HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodGlucose)!,
+        "bloodGlucose": HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodGlucose)!,
     ]
     
     static func requestAuthorizationToShareTypes(completion: (success: Bool, unavailables: [String]) -> Void) {

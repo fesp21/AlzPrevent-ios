@@ -43,11 +43,11 @@
                                     <constraint firstItem="3vU-mZ-94M" firstAttribute="centerY" secondItem="8Jj-bc-wNZ" secondAttribute="centerY" id="zAg-LD-hVe"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0V-72-I1L" userLabel="Container View">
-                                <rect key="frame" x="24" y="250" width="552" height="100"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0V-72-I1L" userLabel="Container View">
+                                <rect key="frame" x="24" y="170" width="552" height="0.0"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5A-SU-VbK">
-                                        <rect key="frame" x="276" y="50" width="0.0" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5A-SU-VbK">
+                                        <rect key="frame" x="276" y="0.0" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -58,6 +58,11 @@
                                     <constraint firstItem="J5A-SU-VbK" firstAttribute="centerX" secondItem="h0V-72-I1L" secondAttribute="centerX" id="g9v-Af-ENs"/>
                                     <constraint firstAttribute="height" constant="100" id="z6y-3l-nm4"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="z6y-3l-nm4"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfk-8N-Eg3">
                                 <rect key="frame" x="210" y="170" width="180" height="43"/>
@@ -65,7 +70,7 @@
                                     <constraint firstAttribute="width" constant="180" id="QJ2-89-hek"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvU-yj-z4C">
                                 <rect key="frame" x="282" y="237" width="37" height="30"/>
@@ -86,7 +91,7 @@
                                     <action selector="clickStartButton:" destination="AuE-Ip-syV" eventType="touchUpInside" id="5eS-4R-fEA"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tab the below color button of the name of the COLOR that is shown." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zE-uh-ezp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Remember the digits you see, REVERSE THEM and type them into the box." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zE-uh-ezp">
                                 <rect key="frame" x="30" y="70" width="540" height="330"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -104,7 +109,6 @@
                             <constraint firstItem="8dD-Wt-Bj3" firstAttribute="top" secondItem="3zE-uh-ezp" secondAttribute="bottom" constant="200" id="98b-3U-Ae8"/>
                             <constraint firstItem="h0V-72-I1L" firstAttribute="centerY" secondItem="HnY-Q7-Veg" secondAttribute="centerY" id="O4u-Ew-dyH"/>
                             <constraint firstItem="8Jj-bc-wNZ" firstAttribute="top" secondItem="H7M-z0-yPG" secondAttribute="bottom" id="R9j-ZX-1LG"/>
-                            <constraint firstItem="rfk-8N-Eg3" firstAttribute="centerY" secondItem="HnY-Q7-Veg" secondAttribute="centerY" id="TDs-89-4YB"/>
                             <constraint firstItem="rfk-8N-Eg3" firstAttribute="centerX" secondItem="HnY-Q7-Veg" secondAttribute="centerX" id="TZv-xe-djK"/>
                             <constraint firstAttribute="trailing" secondItem="h0V-72-I1L" secondAttribute="trailing" constant="24" id="Vhs-6q-71i"/>
                             <constraint firstItem="3zE-uh-ezp" firstAttribute="top" secondItem="8Jj-bc-wNZ" secondAttribute="bottom" id="d5w-xU-PB1"/>
@@ -115,13 +119,14 @@
                             <constraint firstItem="48Y-jU-Wob" firstAttribute="top" secondItem="rfk-8N-Eg3" secondAttribute="bottom" constant="150" id="mbj-pQ-QPj"/>
                             <constraint firstItem="EvU-yj-z4C" firstAttribute="centerX" secondItem="HnY-Q7-Veg" secondAttribute="centerX" id="opI-zE-IMy"/>
                             <constraint firstItem="48Y-jU-Wob" firstAttribute="centerX" secondItem="HnY-Q7-Veg" secondAttribute="centerX" id="qmu-Wr-yy6"/>
+                            <constraint firstItem="h0V-72-I1L" firstAttribute="top" secondItem="8Jj-bc-wNZ" secondAttribute="bottom" constant="100" id="rdc-IN-c78"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3zE-uh-ezp" secondAttribute="trailing" constant="10" id="uMW-JE-SMi"/>
                             <constraint firstAttribute="trailing" secondItem="8Jj-bc-wNZ" secondAttribute="trailing" id="whg-Ub-RW1"/>
                             <constraint firstItem="rfk-8N-Eg3" firstAttribute="top" secondItem="8Jj-bc-wNZ" secondAttribute="bottom" constant="100" id="xpf-MQ-www"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="TDs-89-4YB"/>
+                                <exclude reference="O4u-Ew-dyH"/>
                             </mask>
                         </variation>
                     </view>

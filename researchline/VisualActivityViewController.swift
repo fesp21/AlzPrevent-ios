@@ -30,6 +30,7 @@ class VisualActivityViewController: UIViewController {
     var reactionImageReady: UIImage = UIImage(named: "reaction_ready")!
     var reactionTimer: NSTimer? = nil
     var finishReactionTimer: NSTimer? = nil
+    var timeoutTimer: NSTimer? = nil
     
     var resultTimeMap = [Int: NSTimeInterval]()
     var resultTrials = [Bool]()
@@ -43,6 +44,7 @@ class VisualActivityViewController: UIViewController {
     var startDate: NSDate? = nil
     var successCount = 0
     var failureCount = 0
+    var timeout = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +64,13 @@ class VisualActivityViewController: UIViewController {
         reactionImageView.setImage(reactionImage, forState: .Normal)
         isStart = 1
         startFlag = true
+        timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(5, target:self, selector: "timeoutReaction", userInfo: nil, repeats: false)
+    }
+    
+    internal func timeoutReaction(){
+        timeoutTimer?.invalidate()
+        timeout = true
+        self.validation()
     }
     
     internal func finishReaction(){
@@ -87,11 +96,22 @@ class VisualActivityViewController: UIViewController {
         failureLabel.text = "Failure: \(failureCount)"
     }
     
-    @IBAction func click(sender: AnyObject) {
-        if(!startFlag){
-            return
-        }
-        if(isStart == 1){
+    internal func validation(){
+        timeoutTimer?.invalidate()
+        if(timeout){
+            timeout = false
+            // timeout
+            isStart = 2
+            let interval = NSDate().timeIntervalSinceDate(startDate!)
+            resultTimeMap[trial] = interval
+            
+            trial += 1
+            debugPrint("\(trial)th trial result is failure while \(interval)")
+            resultTrials.append(false)
+            failureCount += 1
+            finishReaction()
+        }else if(isStart == 1){
+            // started reaction
             isStart = 2
             let interval = NSDate().timeIntervalSinceDate(startDate!)
             resultTimeMap[trial] = interval
@@ -102,6 +122,7 @@ class VisualActivityViewController: UIViewController {
             successCount += 1
             finishReaction()
         }else if(isStart == 0){
+            // be patient
             isStart = 2
             reactionImageView.hidden = true
             failTextView.hidden = false
@@ -113,6 +134,14 @@ class VisualActivityViewController: UIViewController {
             finishReactionTimer = NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector: "finishReaction", userInfo: nil, repeats: false)
         }
     }
+    
+    @IBAction func click(sender: AnyObject) {
+        if(!startFlag){
+            // before start reaction
+            return
+        }
+        validation()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -120,7 +149,9 @@ class VisualActivityViewController: UIViewController {
     }
     
     internal func finish(){
-        descriptionText.text = "Test is finished. Your success score is \(successCount)."
+        let sum = resultTimeMap.values.reduce(0, combine: +)
+        let average = sum / Double(resultTimeMap.count)
+        descriptionText.text = "Test is finished. Your success score is \(successCount). Your average reaction time is \(average)"
         descriptionText.hidden = false
         reactionImageView.hidden = true
         failTextView.hidden = true
@@ -144,7 +175,7 @@ class VisualActivityViewController: UIViewController {
         Alamofire.request(.POST, Constants.activity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!], parameters: [
+            "signKey": Constants.signKey()], parameters: [
                 "value": jsonResult,
                 "activityId": activityId!
             ])

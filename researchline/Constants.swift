@@ -10,8 +10,8 @@ import UIKit
 
 class Constants: NSObject {
     // URLs
-//    static let host = "http://52.8.54.205/"
-    static let host = "http://192.168.0.12:9001/"
+    static let host = "http://52.8.54.205/"
+//    static let host = "http://192.168.0.12:9001/"
 //    static let host = "http://localhost:9001/"
     static let login = host + "login_process"
     static let glucoseLogin = host + "api/glucose/auth"
@@ -22,6 +22,7 @@ class Constants: NSObject {
     static let todayActivity = host + "api/activity/today"
     static let yesterdayActivity = host + "api/activity/yesterday"
     static let activity = host + "api/activity"
+    static let statistics = host + "api/statistics"
     
     static let urlChangePassword = host + "support/reset/password"
     static let urlFileConsent = host + "file/consent.pdf"
@@ -36,24 +37,25 @@ class Constants: NSObject {
     }
     
     // Token
-    static var signKey: String? {
-        return userDefaults.stringForKey("signKey")
+    static func signKey() -> String {
+        return userDefaults.stringForKey("signKey") ?? ""
     }
     
     // First, Last Name
-    static var username: String {
+    static func username() -> String {
         return "\(userDefaults.stringForKey("firstName")!) \(userDefaults.stringForKey("lastName")!)"
     }
     
-    static var firstName: String {
+    static func firstName() -> String {
         return userDefaults.stringForKey("firstName") ?? ""
     }
     
-    static var lastName: String {
+    static func lastName() -> String {
         return userDefaults.stringForKey("lastName") ?? ""
     }
     
-    static var email: String {
+    static func email() -> String {
         return userDefaults.stringForKey("email") ?? ""
     }
+    
 }

@@ -6,6 +6,7 @@ target 'researchline' do
 
   pod 'Alamofire'
   pod 'BEMSimpleLineGraph'
+  pod 'Charts'
 end
 
 target 'researchlineTests' do

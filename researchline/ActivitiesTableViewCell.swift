@@ -28,10 +28,7 @@ class ActivitiesTableViewCell: UITableViewCell {
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-        
-        if(selected && self.activityName == "Test1" && today > 0){
-                    }
+        super.setSelected(selected, animated: animated)
         
         
         // Configure the view for the selected state

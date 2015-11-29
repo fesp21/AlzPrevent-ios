@@ -38,11 +38,6 @@ class ActivityViewController: UIViewController {
                 switch response.result{
                 case.Success(let json):
                     if(json["success"] as? Int > 0){
-//                        let alert = UIAlertController(title: "Alert", message: "Success to glucose login.", preferredStyle: UIAlertControllerStyle.Alert)
-//                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-//                        self.presentViewController(alert, animated: true, completion: nil)
-//                        self.navigationController?.popToRootViewControllerAnimated(true)
-//                        self.navigationController?.popViewControllerAnimated(true)
                         self.loginView.hidden = true
                         self.successTextView.hidden = false
                         

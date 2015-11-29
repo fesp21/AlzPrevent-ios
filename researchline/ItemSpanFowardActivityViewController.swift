@@ -31,6 +31,7 @@ class ItemSpanFowardActivityViewController: UIViewController {
     }
     
     var timer: NSTimer?
+    var latencyTimer: NSTimer?
     var repeatCount = 0
     var successCount = 0
     var failureCount = 0
@@ -69,10 +70,17 @@ class ItemSpanFowardActivityViewController: UIViewController {
             
             repeatCount++
             timer?.invalidate()
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
+            latencyTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "latency", userInfo: nil, repeats: false)
+
         } else {
             showsCorrectTextField()
         }
+    }
+    
+    internal func latency(){
+        latencyTimer?.invalidate()
+        numberLabel.hidden = true
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     internal func reset() {
@@ -145,7 +153,7 @@ class ItemSpanFowardActivityViewController: UIViewController {
         Alamofire.request(.POST, Constants.activity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!], parameters: [
+            "signKey": Constants.signKey()], parameters: [
                 "value": jsonResult,
                 "activityId": activityId!
             ])

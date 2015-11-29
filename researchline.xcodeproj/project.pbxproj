@@ -72,6 +72,18 @@
 		BC0B30AF1C02623600E42526 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */; };
 		BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */; };
 		BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */; };
+		BC62816B1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816A1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift */; };
+		BC62816D1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816C1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift */; };
+		BC62816F1C0B9CC6001AB929 /* ColorDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816E1C0B9CC6001AB929 /* ColorDashboardTableViewCell.swift */; };
+		BC6281711C0B9CD4001AB929 /* CountingDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281701C0B9CD4001AB929 /* CountingDashboardTableViewCell.swift */; };
+		BC6281731C0B9CEC001AB929 /* ItemForwordDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281721C0B9CEC001AB929 /* ItemForwordDashboardTableViewCell.swift */; };
+		BC6281751C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281741C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift */; };
+		BC6281771C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281761C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift */; };
+		BC6281791C0BA9DD001AB929 /* GlucoseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281781C0BA9DD001AB929 /* GlucoseSuccessViewController.swift */; };
+		BC97E9B11C07412D00245F5F /* SexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B01C07412D00245F5F /* SexTableViewController.swift */; };
+		BC97E9B31C08154900245F5F /* HeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B21C08154900245F5F /* HeightTableViewController.swift */; };
+		BC97E9B51C084CCA00245F5F /* WeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */; };
+		BC97E9B71C08552D00245F5F /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B61C08552D00245F5F /* BirthViewController.swift */; };
 		CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B653A1581DAD6C773D9491C /* Pods_researchline.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +181,18 @@
 		BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesterdayTableViewCell.swift; sourceTree = "<group>"; };
 		BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
+		BC62816A1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC62816C1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC62816E1C0B9CC6001AB929 /* ColorDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC6281701C0B9CD4001AB929 /* CountingDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC6281721C0B9CEC001AB929 /* ItemForwordDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemForwordDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC6281741C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBackwordDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC6281761C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseDashboardTableViewCell.swift; sourceTree = "<group>"; };
+		BC6281781C0BA9DD001AB929 /* GlucoseSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseSuccessViewController.swift; sourceTree = "<group>"; };
+		BC97E9B01C07412D00245F5F /* SexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTableViewController.swift; sourceTree = "<group>"; };
+		BC97E9B21C08154900245F5F /* HeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightTableViewController.swift; sourceTree = "<group>"; };
+		BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightTableViewController.swift; sourceTree = "<group>"; };
+		BC97E9B61C08552D00245F5F /* BirthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +394,7 @@
 				BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */,
 				BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */,
 				BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */,
+				BC6281781C0BA9DD001AB929 /* GlucoseSuccessViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -380,6 +405,13 @@
 				30BFD4811BEF342C002E52E4 /* Dashboard.storyboard */,
 				30BFD4771BEF3407002E52E4 /* DashboardViewController.swift */,
 				30C58E381C01E17B00510C3C /* DashboardTableViewCell.swift */,
+				BC62816A1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift */,
+				BC62816E1C0B9CC6001AB929 /* ColorDashboardTableViewCell.swift */,
+				BC6281701C0B9CD4001AB929 /* CountingDashboardTableViewCell.swift */,
+				BC62816C1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift */,
+				BC6281721C0B9CEC001AB929 /* ItemForwordDashboardTableViewCell.swift */,
+				BC6281741C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift */,
+				BC6281761C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -400,6 +432,10 @@
 				30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */,
 				30C58E3A1C01F04800510C3C /* ChangePasswordViewController.swift */,
 				30C58E3C1C01F05200510C3C /* ReviewConsentViewController.swift */,
+				BC97E9B01C07412D00245F5F /* SexTableViewController.swift */,
+				BC97E9B21C08154900245F5F /* HeightTableViewController.swift */,
+				BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */,
+				BC97E9B61C08552D00245F5F /* BirthViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -667,6 +703,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */,
+				BC6281711C0B9CD4001AB929 /* CountingDashboardTableViewCell.swift in Sources */,
+				BC62816D1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift in Sources */,
 				30BFD4761BEF33FE002E52E4 /* ActivitiesViewController.swift in Sources */,
 				30BFD45A1BEF3214002E52E4 /* EligibilitySurveyViewController.swift in Sources */,
 				30BFD45E1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift in Sources */,
@@ -681,9 +719,13 @@
 				30BFD4781BEF3407002E52E4 /* DashboardViewController.swift in Sources */,
 				30BFD4541BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift in Sources */,
 				301B39A91BFE475600499C14 /* ItemSpanBackwardViewController.swift in Sources */,
+				BC62816B1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift in Sources */,
 				30BFD46E1BEF33AC002E52E4 /* IdentificationViewController.swift in Sources */,
+				BC6281731C0B9CEC001AB929 /* ItemForwordDashboardTableViewCell.swift in Sources */,
+				BC62816F1C0B9CC6001AB929 /* ColorDashboardTableViewCell.swift in Sources */,
 				301B39A51BFE474400499C14 /* VisualActivityViewController.swift in Sources */,
 				30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */,
+				BC97E9B31C08154900245F5F /* HeightTableViewController.swift in Sources */,
 				30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */,
 				30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */,
 				301B399F1BFE472C00499C14 /* MemoryActivityViewController.swift in Sources */,
@@ -696,6 +738,7 @@
 				301B39A71BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift in Sources */,
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
+				BC97E9B11C07412D00245F5F /* SexTableViewController.swift in Sources */,
 				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
 				BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
@@ -705,10 +748,15 @@
 				30BFD4601BEF32EB002E52E4 /* ConsentReviewViewController.swift in Sources */,
 				30C58E3B1C01F04800510C3C /* ChangePasswordViewController.swift in Sources */,
 				301B39A31BFE473C00499C14 /* FastCountingActivityViewController.swift in Sources */,
+				BC97E9B51C084CCA00245F5F /* WeightTableViewController.swift in Sources */,
 				30BFD47A1BEF3414002E52E4 /* ProfileViewController.swift in Sources */,
 				30C58E371C01CB6B00510C3C /* ActivityViewController.swift in Sources */,
 				30C58E391C01E17B00510C3C /* DashboardTableViewCell.swift in Sources */,
+				BC6281791C0BA9DD001AB929 /* GlucoseSuccessViewController.swift in Sources */,
+				BC97E9B71C08552D00245F5F /* BirthViewController.swift in Sources */,
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
+				BC6281771C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift in Sources */,
+				BC6281751C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift in Sources */,
 				BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,
 			);

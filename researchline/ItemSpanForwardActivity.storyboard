@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTR-OY-6fc" userLabel="Container View">
-                                <rect key="frame" x="24" y="250" width="552" height="100"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTR-OY-6fc" userLabel="Container View">
+                                <rect key="frame" x="24" y="214" width="552" height="0.0"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldS-zT-UOX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldS-zT-UOX">
                                         <rect key="frame" x="276" y="50" width="0.0" height="0.0"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -33,7 +33,6 @@
                                 <constraints>
                                     <constraint firstItem="ldS-zT-UOX" firstAttribute="centerY" secondItem="eTR-OY-6fc" secondAttribute="centerY" id="WTg-Fy-hsR"/>
                                     <constraint firstItem="ldS-zT-UOX" firstAttribute="centerX" secondItem="eTR-OY-6fc" secondAttribute="centerX" id="h9D-cP-H8v"/>
-                                    <constraint firstAttribute="height" constant="100" id="lPL-Yh-8K0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg0-xT-dmF" userLabel="Information View">
@@ -71,7 +70,7 @@
                                     <constraint firstAttribute="width" constant="180" id="EO2-Eb-Gpp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80A-B9-Th8">
                                 <rect key="frame" x="282" y="281" width="37" height="30"/>
@@ -81,7 +80,7 @@
                                     <action selector="touchUpInsideEnterButton:" destination="d8e-j2-40w" eventType="touchUpInside" id="OFC-LN-SLN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tab the below color button of the name of the COLOR that is shown." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9L-IM-4iQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Remember the digits you see, and type them into the box." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9L-IM-4iQ">
                                 <rect key="frame" x="30" y="114" width="540" height="286"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -106,6 +105,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XcT-de-UaF" firstAttribute="top" secondItem="zg0-xT-dmF" secondAttribute="bottom" constant="100" id="2zU-wl-uYc"/>
                             <constraint firstAttribute="trailing" secondItem="zg0-xT-dmF" secondAttribute="trailing" id="548-WU-gfm"/>
                             <constraint firstItem="eTR-OY-6fc" firstAttribute="leading" secondItem="vpd-Yo-o9e" secondAttribute="leading" constant="24" id="8RM-CP-RHU"/>
                             <constraint firstItem="zg0-xT-dmF" firstAttribute="leading" secondItem="vpd-Yo-o9e" secondAttribute="leading" id="Bkv-QB-ekC"/>
@@ -114,23 +114,28 @@
                             <constraint firstItem="zg0-xT-dmF" firstAttribute="top" secondItem="LRx-xP-aFf" secondAttribute="bottom" id="HPk-Lp-H6S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d9L-IM-4iQ" secondAttribute="trailing" constant="10" id="MfC-SJ-aw0"/>
                             <constraint firstItem="d9L-IM-4iQ" firstAttribute="top" secondItem="zg0-xT-dmF" secondAttribute="bottom" id="QrI-dL-huI"/>
+                            <constraint firstItem="eTR-OY-6fc" firstAttribute="top" secondItem="zg0-xT-dmF" secondAttribute="bottom" constant="100" id="SMc-xJ-3vh"/>
                             <constraint firstItem="eTR-OY-6fc" firstAttribute="centerY" secondItem="vpd-Yo-o9e" secondAttribute="centerY" id="Wmb-Mp-geQ"/>
                             <constraint firstItem="0TR-Zy-OLR" firstAttribute="top" secondItem="d9L-IM-4iQ" secondAttribute="bottom" constant="50" id="Xi8-g2-WBp"/>
                             <constraint firstItem="0TR-Zy-OLR" firstAttribute="centerX" secondItem="vpd-Yo-o9e" secondAttribute="centerX" id="ZCI-un-f3R"/>
                             <constraint firstItem="XcT-de-UaF" firstAttribute="centerX" secondItem="vpd-Yo-o9e" secondAttribute="centerX" id="dCo-63-4cL"/>
                             <constraint firstItem="d9L-IM-4iQ" firstAttribute="centerX" secondItem="vpd-Yo-o9e" secondAttribute="centerX" id="ebs-Fv-cqs"/>
                             <constraint firstItem="80A-B9-Th8" firstAttribute="centerX" secondItem="vpd-Yo-o9e" secondAttribute="centerX" id="gqZ-l8-ion"/>
-                            <constraint firstItem="XcT-de-UaF" firstAttribute="top" secondItem="zg0-xT-dmF" secondAttribute="bottom" constant="100" id="mtL-gC-fYh"/>
+                            <constraint firstItem="XcT-de-UaF" firstAttribute="top" secondItem="zg0-xT-dmF" secondAttribute="bottom" constant="130" id="mtL-gC-fYh"/>
                             <constraint firstItem="XcT-de-UaF" firstAttribute="centerY" secondItem="vpd-Yo-o9e" secondAttribute="centerY" id="njj-Dp-RwI"/>
                             <constraint firstItem="zg0-xT-dmF" firstAttribute="top" secondItem="vpd-Yo-o9e" secondAttribute="top" id="nqP-kk-S2A"/>
                             <constraint firstItem="CwE-gw-Ux2" firstAttribute="top" secondItem="d9L-IM-4iQ" secondAttribute="bottom" constant="200" id="owe-HA-xSe"/>
                             <constraint firstItem="eTR-OY-6fc" firstAttribute="centerX" secondItem="vpd-Yo-o9e" secondAttribute="centerX" id="ppl-aa-Zc4"/>
-                            <constraint firstItem="80A-B9-Th8" firstAttribute="top" secondItem="XcT-de-UaF" secondAttribute="bottom" constant="24.5" id="ucr-kJ-krT"/>
+                            <constraint firstItem="80A-B9-Th8" firstAttribute="top" secondItem="XcT-de-UaF" secondAttribute="bottom" constant="24" id="ucr-kJ-krT"/>
+                            <constraint firstItem="XcT-de-UaF" firstAttribute="centerY" secondItem="vpd-Yo-o9e" secondAttribute="centerY" id="zJ2-6K-hBC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="nqP-kk-S2A"/>
+                                <exclude reference="Wmb-Mp-geQ"/>
+                                <exclude reference="mtL-gC-fYh"/>
                                 <exclude reference="njj-Dp-RwI"/>
+                                <exclude reference="zJ2-6K-hBC"/>
                             </mask>
                         </variation>
                     </view>

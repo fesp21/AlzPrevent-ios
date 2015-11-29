@@ -278,7 +278,7 @@ class MemoryActivityViewController: UIViewController {
         Alamofire.request(.POST, Constants.activity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!], parameters: [
+            "signKey": Constants.signKey()], parameters: [
                 "value": jsonResult,
                 "activityId": activityId!
             ])

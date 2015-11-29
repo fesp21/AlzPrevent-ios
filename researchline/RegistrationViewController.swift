@@ -34,8 +34,8 @@ class RegistrationViewController: UIViewController {
             formData.appendBodyPart(data: (self.passwordTextField.text ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "password")
             formData.appendBodyPart(data: Constants.deviceKey.dataUsingEncoding(NSUTF8StringEncoding)!, name: "deviceKey")
             formData.appendBodyPart(data: Constants.deviceType.dataUsingEncoding(NSUTF8StringEncoding)!, name: "deviceType")
-            formData.appendBodyPart(data: (Constants.firstName ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "firstName")
-            formData.appendBodyPart(data: (Constants.lastName ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "lastName")
+            formData.appendBodyPart(data: (Constants.firstName() ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "firstName")
+            formData.appendBodyPart(data: (Constants.lastName() ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "lastName")
             formData.appendBodyPart(data: sex.dataUsingEncoding(NSUTF8StringEncoding)!, name: "sex")
             }, encodingCompletion: { (result: Manager.MultipartFormDataEncodingResult) -> Void in
                 switch result {

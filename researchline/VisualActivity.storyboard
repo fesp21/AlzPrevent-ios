@@ -74,7 +74,7 @@
                                     <constraint firstItem="STD-hh-DMj" firstAttribute="centerY" secondItem="jAg-Jl-ZHe" secondAttribute="centerY" id="yTL-eK-XsW"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tab the below color button of the name of the COLOR that is shown." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-Zf-wxU">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Click on the green dot when it appears." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-Zf-wxU">
                                 <rect key="frame" x="30" y="70" width="540" height="280"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>

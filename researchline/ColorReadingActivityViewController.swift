@@ -115,6 +115,25 @@ class ColorReadingActivityViewController: UIViewController {
         
         resultCorrectMap[0] = 0
         resultCorrectMap[1] = 0
+        
+        redView.layer.cornerRadius = 5
+        redView.layer.borderWidth = 1
+        redView.layer.borderColor = UIColor.blackColor().CGColor
+        orangeView.layer.cornerRadius = 5
+        orangeView.layer.borderWidth = 1
+        orangeView.layer.borderColor = UIColor.blackColor().CGColor
+        yellowView.layer.cornerRadius = 5
+        yellowView.layer.borderWidth = 1
+        yellowView.layer.borderColor = UIColor.blackColor().CGColor
+        greenView.layer.cornerRadius = 5
+        greenView.layer.borderWidth = 1
+        greenView.layer.borderColor = UIColor.blackColor().CGColor
+        blueView.layer.cornerRadius = 5
+        blueView.layer.borderWidth = 1
+        blueView.layer.borderColor = UIColor.blackColor().CGColor
+        purpleView.layer.cornerRadius = 5
+        purpleView.layer.borderWidth = 1
+        purpleView.layer.borderColor = UIColor.blackColor().CGColor
     }
     
     
@@ -198,7 +217,7 @@ class ColorReadingActivityViewController: UIViewController {
         Alamofire.request(.POST, Constants.activity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!], parameters: [
+            "signKey": Constants.signKey()], parameters: [
                 "value": jsonResult,
                 "activityId": activityId!
             ])

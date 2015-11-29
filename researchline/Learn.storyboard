@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Learn-->
@@ -21,11 +22,11 @@
                                         <rect key="frame" x="0.0" y="64" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cyO-lT-h0w" id="pl6-b4-wE2">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About This Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tNs-cn-gW8">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="59.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -36,16 +37,19 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="KuE-zN-zTc" kind="show" id="2s5-ld-MGq"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="T2I-HS-hIF" rowHeight="60" style="IBUITableViewCellStyleDefault" id="qZf-Az-ruh">
                                         <rect key="frame" x="0.0" y="124" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qZf-Az-ruh" id="ife-l2-qPQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="How This Study Works" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T2I-HS-hIF">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="59.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -56,16 +60,19 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="7pA-Bo-Wj9" kind="show" id="uR0-nP-UXr"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="t5e-1l-05g" rowHeight="60" style="IBUITableViewCellStyleDefault" id="S3u-CU-5iN">
                                         <rect key="frame" x="0.0" y="184" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S3u-CU-5iN" id="MPL-O5-3A9">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Who Can Participate?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t5e-1l-05g">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="59.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -76,16 +83,19 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="N8w-Jg-8fR" kind="show" id="NtU-cD-JHx"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="9qJ-JJ-g3r" rowHeight="60" style="IBUITableViewCellStyleDefault" id="8uz-Lv-WbH">
                                         <rect key="frame" x="0.0" y="244" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8uz-Lv-WbH" id="V2W-4T-ZPz">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Life with Diabetes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9qJ-JJ-g3r">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="59.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -96,16 +106,19 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="p2o-ee-7OG" kind="show" id="n2l-gC-rdH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gwe-31-dAf" rowHeight="60" style="IBUITableViewCellStyleDefault" id="oXg-cu-9hd">
                                         <rect key="frame" x="0.0" y="304" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oXg-cu-9hd" id="n8z-8Z-RC4">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gwe-31-dAf">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="59.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -116,16 +129,19 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="nQB-Sf-HL1" kind="show" id="amt-WU-zy6"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Vq2-Gb-FRh" rowHeight="60" style="IBUITableViewCellStyleDefault" id="rH8-Qm-d2P">
                                         <rect key="frame" x="0.0" y="364" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rH8-Qm-d2P" id="EVt-bN-YK1">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="OnlineResources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vq2-Gb-FRh">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="59.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Online Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vq2-Gb-FRh">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -136,6 +152,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="G5a-S8-wXK" kind="show" id="0ff-h4-S7r"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -150,6 +169,287 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ay-7i-oOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="925" y="-1104"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X17-Zc-hNY">
+            <objects>
+                <viewController id="p2o-ee-7OG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20w-mE-A9s"/>
+                        <viewControllerLayoutGuide type="bottom" id="ejH-2v-xKT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="omx-Ks-8jj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Life with Diabetes" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sig-0F-fpn">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hl3-Gm-em2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkS-8T-Dej">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Alzheimer's is the most common form of dementia, a general term for memory loss and other intellectual abilities serious enough to interfere with daily life. Alzheimer's disease accounts for 60 to 80 percent of dementia cases. 
+
+Alzheimer's is not a normal part of aging, although the greatest known risk factor is increasing age, and the majority of people with Alzheimer's are 65 and older. But Alzheimer's is not just a disease of old age. Up to 5 percent of people with the disease have early onset Alzheimer's (also known as younger-onset), which often appears when someone is in their 40s or 50s.
+
+Alzheimer's worsens over time. Alzheimer's is a progressive disease, where dementia symptoms gradually worsen over a number of years. In its early stages, memory loss is mild, but with late-stage Alzheimer's, individuals lose the ability to carry on a conversation and respond to their environment. Alzheimer's is the sixth leading cause of death in the United States. Those with Alzheimer's live an average of eight years after their symptoms become noticeable to others, but survival can range from four to 20 years, depending on age and other health conditions. 
+
+Alzheimer's has no current cure, but treatments for symptoms are available and research continues. Although current Alzheimer's treatments cannot stop Alzheimer's from progressing, they can temporarily slow the worsening of dementia symptoms and improve quality of life for those with Alzheimer's and their caregivers. Today, there is a worldwide effort under way to find better ways to treat the disease, delay its onset, and prevent it from developing.  
+
+Alzheimer’s Association </mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sig-0F-fpn" firstAttribute="leading" secondItem="omx-Ks-8jj" secondAttribute="leadingMargin" id="1cY-Rs-FoS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XkS-8T-Dej" secondAttribute="trailing" id="716-ck-AOh"/>
+                            <constraint firstItem="XkS-8T-Dej" firstAttribute="leading" secondItem="omx-Ks-8jj" secondAttribute="leadingMargin" id="7gP-qz-OoW"/>
+                            <constraint firstItem="XkS-8T-Dej" firstAttribute="top" secondItem="Sig-0F-fpn" secondAttribute="bottom" id="KAU-XP-Dmr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sig-0F-fpn" secondAttribute="trailing" id="a76-cQ-ry9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XkS-8T-Dej" secondAttribute="bottom" id="euZ-wT-Wxu"/>
+                            <constraint firstItem="Sig-0F-fpn" firstAttribute="top" secondItem="20w-mE-A9s" secondAttribute="bottom" id="hLy-c5-rra"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5W1-80-B1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="-318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nl2-lS-a5I">
+            <objects>
+                <viewController id="N8w-Jg-8fR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0be-x4-fyc"/>
+                        <viewControllerLayoutGuide type="bottom" id="WK0-NY-WaO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S5a-sW-oFe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Who Can Paticipate?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-h5-wwQ">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YB3-JP-MhT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" text="This study is open to adults ages 18 and over" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyy-fR-k9A">
+                                <rect key="frame" x="20" y="114" width="560" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DJv-h5-wwQ" secondAttribute="trailing" id="1Fa-jn-SVG"/>
+                            <constraint firstItem="jyy-fR-k9A" firstAttribute="top" secondItem="DJv-h5-wwQ" secondAttribute="bottom" id="BzV-U2-WYv"/>
+                            <constraint firstItem="WK0-NY-WaO" firstAttribute="top" secondItem="jyy-fR-k9A" secondAttribute="bottom" id="Etm-6t-V7x"/>
+                            <constraint firstItem="jyy-fR-k9A" firstAttribute="leading" secondItem="S5a-sW-oFe" secondAttribute="leadingMargin" id="Wnn-6y-BoA"/>
+                            <constraint firstItem="DJv-h5-wwQ" firstAttribute="leading" secondItem="S5a-sW-oFe" secondAttribute="leadingMargin" id="qJZ-gw-Og5"/>
+                            <constraint firstItem="DJv-h5-wwQ" firstAttribute="top" secondItem="0be-x4-fyc" secondAttribute="bottom" id="qTu-P5-n3l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jyy-fR-k9A" secondAttribute="trailing" id="ueQ-C2-bje"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZm-aS-YR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-1104"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gN6-JF-WYW">
+            <objects>
+                <viewController id="nQB-Sf-HL1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rAJ-6l-bTT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hf5-O8-5VF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TzV-CD-Dot">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Symptoms" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHd-LG-50v">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bvc-zi-wrf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-5H-hzt">
+                                <rect key="frame" x="20" y="114" width="560" height="1000"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The most common early symptom of Alzheimer's is difficulty remembering newly learned information.
+
+Just like the rest of our bodies, our brains change as we age . Most of us eventually notice some slowed thinking and occasional problems with remembering certain things. However, serious memory loss, confusion and other major changes in the way our minds work may be a sign that brain cells are failing.
+The most common early symptom of Alzheimer's is difficulty remembering newly learned information because Alzheimer's changes typically begin in the part of the brain that affects learning. As Alzheimer's advances through the brain it leads to increasingly severe symptoms, including disorientation, mood and behavior changes; deepening confusion about events, time and place; unfounded suspicions about family, friends and professional caregivers; more serious memory loss and behavior changes; and difficulty speaking, swallowing and walking.
+
+Alzheimer’s Association </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BHd-LG-50v" secondAttribute="trailing" id="77h-Wf-IRw"/>
+                            <constraint firstItem="BHd-LG-50v" firstAttribute="top" secondItem="rAJ-6l-bTT" secondAttribute="bottom" id="7yP-Jb-jdC"/>
+                            <constraint firstItem="BHd-LG-50v" firstAttribute="leading" secondItem="TzV-CD-Dot" secondAttribute="leadingMargin" id="C0t-5r-8Ha"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="T2T-5H-hzt" secondAttribute="bottom" id="HIv-J5-aGc"/>
+                            <constraint firstItem="T2T-5H-hzt" firstAttribute="top" secondItem="BHd-LG-50v" secondAttribute="bottom" id="Rx3-84-w3b"/>
+                            <constraint firstItem="T2T-5H-hzt" firstAttribute="leading" secondItem="TzV-CD-Dot" secondAttribute="leadingMargin" id="bGH-DQ-6uQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T2T-5H-hzt" secondAttribute="trailing" id="iNf-ZY-ic1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSL-dF-XAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="-318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qmx-dL-IeN">
+            <objects>
+                <viewController id="7pA-Bo-Wj9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="39V-r4-u4j"/>
+                        <viewControllerLayoutGuide type="bottom" id="rkT-PD-YhR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tns-gC-YwX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How to This Study Works" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXj-0A-nkK">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cL6-Y1-fBo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voa-Y6-qxc">
+                                <rect key="frame" x="20" y="114" width="560" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Welcome to ResearchLine! This app is part of a program to use the iPhone to advance clinical research into Alzheimer’s disease.  ResearchLine helps you keep track of health behaviors, such as physical activity, glucose level, cognitive and emotional function. Data that you share through the app as part of a research study will help researchers understand how health behaviors influence cognitive and emotional functions in real life, with a resolution greater than ever before. </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="voa-Y6-qxc" firstAttribute="top" secondItem="LXj-0A-nkK" secondAttribute="bottom" id="0jr-mO-zdU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="voa-Y6-qxc" secondAttribute="trailing" id="J9m-43-Z4h"/>
+                            <constraint firstItem="voa-Y6-qxc" firstAttribute="leading" secondItem="Tns-gC-YwX" secondAttribute="leadingMargin" id="XTJ-iw-vMN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LXj-0A-nkK" secondAttribute="trailing" id="XoO-Qc-v6N"/>
+                            <constraint firstItem="LXj-0A-nkK" firstAttribute="top" secondItem="39V-r4-u4j" secondAttribute="bottom" id="fUY-mA-ipO"/>
+                            <constraint firstItem="LXj-0A-nkK" firstAttribute="leading" secondItem="Tns-gC-YwX" secondAttribute="leadingMargin" id="kSc-l1-fNY"/>
+                            <constraint firstItem="rkT-PD-YhR" firstAttribute="top" secondItem="voa-Y6-qxc" secondAttribute="bottom" id="zA3-um-YfM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RU-y5-nFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="-1767"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gn4-Mc-q5W">
+            <objects>
+                <viewController id="G5a-S8-wXK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4gi-po-UsM"/>
+                        <viewControllerLayoutGuide type="bottom" id="JSk-1e-7k4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ivu-qU-QvR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Online Resources" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-qW-svy">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZEQ-9d-XAY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-FA-Xe6">
+                                <rect key="frame" x="20" y="114" width="560" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">http://www.alz.org/
+Alzheimer’s Association
+
+https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet
+National Institute of Ageing - Alzheimer’s disease fact sheet</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hLm-FA-Xe6" firstAttribute="top" secondItem="Zu2-qW-svy" secondAttribute="bottom" id="3Gt-8a-lHt"/>
+                            <constraint firstItem="Zu2-qW-svy" firstAttribute="leading" secondItem="ivu-qU-QvR" secondAttribute="leadingMargin" id="3hx-Je-Gle"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hLm-FA-Xe6" secondAttribute="trailing" id="G75-HZ-Rt9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hLm-FA-Xe6" secondAttribute="bottom" id="Rjf-cf-7bk"/>
+                            <constraint firstItem="Zu2-qW-svy" firstAttribute="top" secondItem="4gi-po-UsM" secondAttribute="bottom" id="U3Z-fB-bUc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zu2-qW-svy" secondAttribute="trailing" id="ksL-ex-7u5"/>
+                            <constraint firstItem="hLm-FA-Xe6" firstAttribute="leading" secondItem="ivu-qU-QvR" secondAttribute="leadingMargin" id="qLl-mO-drf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDg-ei-E9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a4j-xl-ubu">
+            <objects>
+                <viewController id="KuE-zN-zTc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BtX-aq-wuu"/>
+                        <viewControllerLayoutGuide type="bottom" id="zlu-eb-6No"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QVb-ar-CCD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="About This Study" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0O-SG-8iP">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wJN-qn-o6k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiO-xi-bnJ">
+                                <rect key="frame" x="20" y="114" width="560" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Welcome to ResearchLine! This app is designed to use the iPhone to conduct clinical research into Alzheimer’s disease.  ResearchLine helps you keep track of health behaviors for monitoring and improving cognitive and emotional functions. Data that you share through the app as part of a research study will help researchers understand how health behaviors influence blood glucose, cognitive/emotional functions in real life. This app also provides personalized insights into how your daily physical activity relate to your blood glucose, cognitive, emotional functional levels, and helps you manage cognitive decline and prevents Alzheimer’s disease.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="QiO-xi-bnJ" secondAttribute="trailing" id="362-DC-pDV"/>
+                            <constraint firstItem="QiO-xi-bnJ" firstAttribute="leading" secondItem="QVb-ar-CCD" secondAttribute="leadingMargin" id="3U3-4H-zqX"/>
+                            <constraint firstItem="QiO-xi-bnJ" firstAttribute="top" secondItem="BtX-aq-wuu" secondAttribute="bottom" constant="50" id="6px-H2-2iv"/>
+                            <constraint firstItem="zlu-eb-6No" firstAttribute="top" secondItem="QiO-xi-bnJ" secondAttribute="bottom" id="KYq-23-6g2"/>
+                            <constraint firstItem="L0O-SG-8iP" firstAttribute="leading" secondItem="QVb-ar-CCD" secondAttribute="leadingMargin" id="Q1W-Pp-B0b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L0O-SG-8iP" secondAttribute="trailing" id="Rhn-fh-AWw"/>
+                            <constraint firstItem="L0O-SG-8iP" firstAttribute="top" secondItem="BtX-aq-wuu" secondAttribute="bottom" id="V4M-Vb-0ox"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYa-kX-mgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="-1789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tWk-yP-O3g">

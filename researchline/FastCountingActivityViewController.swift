@@ -11,8 +11,8 @@ import Alamofire
 
 class FastCountingActivityViewController: UIViewController {
     
-    var usedTops: [CGFloat] = []
-    var usedLeadings: [CGFloat] = []
+    var usedTops: [UInt32] = []
+    var usedLeadings: [UInt32] = []
     
     @IBOutlet weak var point1View: UIView!
     @IBOutlet weak var point2View: UIView!
@@ -21,7 +21,6 @@ class FastCountingActivityViewController: UIViewController {
     @IBOutlet weak var point5View: UIView!
     @IBOutlet weak var point6View: UIView!
     @IBOutlet weak var point7View: UIView!
-    @IBOutlet weak var point8View: UIView!
     
     @IBOutlet weak var point1ViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var point1ViewLeadingConstraint: NSLayoutConstraint!
@@ -43,9 +42,6 @@ class FastCountingActivityViewController: UIViewController {
     
     @IBOutlet weak var point7ViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var point7ViewLeadingConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var point8ViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var point8ViewLeadingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var containerView: UIView!
     
@@ -111,7 +107,7 @@ class FastCountingActivityViewController: UIViewController {
         Alamofire.request(.POST, Constants.activity, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": Constants.signKey!], parameters: [
+            "signKey": Constants.signKey()], parameters: [
                 "value": jsonResult,
                 "activityId": activityId!
             ])
@@ -140,6 +136,14 @@ class FastCountingActivityViewController: UIViewController {
         successLabel.hidden = true
         failureLabel.hidden = true
         containerView.hidden = true
+        
+        point1View.hidden = true
+        point2View.hidden = true
+        point3View.hidden = true
+        point4View.hidden = true
+        point5View.hidden = true
+        point6View.hidden = true
+        point7View.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -185,55 +189,63 @@ class FastCountingActivityViewController: UIViewController {
         
         usedTops.removeAll()
         usedLeadings.removeAll()
-        pointCount = 0
+        pointCount = Int.init(arc4random_uniform(4)) + 4
         
-        point1ViewTopConstraint.constant = getRandomTop()
-        point1ViewLeadingConstraint.constant = getRandomLeading()
-        let point1ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point1ViewVisible)
-        point1View.hidden = point1ViewVisible
+        point1View.hidden = true
+        point2View.hidden = true
+        point3View.hidden = true
+        point4View.hidden = true
+        point5View.hidden = true
+        point6View.hidden = true
+        point7View.hidden = true
         
-        point2ViewTopConstraint.constant = getRandomTop()
-        point2ViewLeadingConstraint.constant = getRandomLeading()
-        let point2ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point2ViewVisible)
-        point2View.hidden = point2ViewVisible
+        if(pointCount > 3){
+            point1ViewTopConstraint.constant = getRandomTop()
+            point1ViewLeadingConstraint.constant = getRandomLeading()
+            point1View.hidden = false
+            point1View.layer.cornerRadius = point1View.frame.size.width/2
+            point1View.clipsToBounds = true
+            
+            point2ViewTopConstraint.constant = getRandomTop()
+            point2ViewLeadingConstraint.constant = getRandomLeading()
+            point2View.hidden = false
+            point2View.layer.cornerRadius = point2View.frame.size.width/2
+            point2View.clipsToBounds = true
+            
+            point3ViewTopConstraint.constant = getRandomTop()
+            point3ViewLeadingConstraint.constant = getRandomLeading()
+            point3View.hidden = false
+            point3View.layer.cornerRadius = point3View.frame.size.width/2
+            point3View.clipsToBounds = true
+            
+            point4ViewTopConstraint.constant = getRandomTop()
+            point4ViewLeadingConstraint.constant = getRandomLeading()
+            point4View.hidden = false
+            point4View.layer.cornerRadius = point4View.frame.size.width/2
+            point4View.clipsToBounds = true
+        }
+        if(pointCount > 4){
+            point5ViewTopConstraint.constant = getRandomTop()
+            point5ViewLeadingConstraint.constant = getRandomLeading()
+            point5View.hidden = false
+            point5View.layer.cornerRadius = point5View.frame.size.width/2
+            point5View.clipsToBounds = true
+        }
+        if(pointCount > 5){
+            point6ViewTopConstraint.constant = getRandomTop()
+            point6ViewLeadingConstraint.constant = getRandomLeading()
+            point6View.hidden = false
+            point6View.layer.cornerRadius = point6View.frame.size.width/2
+            point6View.clipsToBounds = true
+        }
+        if(pointCount > 6){
+            point7ViewTopConstraint.constant = getRandomTop()
+            point7ViewLeadingConstraint.constant = getRandomLeading()
+            point7View.hidden = false
+            point7View.layer.cornerRadius = point7View.frame.size.width/2
+            point7View.clipsToBounds = true
+        }
         
-        point3ViewTopConstraint.constant = getRandomTop()
-        point3ViewLeadingConstraint.constant = getRandomLeading()
-        let point3ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point3ViewVisible)
-        point3View.hidden = point3ViewVisible
-        
-        point4ViewTopConstraint.constant = getRandomTop()
-        point4ViewLeadingConstraint.constant = getRandomLeading()
-        let point4ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point4ViewVisible)
-        point4View.hidden = point4ViewVisible
-        
-        point5ViewTopConstraint.constant = getRandomTop()
-        point5ViewLeadingConstraint.constant = getRandomLeading()
-        let point5ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point5ViewVisible)
-        point5View.hidden = point5ViewVisible
-        
-        point6ViewTopConstraint.constant = getRandomTop()
-        point6ViewLeadingConstraint.constant = getRandomLeading()
-        let point6ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point6ViewVisible)
-        point6View.hidden = point6ViewVisible
-        
-        point7ViewTopConstraint.constant = getRandomTop()
-        point7ViewLeadingConstraint.constant = getRandomLeading()
-        let point7ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point7ViewVisible)
-        point7View.hidden = point7ViewVisible
-        
-        point8ViewTopConstraint.constant = getRandomTop()
-        point8ViewLeadingConstraint.constant = getRandomLeading()
-        let point8ViewVisible = arc4random_uniform(2) == 1
-        pointCount! += Int(point8ViewVisible)
-        point8View.hidden = point8ViewVisible
         
         start = NSDate()
         
@@ -246,24 +258,30 @@ class FastCountingActivityViewController: UIViewController {
     }
     
     internal func getRandomTop() -> CGFloat {
-        var value = CGFloat(arc4random_uniform(UInt32(containerView.bounds.height - 24)) + UInt32(1))
-        while usedTops.contains(value) {
-            value = CGFloat(arc4random_uniform(UInt32(containerView.bounds.height - 24)) + UInt32(1))
-        }
         
-        usedTops.append(value)
+        var value: CGFloat? = nil
+        var intValue: UInt32? = 0
+        repeat {
+            intValue = arc4random_uniform(UInt32(containerView.bounds.height - 24)) + UInt32(1)
+        } while(usedTops.contains(intValue! / 36))
         
-        return value
+        value = CGFloat(intValue!)
+        usedTops.append(intValue! / 36)
+        
+        return value!
     }
     
     internal func getRandomLeading() -> CGFloat {
-        var value = CGFloat(arc4random_uniform(UInt32(view.bounds.width - 24)) + UInt32(1))
-        while usedLeadings.contains(value) {
-            value = CGFloat(arc4random_uniform(UInt32(view.bounds.width - 24)) + UInt32(1))
-        }
         
-        usedLeadings.append(value)
+        var value: CGFloat? = nil
+        var intValue: UInt32? = 0
+        repeat {
+            intValue = arc4random_uniform(UInt32(view.bounds.width - 24)) + UInt32(1)
+        } while(usedLeadings.contains(intValue! / 36))
         
-        return value
+        value = CGFloat(intValue!)
+        usedLeadings.append(intValue! / 36)
+        
+        return value!
     }
 }

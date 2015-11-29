@@ -49,7 +49,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1H-0E-TeD" userLabel="Select Number View">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-aQ-gwP">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-aQ-gwP">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.99981133099999997" blue="0.76941134349999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,17 +59,7 @@
                                             <action selector="touchUpInsideNumberButton:" destination="1jM-di-XW8" eventType="touchUpInside" id="kfZ-MQ-17k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onO-SR-enR">
-                                        <rect key="frame" x="150" y="0.0" width="150" height="50"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="1" green="0.99981133099999997" blue="0.76941134349999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="5"/>
-                                        <connections>
-                                            <action selector="touchUpInsideNumberButton:" destination="1jM-di-XW8" eventType="touchUpInside" id="3Ib-6Z-8vW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBi-Eg-idw">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBi-Eg-idw">
                                         <rect key="frame" x="300" y="0.0" width="150" height="50"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.99981133099999997" blue="0.76941134349999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,7 +69,7 @@
                                             <action selector="touchUpInsideNumberButton:" destination="1jM-di-XW8" eventType="touchUpInside" id="tT6-zp-pdP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKx-jG-HZe">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKx-jG-HZe">
                                         <rect key="frame" x="450" y="0.0" width="150" height="50"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.99981133099999997" blue="0.76941134349999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,6 +77,16 @@
                                         <state key="normal" title="7"/>
                                         <connections>
                                             <action selector="touchUpInsideNumberButton:" destination="1jM-di-XW8" eventType="touchUpInside" id="NsP-HT-mlO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onO-SR-enR">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="50"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.99981133099999997" blue="0.76941134349999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="5"/>
+                                        <connections>
+                                            <action selector="touchUpInsideNumberButton:" destination="1jM-di-XW8" eventType="touchUpInside" id="3Ib-6Z-8vW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -105,6 +105,7 @@
                                     <constraint firstItem="FBi-Eg-idw" firstAttribute="width" secondItem="b1H-0E-TeD" secondAttribute="width" multiplier="1:4" id="U4Z-hp-r5I"/>
                                     <constraint firstItem="kK6-aQ-gwP" firstAttribute="width" secondItem="b1H-0E-TeD" secondAttribute="width" multiplier="1:4" id="fSz-ON-IGe"/>
                                     <constraint firstItem="JKx-jG-HZe" firstAttribute="leading" secondItem="FBi-Eg-idw" secondAttribute="trailing" id="pEs-8g-2eK"/>
+                                    <constraint firstItem="kK6-aQ-gwP" firstAttribute="leading" secondItem="b1H-0E-TeD" secondAttribute="leading" id="rPm-W4-LVF"/>
                                     <constraint firstItem="JKx-jG-HZe" firstAttribute="top" secondItem="b1H-0E-TeD" secondAttribute="top" id="rbk-EM-p19"/>
                                     <constraint firstItem="FBi-Eg-idw" firstAttribute="leading" secondItem="onO-SR-enR" secondAttribute="trailing" id="vUH-P3-beu"/>
                                     <constraint firstItem="onO-SR-enR" firstAttribute="top" secondItem="b1H-0E-TeD" secondAttribute="top" id="y7O-0X-pZ7"/>
@@ -185,15 +186,6 @@
                                             <constraint firstAttribute="width" constant="24" id="rkW-Gw-meC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jK-ai-ekm" userLabel="Point8 View">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="7QU-87-a8t"/>
-                                            <constraint firstAttribute="width" constant="24" id="zkb-5j-uhB"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tu-4o-Ija" userLabel="Point4 View">
                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                         <animations/>
@@ -210,7 +202,6 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="3jK-ai-ekm" firstAttribute="leading" secondItem="ZCh-ZN-qUY" secondAttribute="leading" id="6g6-rl-gZA"/>
                                     <constraint firstItem="xT7-TU-yG7" firstAttribute="top" secondItem="ZCh-ZN-qUY" secondAttribute="top" id="9Tm-KM-gir"/>
                                     <constraint firstItem="zQO-Yp-AFX" firstAttribute="top" secondItem="ZCh-ZN-qUY" secondAttribute="top" id="FeK-vm-IPa"/>
                                     <constraint firstItem="8Tu-4o-Ija" firstAttribute="leading" secondItem="ZCh-ZN-qUY" secondAttribute="leading" id="LuQ-Mg-Y8E"/>
@@ -223,7 +214,6 @@
                                     <constraint firstItem="wdL-Ob-CEt" firstAttribute="top" secondItem="ZCh-ZN-qUY" secondAttribute="top" id="m5O-63-fMe"/>
                                     <constraint firstItem="xT7-TU-yG7" firstAttribute="leading" secondItem="ZCh-ZN-qUY" secondAttribute="leading" id="oE3-WQ-n4E"/>
                                     <constraint firstItem="ccG-JJ-Bs2" firstAttribute="top" secondItem="ZCh-ZN-qUY" secondAttribute="top" id="ocW-HT-atN"/>
-                                    <constraint firstItem="3jK-ai-ekm" firstAttribute="top" secondItem="ZCh-ZN-qUY" secondAttribute="top" id="qGX-EC-BIE"/>
                                     <constraint firstItem="ute-Gq-Hup" firstAttribute="leading" secondItem="ZCh-ZN-qUY" secondAttribute="leading" id="vbf-hH-vfm"/>
                                     <constraint firstItem="ivi-pf-MiK" firstAttribute="leading" secondItem="ZCh-ZN-qUY" secondAttribute="leading" id="yaF-yc-Yo4"/>
                                 </constraints>
@@ -279,9 +269,6 @@
                         <outlet property="point7View" destination="ute-Gq-Hup" id="twO-Ey-mZO"/>
                         <outlet property="point7ViewLeadingConstraint" destination="vbf-hH-vfm" id="CBH-e1-PmH"/>
                         <outlet property="point7ViewTopConstraint" destination="ciP-uE-yTA" id="fDm-5b-zhW"/>
-                        <outlet property="point8View" destination="3jK-ai-ekm" id="UCG-6h-Tbk"/>
-                        <outlet property="point8ViewLeadingConstraint" destination="6g6-rl-gZA" id="yPP-BY-nxy"/>
-                        <outlet property="point8ViewTopConstraint" destination="qGX-EC-BIE" id="NWs-AC-mc9"/>
                         <outlet property="startButton" destination="voQ-pj-3G5" id="XAb-kx-kVN"/>
                         <outlet property="successLabel" destination="aau-yT-liZ" id="IFR-kY-zFk"/>
                     </connections>
