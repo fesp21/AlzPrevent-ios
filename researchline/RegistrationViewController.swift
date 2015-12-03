@@ -21,17 +21,41 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var sexSegmentedControl: UISegmentedControl!
 
     @IBAction func editChangedTextField(sender: UITextField) {
-        joinBarButtonItem.enabled = !emailTextField.text!.isEmpty && !realNameTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+        if(!emailTextField.text!.isEmpty && !realNameTextField.text!.isEmpty && !passwordTextField.text!.isEmpty){
+            joinBarButtonItem.enabled = true
+            
+            let data = self.signFileData!
+            Constants.signFileData = data
+            
+            let sex = sexSegmentedControl.selectedSegmentIndex == 0 ? "male" : "female"
+            Constants.userDefaults.setObject(sex, forKey: "sex")
+            let email = self.emailTextField.text ?? ""
+            Constants.userDefaults.setObject(email, forKey: "email")
+            let realName = self.realNameTextField.text ?? ""
+            Constants.userDefaults.setObject(realName, forKey: "realName")
+            let password = self.passwordTextField.text ?? ""
+            Constants.userDefaults.setObject(password, forKey: "password")
+            
+        }
+
     }
     
+    
+    
     @IBAction func touchUpInsideNextBarButtonItem(sender: UIBarButtonItem) {
-        let data = UIImagePNGRepresentation(self.signFileData!)!
-        let sex = sexSegmentedControl.selectedSegmentIndex == 0 ? "male" : "female"
+        
+        let email = Constants.userDefaults.stringForKey("email")!
+        let realName = Constants.userDefaults.stringForKey("realName")!
+        let password = Constants.userDefaults.stringForKey("password")!
+        let sex = Constants.userDefaults.stringForKey("sex")!
+        let data = UIImagePNGRepresentation(Constants.signFileData!)!
+        
+        
         Alamofire.upload(.POST, Constants.register, multipartFormData: { (formData: MultipartFormData) -> Void in
             formData.appendBodyPart(data: data, name: "file", fileName: "file.jpg", mimeType: "image/png")
-            formData.appendBodyPart(data: (self.emailTextField.text ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "email")
-            formData.appendBodyPart(data: (self.realNameTextField.text ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "realName")
-            formData.appendBodyPart(data: (self.passwordTextField.text ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "password")
+            formData.appendBodyPart(data: email.dataUsingEncoding(NSUTF8StringEncoding)!, name: "email")
+            formData.appendBodyPart(data: realName.dataUsingEncoding(NSUTF8StringEncoding)!, name: "realName")
+            formData.appendBodyPart(data: password.dataUsingEncoding(NSUTF8StringEncoding)!, name: "password")
             formData.appendBodyPart(data: Constants.deviceKey.dataUsingEncoding(NSUTF8StringEncoding)!, name: "deviceKey")
             formData.appendBodyPart(data: Constants.deviceType.dataUsingEncoding(NSUTF8StringEncoding)!, name: "deviceType")
             formData.appendBodyPart(data: (Constants.firstName() ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "firstName")
@@ -49,18 +73,30 @@ class RegistrationViewController: UIViewController {
                                 if signKey != nil {
                                     userDefaults.setObject(response.result.value!["data"]!!["signKey"], forKey: "signKey")
                                     
-                                    let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                                    let controller = storyboard.instantiateInitialViewController()!
-                                    self.presentViewController(controller, animated: true, completion: nil)
+                                    Constants.userDefaults.setObject(Constants.STEP_REGISTER, forKey: "registerStep")
+                                    
+                                    let storyboard = UIStoryboard(name: "Session", bundle: nil)
+                                    let controller = storyboard.instantiateViewControllerWithIdentifier("AdditionInfoViewController")
+                                    self.navigationController?.pushViewController(controller, animated: true)
+                                    
                                 } else {
                                     print("no signKey")
                                 }
+                            }else if(_response.statusCode == 406){
+                                let alert = UIAlertController(title: "Alert", message: "Fail to join. Please check the email address that used.", preferredStyle: UIAlertControllerStyle.Alert)
+                                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                                self.presentViewController(alert, animated: true, completion: nil)
+                            }else{
+                                let alert = UIAlertController(title: "Alert", message: "Error was happen when sending registration request.", preferredStyle: UIAlertControllerStyle.Alert)
+                                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                                self.presentViewController(alert, animated: true, completion: nil)
                             }
                         }
                     }
                 case .Failure(let encodingError):
                     print(encodingError)
-                }
-        })
+                } // result
+        }) // upload
+        
     }
 }

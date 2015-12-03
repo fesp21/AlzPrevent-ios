@@ -13,8 +13,8 @@ class EligibilitySurveyViewController: UITableViewController {
     @IBOutlet weak var surveyOneYesButton: UIButton!
     @IBOutlet weak var surveyOneNoButton: UIButton!
     
-    @IBOutlet weak var surveyTwoYesButton: UIButton!
-    @IBOutlet weak var surveyTwoNoButton: UIButton!
+//    @IBOutlet weak var surveyTwoYesButton: UIButton!
+//    @IBOutlet weak var surveyTwoNoButton: UIButton!
     
     @IBOutlet weak var surveyThreeYesButton: UIButton!
     @IBOutlet weak var surveyThreeNoButton: UIButton!
@@ -43,10 +43,10 @@ class EligibilitySurveyViewController: UITableViewController {
             surveyOneNoButton.selected = false
         }
         
-        if sender.tag == 20 || sender.tag == 21 {
-            surveyTwoYesButton.selected = false
-            surveyTwoNoButton.selected = false
-        }
+//        if sender.tag == 20 || sender.tag == 21 {
+//            surveyTwoYesButton.selected = false
+//            surveyTwoNoButton.selected = false
+//        }
         
         if sender.tag == 30 || sender.tag == 31 {
             surveyThreeYesButton.selected = false
@@ -55,6 +55,6 @@ class EligibilitySurveyViewController: UITableViewController {
         
         sender.selected = !sender.selected
         nextBarButtonItem.enabled = true
-        isAvailabled = surveyOneYesButton.selected && !surveyTwoYesButton.selected && surveyThreeYesButton.selected
+        isAvailabled = surveyOneYesButton.selected && surveyThreeYesButton.selected
     }
 }

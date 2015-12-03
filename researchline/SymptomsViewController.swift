@@ -1,32 +1,30 @@
 //
-//  ChangeEmailViewController.swift
+//  SymtomViewController.swift
 //  researchline
 //
-//  Created by riverleo on 2015. 11. 8..
+//  Created by jknam on 2015. 12. 4..
 //  Copyright © 2015년 bbb. All rights reserved.
 //
 
 import UIKit
 
-class ChangeEmailViewController: UIViewController {
+class SymptomsViewController: UIViewController {
 
-    @IBOutlet weak var emailLabel: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
-    
-    @IBAction func done(sender: AnyObject) {
-        let emailStr = emailLabel.text
-        Constants.userDefaults.setObject(emailStr, forKey: "email")
-        navigationController!.popViewControllerAnimated(true)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        textView.setContentOffset(CGPointZero, animated: false)
     }
     
 

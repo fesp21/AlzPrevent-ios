@@ -24,13 +24,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vU-mZ-94M">
                                         <rect key="frame" x="20" y="14" width="84" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Failure: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaZ-wv-QlT">
                                         <rect key="frame" x="499" y="14" width="70" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -49,7 +49,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5A-SU-VbK">
                                         <rect key="frame" x="276" y="0.0" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -84,6 +84,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="JWK-uk-68a"/>
+                                    <constraint firstAttribute="height" constant="34" id="qz8-kr-dbT"/>
                                 </constraints>
                                 <inset key="titleEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <state key="normal" title="Click Here to Start"/>
@@ -92,7 +93,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Remember the digits you see, REVERSE THEM and type them into the box." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zE-uh-ezp">
-                                <rect key="frame" x="30" y="70" width="540" height="330"/>
+                                <rect key="frame" x="30" y="70" width="540" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -106,7 +107,7 @@
                         <constraints>
                             <constraint firstItem="8Jj-bc-wNZ" firstAttribute="leading" secondItem="HnY-Q7-Veg" secondAttribute="leading" id="38G-bV-riF"/>
                             <constraint firstItem="h0V-72-I1L" firstAttribute="centerX" secondItem="HnY-Q7-Veg" secondAttribute="centerX" id="7Of-cx-0fo"/>
-                            <constraint firstItem="8dD-Wt-Bj3" firstAttribute="top" secondItem="3zE-uh-ezp" secondAttribute="bottom" constant="200" id="98b-3U-Ae8"/>
+                            <constraint firstItem="8dD-Wt-Bj3" firstAttribute="top" secondItem="3zE-uh-ezp" secondAttribute="bottom" constant="300" id="98b-3U-Ae8"/>
                             <constraint firstItem="h0V-72-I1L" firstAttribute="centerY" secondItem="HnY-Q7-Veg" secondAttribute="centerY" id="O4u-Ew-dyH"/>
                             <constraint firstItem="8Jj-bc-wNZ" firstAttribute="top" secondItem="H7M-z0-yPG" secondAttribute="bottom" id="R9j-ZX-1LG"/>
                             <constraint firstItem="rfk-8N-Eg3" firstAttribute="centerX" secondItem="HnY-Q7-Veg" secondAttribute="centerX" id="TZv-xe-djK"/>

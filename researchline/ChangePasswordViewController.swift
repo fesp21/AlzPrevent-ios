@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChangePasswordViewController: UIViewController {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBAction func clickYesButton(sender: AnyObject) {
+        
+        Alamofire.request(.POST, Constants.findPassword,
+            parameters: [
+                "email": Constants.email()
+            ])
+            .responseString { (response: Response) -> Void in
+                
+                debugPrint(response)
+                    
+                let alert = UIAlertController(title: "Alert", message: "Send a email for changing password. Please check your email.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion:{ () -> Void in
+                        self.navigationController?.popViewControllerAnimated(true)
+                    })
+        }
+    }
+
+    @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let request = NSURLRequest(URL: NSURL(string: Constants.urlChangePassword)!)
-        webView.loadRequest(request)
     }
 }

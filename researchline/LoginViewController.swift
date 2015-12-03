@@ -28,6 +28,10 @@ class LoginViewController: UIViewController {
         doneBarButtonItem.enabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
     }
     
+    @IBAction func passwordChanged(sender: AnyObject) {
+        doneBarButtonItem.enabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+    }
+    
     @IBAction func touchUpInsideDoneBarButtonItem(sender: UIBarButtonItem) {
         sender.enabled = false
         Alamofire.request(.POST, Constants.login,
@@ -51,6 +55,7 @@ class LoginViewController: UIViewController {
                         let userDefaults = NSUserDefaults.standardUserDefaults()
                         userDefaults.setObject(response.result.value!["signKey"]!, forKey: "signKey")
                         userDefaults.setObject(self.emailTextField.text, forKey: "email")
+                        Constants.userDefaults.setObject(Constants.STEP_FINISHED, forKey: "registerStep")
                         
                         // shows tab bar
                         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)

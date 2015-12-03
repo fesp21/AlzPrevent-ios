@@ -80,6 +80,13 @@
 		BC6281751C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281741C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift */; };
 		BC6281771C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281761C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift */; };
 		BC6281791C0BA9DD001AB929 /* GlucoseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281781C0BA9DD001AB929 /* GlucoseSuccessViewController.swift */; };
+		BC62817B1C0C7D3E001AB929 /* AdditionHeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62817A1C0C7D3E001AB929 /* AdditionHeightTableViewController.swift */; };
+		BC62817D1C0C7D89001AB929 /* AdditionWeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62817C1C0C7D89001AB929 /* AdditionWeightTableViewController.swift */; };
+		BC62817F1C0C7DA8001AB929 /* AdditionBirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62817E1C0C7DA8001AB929 /* AdditionBirthViewController.swift */; };
+		BC6281811C0C8905001AB929 /* AdditionInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6281801C0C8905001AB929 /* AdditionInfoTableViewController.swift */; };
+		BC6620281C0DA0E800ECDCAB /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6620271C0DA0E800ECDCAB /* PasscodeViewController.swift */; };
+		BC68B0CD1C10CD940024A2AC /* SymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC68B0CC1C10CD940024A2AC /* SymptomsViewController.swift */; };
+		BC68B0CF1C10CDE00024A2AC /* LifeAndDebatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC68B0CE1C10CDE00024A2AC /* LifeAndDebatesViewController.swift */; };
 		BC97E9B11C07412D00245F5F /* SexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B01C07412D00245F5F /* SexTableViewController.swift */; };
 		BC97E9B31C08154900245F5F /* HeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B21C08154900245F5F /* HeightTableViewController.swift */; };
 		BC97E9B51C084CCA00245F5F /* WeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */; };
@@ -189,6 +196,13 @@
 		BC6281741C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBackwordDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		BC6281761C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		BC6281781C0BA9DD001AB929 /* GlucoseSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseSuccessViewController.swift; sourceTree = "<group>"; };
+		BC62817A1C0C7D3E001AB929 /* AdditionHeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionHeightTableViewController.swift; sourceTree = "<group>"; };
+		BC62817C1C0C7D89001AB929 /* AdditionWeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionWeightTableViewController.swift; sourceTree = "<group>"; };
+		BC62817E1C0C7DA8001AB929 /* AdditionBirthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionBirthViewController.swift; sourceTree = "<group>"; };
+		BC6281801C0C8905001AB929 /* AdditionInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionInfoTableViewController.swift; sourceTree = "<group>"; };
+		BC6620271C0DA0E800ECDCAB /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		BC68B0CC1C10CD940024A2AC /* SymptomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomsViewController.swift; sourceTree = "<group>"; };
+		BC68B0CE1C10CDE00024A2AC /* LifeAndDebatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeAndDebatesViewController.swift; sourceTree = "<group>"; };
 		BC97E9B01C07412D00245F5F /* SexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTableViewController.swift; sourceTree = "<group>"; };
 		BC97E9B21C08154900245F5F /* HeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightTableViewController.swift; sourceTree = "<group>"; };
 		BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightTableViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +362,7 @@
 			children = (
 				308ABCA51BEF296B00968C7D /* TabBar.storyboard */,
 				30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */,
+				BC6620271C0DA0E800ECDCAB /* PasscodeViewController.swift */,
 				30BFD4501BEF317C002E52E4 /* Welcome */,
 				30BFD4481BEF307A002E52E4 /* Session */,
 				306741D91BF8E4E8000B8D0B /* Tabs */,
@@ -374,6 +389,10 @@
 				30BFD4711BEF33D9002E52E4 /* AllSetViewController.swift */,
 				30D519DB1BEF6F5E00306B1A /* ChangeEmailViewController.swift */,
 				301B399C1BFE284900499C14 /* RegistrationViewController.swift */,
+				BC62817A1C0C7D3E001AB929 /* AdditionHeightTableViewController.swift */,
+				BC62817C1C0C7D89001AB929 /* AdditionWeightTableViewController.swift */,
+				BC62817E1C0C7DA8001AB929 /* AdditionBirthViewController.swift */,
+				BC6281801C0C8905001AB929 /* AdditionInfoTableViewController.swift */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -421,6 +440,8 @@
 			children = (
 				30BFD4831BEF3431002E52E4 /* Learn.storyboard */,
 				30BFD4731BEF33F3002E52E4 /* LearnViewController.swift */,
+				BC68B0CC1C10CD940024A2AC /* SymptomsViewController.swift */,
+				BC68B0CE1C10CDE00024A2AC /* LifeAndDebatesViewController.swift */,
 			);
 			name = Learn;
 			sourceTree = "<group>";
@@ -702,13 +723,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC62817F1C0C7DA8001AB929 /* AdditionBirthViewController.swift in Sources */,
 				30D519D81BEF570300306B1A /* ConsentWelcomeViewController.swift in Sources */,
 				BC6281711C0B9CD4001AB929 /* CountingDashboardTableViewCell.swift in Sources */,
+				BC68B0CD1C10CD940024A2AC /* SymptomsViewController.swift in Sources */,
 				BC62816D1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift in Sources */,
 				30BFD4761BEF33FE002E52E4 /* ActivitiesViewController.swift in Sources */,
+				BC6281811C0C8905001AB929 /* AdditionInfoTableViewController.swift in Sources */,
 				30BFD45A1BEF3214002E52E4 /* EligibilitySurveyViewController.swift in Sources */,
 				30BFD45E1BEF32D6002E52E4 /* ConsentSharingOptionsViewController.swift in Sources */,
 				30BFD4641BEF330D002E52E4 /* ConsentSignatureViewController.swift in Sources */,
+				BC62817D1C0C7D89001AB929 /* AdditionWeightTableViewController.swift in Sources */,
 				30BFD4521BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift in Sources */,
 				30D519DA1BEF6ADD00306B1A /* ConsentSlideViewController.swift in Sources */,
 				30BFD4661BEF3324002E52E4 /* WhatToExpectViewController.swift in Sources */,
@@ -717,6 +742,7 @@
 				301B399D1BFE284900499C14 /* RegistrationViewController.swift in Sources */,
 				BC0B30AF1C02623600E42526 /* TodayTableViewCell.swift in Sources */,
 				30BFD4781BEF3407002E52E4 /* DashboardViewController.swift in Sources */,
+				BC62817B1C0C7D3E001AB929 /* AdditionHeightTableViewController.swift in Sources */,
 				30BFD4541BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift in Sources */,
 				301B39A91BFE475600499C14 /* ItemSpanBackwardViewController.swift in Sources */,
 				BC62816B1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift in Sources */,
@@ -732,12 +758,14 @@
 				301B39A11BFE473300499C14 /* ColorReadingActivityViewController.swift in Sources */,
 				30BFD4561BEF31D1002E52E4 /* LoginViewController.swift in Sources */,
 				30BFD4581BEF31DA002E52E4 /* ForgotPasswordViewController.swift in Sources */,
+				BC68B0CF1C10CDE00024A2AC /* LifeAndDebatesViewController.swift in Sources */,
 				308ABCAA1BEF296B00968C7D /* researchline.xcdatamodeld in Sources */,
 				30714D001BF86BB900AC2C96 /* HealthManager.swift in Sources */,
 				BC0B30AB1C025BAA00E42526 /* ActivitiesTableViewCell2.swift in Sources */,
 				301B39A71BFE474E00499C14 /* ItemSpanFowardActivityViewController.swift in Sources */,
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
+				BC6620281C0DA0E800ECDCAB /* PasscodeViewController.swift in Sources */,
 				BC97E9B11C07412D00245F5F /* SexTableViewController.swift in Sources */,
 				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
 				BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */,

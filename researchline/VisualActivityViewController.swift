@@ -151,7 +151,7 @@ class VisualActivityViewController: UIViewController {
     internal func finish(){
         let sum = resultTimeMap.values.reduce(0, combine: +)
         let average = sum / Double(resultTimeMap.count)
-        descriptionText.text = "Test is finished. Your success score is \(successCount). Your average reaction time is \(average)"
+        descriptionText.text = "Your average reaction time is \(average)."
         descriptionText.hidden = false
         reactionImageView.hidden = true
         failTextView.hidden = true

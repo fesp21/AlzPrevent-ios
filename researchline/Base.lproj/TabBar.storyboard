@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W4f-T2-8AW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2nt-av-ni9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -8,7 +8,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="rIw-Es-CGM">
             <objects>
-                <tabBarController id="W4f-T2-8AW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootTabBarController" id="W4f-T2-8AW" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YNq-yi-PAl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,6 +65,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1d-A3-hVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1309" y="1484"/>
+        </scene>
+        <!--Passcode View Controller-->
+        <scene sceneID="MOC-I4-iIO">
+            <objects>
+                <viewController id="2nt-av-ni9" customClass="PasscodeViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9d-h2-ya8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0M6-ev-dir"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQa-Ok-hsv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter passcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1C-7x-Gjb">
+                                <rect key="frame" x="150" y="120" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3U0-mS-iYa"/>
+                                    <constraint firstAttribute="width" constant="300" id="LUj-jE-lj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passcodeChanged:" destination="2nt-av-ni9" eventType="editingChanged" id="oSP-2N-QNe"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHS-90-v2I">
+                                <rect key="frame" x="235" y="250" width="130" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="d5W-Bf-vwc"/>
+                                    <constraint firstAttribute="height" constant="40" id="ucJ-zB-xmw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="clickStartButton:" destination="2nt-av-ni9" eventType="touchUpInside" id="KZr-QL-Gis"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Wrong passcode!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh3-5g-V9m">
+                                <rect key="frame" x="181" y="180" width="240" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RgQ-Tp-YCz"/>
+                                    <constraint firstAttribute="width" constant="240" id="WoT-ew-OMe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FHS-90-v2I" firstAttribute="top" secondItem="jh3-5g-V9m" secondAttribute="bottom" constant="40" id="77A-sE-ErZ"/>
+                            <constraint firstItem="jh3-5g-V9m" firstAttribute="top" secondItem="C1C-7x-Gjb" secondAttribute="bottom" constant="10" id="8pe-ir-euB"/>
+                            <constraint firstItem="jh3-5g-V9m" firstAttribute="centerX" secondItem="oQa-Ok-hsv" secondAttribute="centerX" id="UwT-MW-586"/>
+                            <constraint firstItem="FHS-90-v2I" firstAttribute="centerX" secondItem="oQa-Ok-hsv" secondAttribute="centerX" id="Y9h-Wt-kBd"/>
+                            <constraint firstItem="C1C-7x-Gjb" firstAttribute="top" secondItem="b9d-h2-ya8" secondAttribute="bottom" constant="100" id="hsW-us-WpH"/>
+                            <constraint firstItem="FHS-90-v2I" firstAttribute="top" secondItem="C1C-7x-Gjb" secondAttribute="bottom" constant="50" id="iS4-ma-9YY"/>
+                            <constraint firstItem="C1C-7x-Gjb" firstAttribute="centerX" secondItem="oQa-Ok-hsv" secondAttribute="centerX" id="kCp-gr-qg4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iS4-ma-9YY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="alertText" destination="jh3-5g-V9m" id="TDK-iv-VkV"/>
+                        <outlet property="passcodeText" destination="C1C-7x-Gjb" id="cH9-8n-xXY"/>
+                        <outlet property="startButton" destination="FHS-90-v2I" id="cBb-GK-VbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAW-xp-Baa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="1543"/>
         </scene>
         <!--Learn-->
         <scene sceneID="l17-4k-eJb">

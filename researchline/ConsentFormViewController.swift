@@ -19,6 +19,11 @@ class ConsentFormViewController: UIViewController {
         let lastName = lastNameTextLabel.text ?? ""
         
         nextButton.enabled = !firstName.isEmpty && !lastName.isEmpty
+        if(nextButton.enabled){
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults.setObject(firstName, forKey: "firstName")
+            userDefaults.setObject(lastName, forKey: "lastName")
+        }
     }
     
     @IBAction func touchUpInsideNextButton(sender: UIBarButtonItem) {

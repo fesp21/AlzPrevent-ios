@@ -142,7 +142,9 @@ class ActivitiesViewController: UITableViewController {
         if(indexPath.row == 0){
             let cell = tableView.dequeueReusableCellWithIdentifier("TodayTableViewCell", forIndexPath: indexPath) as! TodayTableViewCell
             if(self.data.count > 0){
-            cell.dateTextView.text = "Today, \(self.data[0]["dateString"]!!)"
+                let dateString = self.data[0]["dateString"]!!
+                cell.dateTextView.text = "Today, \(dateString)"
+                Constants.userDefaults.setObject(dateString, forKey: "dateString")
             }
             return cell
         }else if(indexPath.row == (data.count + 1)){

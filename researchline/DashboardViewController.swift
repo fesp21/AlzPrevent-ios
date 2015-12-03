@@ -14,6 +14,8 @@ class DashboardViewController: UITableViewController {
 
     // MARK: Table View Delgate
 
+
+    @IBOutlet weak var dateTextLabel: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
     
     var mFormat: NSNumberFormatter? = nil
@@ -26,7 +28,12 @@ class DashboardViewController: UITableViewController {
         mFormat = NSNumberFormatter(); // use one decimal
         mFormat!.numberStyle = .PercentStyle
 
-        
+        // TODO : First Start Error Happen
+        if(Constants.userDefaults.stringForKey("dateString") != nil){
+            dateTextLabel.text = "Today, \(Constants.userDefaults.stringForKey("dateString")!)"
+        }else{
+            dateTextLabel.text = "Today"
+        }
         
         Alamofire.request(.GET, Constants.statistics,
             headers: [

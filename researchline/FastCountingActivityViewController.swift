@@ -151,12 +151,19 @@ class FastCountingActivityViewController: UIViewController {
         timer2?.invalidate()
     }
     
+    var touchUpFlag = false
     @IBAction func touchUpInsideNumberButton(sender: UIButton) {
+        timer2?.invalidate()
         
         if !startFlag {
             return
         }
+        if touchUpFlag {
+            return
+        }
         
+        self.touchUpFlag = true
+    
         var result = ""
         if sender.tag == pointCount {
             successCount++
@@ -177,6 +184,8 @@ class FastCountingActivityViewController: UIViewController {
         debugPrint("\(trial)th trial result is \(result) while \(interval)")
         
         trial += 1
+        
+        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
 
     // MARK: Behavior Methods
@@ -186,7 +195,8 @@ class FastCountingActivityViewController: UIViewController {
             finish()
             return
         }
-        
+        touchUpFlag = false
+        descriptionText.hidden = true
         usedTops.removeAll()
         usedLeadings.removeAll()
         pointCount = Int.init(arc4random_uniform(4)) + 4
@@ -250,11 +260,39 @@ class FastCountingActivityViewController: UIViewController {
         start = NSDate()
         
         timer1?.invalidate()
-        timer2 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "showsSelectNumber", userInfo: nil, repeats: false)
+        timer2 = NSTimer.scheduledTimerWithTimeInterval(4.5, target: self, selector: "timeout", userInfo: nil, repeats: false)
     }
     
-    internal func showsSelectNumber() {
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
+    internal func timeout() {
+        timer2?.invalidate()
+        descriptionText.text = "This trial was timeout!."
+        descriptionText.hidden = false
+        
+        point1View.hidden = true
+        point2View.hidden = true
+        point3View.hidden = true
+        point4View.hidden = true
+        point5View.hidden = true
+        point6View.hidden = true
+        point7View.hidden = true
+        
+        var result = ""
+    
+        failureCount++
+        result = "fail"
+        resultTrials.append(false)
+        
+        successLabel.text = "Success: \(successCount)"
+        failureLabel.text = "Failure: \(failureCount)"
+        
+        let interval = NSDate().timeIntervalSinceDate(start!)
+        resultTimeMap[trial] = interval
+        
+        debugPrint("\(trial)th trial result is \(result) while \(interval)")
+        
+        trial += 1
+        
+        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     internal func getRandomTop() -> CGFloat {

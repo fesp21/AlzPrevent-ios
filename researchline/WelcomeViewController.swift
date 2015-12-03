@@ -12,9 +12,19 @@ class WelcomeViewController: UIViewController, UICollectionViewDelegate, UIColle
 
   @IBOutlet weak var pageControl: UIPageControl!
   @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
 
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    
+    Constants.userDefaults.setObject(Constants.STEP_READY, forKey: "registerStep")
 
     navigationController?.navigationBarHidden = true
   }

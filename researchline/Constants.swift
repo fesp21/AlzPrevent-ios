@@ -10,7 +10,7 @@ import UIKit
 
 class Constants: NSObject {
     // URLs
-    static let host = "http://52.8.54.205/"
+    static let host = "https://researchline.net/"
 //    static let host = "http://192.168.0.12:9001/"
 //    static let host = "http://localhost:9001/"
     static let login = host + "login_process"
@@ -23,10 +23,15 @@ class Constants: NSObject {
     static let yesterdayActivity = host + "api/activity/yesterday"
     static let activity = host + "api/activity"
     static let statistics = host + "api/statistics"
+    static let requestVerifyingEmail = host + "support/request/verifying"
+    static let checkVerifyingEmail = host + "support/check/verifying"
+    static let sendConsentEmail = host + "/support/mail/consent"
     
     static let urlChangePassword = host + "support/reset/password"
     static let urlFileConsent = host + "file/consent.pdf"
 
+    static var signFileData: UIImage?
+    
     static let userDefaults = NSUserDefaults.standardUserDefaults()
     
     // Device
@@ -57,5 +62,14 @@ class Constants: NSObject {
     static func email() -> String {
         return userDefaults.stringForKey("email") ?? ""
     }
+    
+    static func registerStep() -> String {
+        return userDefaults.stringForKey("registerStep") ?? ""
+    }
+    
+    static let STEP_READY = "step_ready"
+    static let STEP_REGISTER = "step_register"
+    static let STEP_EMAIL_VERIFICATION = "step_email_verification"
+    static let STEP_FINISHED = "step_finished"
     
 }

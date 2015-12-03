@@ -23,7 +23,7 @@ class ItemSpanBackwardActivityViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBAction func clickStartButton(sender: AnyObject) {
         numberLabel.hidden = false
-        enterButton.hidden = false
+        enterButton.hidden = true
         startButton.hidden = true
         descriptionText.hidden = true
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
@@ -79,6 +79,7 @@ class ItemSpanBackwardActivityViewController: UIViewController {
     internal func latency(){
         latencyTimer?.invalidate()
         numberLabel.hidden = true
+        enterButton.hidden = true
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
@@ -95,6 +96,8 @@ class ItemSpanBackwardActivityViewController: UIViewController {
     }
     
     @IBAction func touchUpInsideEnterButton(sender: UIButton) {
+        enterButton.hidden = true
+        
         var reverse = ""
         for character in correct.characters {
             let asString = "\(character)"

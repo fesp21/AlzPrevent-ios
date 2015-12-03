@@ -20,13 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         var storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-        if Constants.signKey() == "" {
-//        if false {
+        self.window?.rootViewController = storyboard.instantiateInitialViewController()
+        if Constants.signKey() == "" || Constants.registerStep() == Constants.STEP_READY {
             storyboard = UIStoryboard(name: "Welcome", bundle: nil)
+            self.window?.rootViewController = storyboard.instantiateInitialViewController()
+        } else if Constants.registerStep() == Constants.STEP_REGISTER {
+            storyboard = UIStoryboard(name: "Session", bundle: nil)
+            self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("AdditionalNavigationController")
+        } else if Constants.registerStep() == Constants.STEP_EMAIL_VERIFICATION {
+            storyboard = UIStoryboard(name: "Session", bundle: nil)
+            self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("EmailVerificationViewController")
         }
         
-        self.window?.rootViewController = storyboard.instantiateInitialViewController()
         self.window!.makeKeyAndVisible()
+        
+        
         
         let settings = UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil)
         application.registerForRemoteNotifications()

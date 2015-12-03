@@ -10,9 +10,41 @@ import UIKit
 
 class IdentificationViewController: UIViewController {
 
+    
+    var passcode = ""
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    
+    @IBAction func passwordChange(sender: AnyObject) {
+        let sizeOfCode = password.text!.characters.count
+
+        let passwordText: String = password.text!
+        let toNumber = Int(passwordText)
+        if(passwordText == ""){
+            return
+        }else if((toNumber == nil)){
+            password.text = self.passcode
+        }
+        
+        if(sizeOfCode > 4){
+            password.text = self.passcode
+        }else{
+            self.passcode = password.text!
+        }
+        
+        if(sizeOfCode == 4){
+            nextButton.enabled = true
+            Constants.userDefaults.setObject(self.passcode, forKey: "passcode")
+        }else{
+            nextButton.enabled = false
+            Constants.userDefaults.removeObjectForKey("passcode")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

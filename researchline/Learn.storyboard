@@ -164,21 +164,22 @@
                             <outlet property="delegate" destination="HaD-uj-JDq" id="S71-cy-nKq"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Learn" id="7vv-UC-Tnp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ay-7i-oOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="925" y="-1104"/>
         </scene>
-        <!--View Controller-->
+        <!--Life And Debates View Controller-->
         <scene sceneID="X17-Zc-hNY">
             <objects>
-                <viewController id="p2o-ee-7OG" sceneMemberID="viewController">
+                <viewController id="p2o-ee-7OG" customClass="LifeAndDebatesViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="20w-mE-A9s"/>
                         <viewControllerLayoutGuide type="bottom" id="ejH-2v-xKT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="omx-Ks-8jj">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="omx-Ks-8jj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -190,10 +191,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkS-8T-Dej">
-                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkS-8T-Dej">
+                                <rect key="frame" x="20" y="114" width="560" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Alzheimer's is the most common form of dementia, a general term for memory loss and other intellectual abilities serious enough to interfere with daily life. Alzheimer's disease accounts for 60 to 80 percent of dementia cases. 
+                                <string key="text">Alzheimer's is the most common form of dementia, a general term for memory loss and other intellectual abilities serious enough to interfere with daily life. Alzheimer's disease accounts for 60 to 80 percent of dementia cases. 
 
 Alzheimer's is not a normal part of aging, although the greatest known risk factor is increasing age, and the majority of people with Alzheimer's are 65 and older. But Alzheimer's is not just a disease of old age. Up to 5 percent of people with the disease have early onset Alzheimer's (also known as younger-onset), which often appears when someone is in their 40s or 50s.
 
@@ -201,7 +202,7 @@ Alzheimer's worsens over time. Alzheimer's is a progressive disease, where demen
 
 Alzheimer's has no current cure, but treatments for symptoms are available and research continues. Although current Alzheimer's treatments cannot stop Alzheimer's from progressing, they can temporarily slow the worsening of dementia symptoms and improve quality of life for those with Alzheimer's and their caregivers. Today, there is a worldwide effort under way to find better ways to treat the disease, delay its onset, and prevent it from developing.  
 
-Alzheimer’s Association </mutableString>
+Alzheimer’s Association </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -217,6 +218,10 @@ Alzheimer’s Association </mutableString>
                             <constraint firstItem="Sig-0F-fpn" firstAttribute="top" secondItem="20w-mE-A9s" secondAttribute="bottom" id="hLy-c5-rra"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="textView" destination="XkS-8T-Dej" id="pFa-Xh-2SU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5W1-80-B1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,15 +265,16 @@ Alzheimer’s Association </mutableString>
                             <constraint firstAttribute="trailingMargin" secondItem="jyy-fR-k9A" secondAttribute="trailing" id="ueQ-C2-bje"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZm-aS-YR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1723" y="-1104"/>
         </scene>
-        <!--View Controller-->
+        <!--Symptoms View Controller-->
         <scene sceneID="gN6-JF-WYW">
             <objects>
-                <viewController id="nQB-Sf-HL1" sceneMemberID="viewController">
+                <viewController id="nQB-Sf-HL1" customClass="SymptomsViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rAJ-6l-bTT"/>
                         <viewControllerLayoutGuide type="bottom" id="Hf5-O8-5VF"/>
@@ -285,7 +291,7 @@ Alzheimer’s Association </mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-5H-hzt">
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-5H-hzt">
                                 <rect key="frame" x="20" y="114" width="560" height="1000"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">The most common early symptom of Alzheimer's is difficulty remembering newly learned information.
@@ -309,6 +315,10 @@ Alzheimer’s Association </string>
                             <constraint firstAttribute="trailingMargin" secondItem="T2T-5H-hzt" secondAttribute="trailing" id="iNf-ZY-ic1"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="textView" destination="T2T-5H-hzt" id="iVB-ft-TFJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSL-dF-XAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -353,6 +363,7 @@ Alzheimer’s Association </string>
                             <constraint firstItem="rkT-PD-YhR" firstAttribute="top" secondItem="voa-Y6-qxc" secondAttribute="bottom" id="zA3-um-YfM"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RU-y5-nFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,7 +389,7 @@ Alzheimer’s Association </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-FA-Xe6">
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-FA-Xe6">
                                 <rect key="frame" x="20" y="114" width="560" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">http://www.alz.org/
@@ -402,6 +413,7 @@ National Institute of Ageing - Alzheimer’s disease fact sheet</string>
                             <constraint firstItem="hLm-FA-Xe6" firstAttribute="leading" secondItem="ivu-qU-QvR" secondAttribute="leadingMargin" id="qLl-mO-drf"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDg-ei-E9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -446,6 +458,7 @@ National Institute of Ageing - Alzheimer’s disease fact sheet</string>
                             <constraint firstItem="L0O-SG-8iP" firstAttribute="top" secondItem="BtX-aq-wuu" secondAttribute="bottom" id="V4M-Vb-0ox"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYa-kX-mgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -455,6 +468,7 @@ National Institute of Ageing - Alzheimer’s disease fact sheet</string>
         <scene sceneID="tWk-yP-O3g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oNG-gN-VUw" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OJZ-4Z-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Welcome View Controller-->
@@ -348,6 +349,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="UpF-Dj-AW7"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="CTd-9T-eAi" id="DR1-rJ-zlt"/>
                         <outlet property="pageControl" destination="zZC-je-4XA" id="fKR-eP-eb9"/>
@@ -372,7 +374,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NH-yf-o3a" userLabel="Form View">
                                 <rect key="frame" x="0.0" y="112" width="600" height="83"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="example1@domain.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZh-bb-VEO">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZh-bb-VEO">
                                         <rect key="frame" x="16" y="12" width="568" height="17"/>
                                         <animations/>
                                         <accessibility key="accessibilityConfiguration" label=""/>
@@ -390,11 +392,14 @@
                                             <constraint firstAttribute="height" constant="1" id="fqs-jb-N8j"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password1" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="608-Ox-4Wn">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="608-Ox-4Wn">
                                         <rect key="frame" x="16" y="54" width="568" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="passwordChanged:" destination="Rvv-il-hTs" eventType="editingChanged" id="d4z-XP-BnY"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -496,13 +501,39 @@
                         <viewControllerLayoutGuide type="top" id="3gh-KW-hTD"/>
                         <viewControllerLayoutGuide type="bottom" id="KEw-pT-0RX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="50X-OW-f7t">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="50X-OW-f7t">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="2" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbf-Sg-T3Z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BBB_ConsentForm" translatesAutoresizingMaskIntoConstraints="NO" id="e7w-Oi-Ymv">
+                                        <rect key="frame" x="0.0" y="0.0" width="612" height="792"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="e7w-Oi-Ymv" secondAttribute="bottom" id="MYS-Oi-gma"/>
+                                    <constraint firstItem="e7w-Oi-Ymv" firstAttribute="top" secondItem="Cbf-Sg-T3Z" secondAttribute="top" id="Qbz-I6-S2d"/>
+                                    <constraint firstAttribute="trailing" secondItem="e7w-Oi-Ymv" secondAttribute="trailing" id="csy-yF-uvk"/>
+                                    <constraint firstItem="e7w-Oi-Ymv" firstAttribute="leading" secondItem="Cbf-Sg-T3Z" secondAttribute="leading" id="sOP-48-dfe"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cbf-Sg-T3Z" firstAttribute="leading" secondItem="50X-OW-f7t" secondAttribute="leading" id="028-Wm-YfN"/>
+                            <constraint firstAttribute="trailing" secondItem="Cbf-Sg-T3Z" secondAttribute="trailing" id="lB7-LJ-hqM"/>
+                            <constraint firstItem="Cbf-Sg-T3Z" firstAttribute="top" secondItem="50X-OW-f7t" secondAttribute="topMargin" id="pAn-42-OhS"/>
+                            <constraint firstItem="KEw-pT-0RX" firstAttribute="top" secondItem="Cbf-Sg-T3Z" secondAttribute="bottom" id="zbl-eC-FBQ"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="e7w-Oi-Ymv" id="K1b-he-jbd"/>
+                        <outlet property="scrollView" destination="Cbf-Sg-T3Z" id="YZb-Wv-3BQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cw7-Fp-0fG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -527,7 +558,7 @@
                                         <rect key="frame" x="16" y="12" width="572" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0H5-y0-QDx" userLabel="Line View">
                                         <rect key="frame" x="16" y="41" width="584" height="1"/>
@@ -541,7 +572,7 @@
                                         <rect key="frame" x="16" y="54" width="572" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biI-N1-PfE" userLabel="Line View">
                                         <rect key="frame" x="16" y="83" width="584" height="1"/>
@@ -603,9 +634,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Consent Document" id="hKe-Yg-Z1n">
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="AfY-V0-ATo"/>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="AfY-V0-ATo">
+                            <connections>
+                                <action selector="send:" destination="g8O-Ft-4ut" id="WpO-C2-W0f"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addressForm" destination="yZt-Vf-oks" id="dum-FN-R7i"/>
+                        <outlet property="ccAddressForm" destination="JFb-FG-9ME" id="IJo-oW-5mr"/>
+                        <outlet property="subject" destination="hDY-mp-UUh" id="i7t-9M-92X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIy-ie-rim" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -632,6 +672,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BBB_ConsentForm" width="612" height="792"/>
         <image name="LogoWide" width="274" height="60"/>
     </resources>
 </document>

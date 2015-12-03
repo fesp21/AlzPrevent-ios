@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Consent Welcome View Controller-->
@@ -689,7 +690,7 @@
             </objects>
             <point key="canvasLocation" x="1285" y="434"/>
         </scene>
-        <!--Title-->
+        <!--Consent-->
         <scene sceneID="c9J-KE-uup">
             <objects>
                 <tableViewController storyboardIdentifier="ConsentSharingOptionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PB8-LW-6ub" customClass="ConsentSharingOptionsViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
@@ -796,7 +797,7 @@
                             <outlet property="delegate" destination="PB8-LW-6ub" id="Mvr-G0-JJ7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="t99-IM-eHG"/>
+                    <navigationItem key="navigationItem" title="Consent" id="t99-IM-eHG"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzO-zh-J6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -844,58 +845,117 @@
                                     <constraint firstAttribute="height" constant="1" id="LKm-kc-3hb"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-5O-for">
-                                <rect key="frame" x="24" y="260" width="552" height="40"/>
-                                <animations/>
-                                <attributedString key="attributedText">
-                                    <fragment content="PROTOCOL TITLE:">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" Smartphone app for management of type 2 diabetas">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhm-mi-qxr">
-                                <rect key="frame" x="24" y="309" width="552" height="20"/>
-                                <animations/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Principal Investigator:">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" Stanley Shaw, MD PhD">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Site Principal Investigator: Stanley Shaw, MD PhD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnq-ql-lIg">
-                                <rect key="frame" x="24" y="337" width="552" height="20"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description of Subject Population: Individuals 18 or over with type 2 diabetas of pre-diabetas who live in the United States." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bav-yq-CXn">
-                                <rect key="frame" x="24" y="380" width="552" height="40"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-I0-eX4">
+                                <rect key="frame" x="20" y="237" width="560" height="3000"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3000" id="9Cw-K0-SAB"/>
+                                </constraints>
+                                <string key="text">ResearchLine Consent Form
+Protocol Title:
+Smartphone app for management of cognitive function
+Principal Investigator:
+Janet Hsiao, Phd
+Site Principal Investigator:
+Janet Hsiao, Phd
+Description of Subject Population:
+Individuals 18 or over
+About this consent form
+The following pages explain important information about the ResearchLine app, and how the app is part of a research study.
+Please read this form carefully.
+Taking part in this research study is voluntary and is up to you. If you decide to take part in this research study, you must sign this form to show that you want to take part. We will give you a signed copy of this form to keep. If you have any questions about the research or about this form, please ask us.
+People who agree to take part in research studies are called “subjects”. This term will be used throughout this consent form. Partners HealthCare System is made up of Partners institutions (including Hong Kong University, where this study originates), health care providers, and researchers. In the rest of this consent form, we refer to the Partners system simply as “Partners”.
+This study is sponsored by Hong Kong University. 
+Why is this research study being done? 
+Alzheimer’s disease is one of the most devastating diseases, affecting 35 million people worldwide. It is a chronic neurodegenerative disease. 
+
+Today’s mobile phones (especially smartphones) are becoming powerful platforms for communicating, computing and sensing. We are investigating ways to help people make use of the capabilities of their smartphones to improve their health.
+
+This study will make available to the public a free app (ResearchLine) that users can install on their smartphones. The app will provide a variety of services to help users track their daily behaviors. 
+By analyzing this coded data across all app users, researchers can better understand the relationships between the variables and eventually prevent Alzheimer’s disease. 
+
+The goals of this research study are: 
+Monitor and diagnose cognitive decline (blood analytics, psychological behavioral tests, GPS, accelerometer, gyroscope) 
+Early diagnose mild cognitive impairment
+Prevent Alzheimer’s disease 
+
+How long will I take part in this research study?
+If you choose to participate, this study lasts for one year. You are free to continue using the app for the personal insights if you wish. 
+Entering information and responding to surveys should take on average 10-20 minutes each day. Occasionally, tasks may take a little longer.
+What will happen in this research study?
+This study will ask you to perform tasks and respond to surveys.
+When users first launch the app, they will be asked to review a series of phone screens that describe the study and the relevant risks and benefits (“informed consent” process) so they can decide whether or not they wish to participate in the research study (participation in the research study is required in order to use the app); if they wish to participate, users will certify their agreement with the informed consent by entering their name and an email address (the email address is only used to enable users to receive a copy of the completed informed consent document – this document – in their email. Name and email will not be associated with any app data).
+ResearchLine will ask you to:
+Answer survey questions about your health and health behaviors
+Perform cognitive and emotional tests provided everyday
+The app sends occasional reminders to complete study activities.
+ResearchLine uses the iPhone’s built-in accelerometer to passively keep track of physical activity (“passive” because this happens automatically and you do not need to enter any information). The app interprets accelerometer data as steps taken, or as different intensity levels of activity.
+For these activity measures to be accurate, you should carry the iPhone on your person as much as possible (e.g., in your pocket, or clipped to your waist). For instance, if the iPhone is resting on a table when you go for a walk, it will not be able to detect this activity.
+
+Occasionally, there will also be longer surveys that evaluate aspects such as your quality of life, or your sleep duration and quality.
+
+ResearchLine provides personalized feedback in the form of graphs and text on the smartphone to display your progress, and provide insights into your health behaviors. The app summarizes data about how cognitive or emotional patterns are associated with your glucose values. These insights may help you understand your health behaviors better, and help you monitor your cognitive function. Viewing the graphs and text is optional but may be useful or interesting to you.
+In your Profile within ResearchLine, you can set reminders for yourself to complete app activities. In general, more data entered in the app results in more accurate and informative insights.
+What are the risks and possible discomforts from being in this research study?
+There are possible risks, discomforts and inconveniences associated with any research study. This study does not involve testing any new drugs or therapies, so we do not expect any medical side effects from participating.
+The app is not designed to give medical advice, nor make suggestions related to Alzheimer’s disease treatment or medications.
+Any information you provide is completely up to you. You can decline to answer survey questions or participate in the app’s tasks. If a survey question makes you feel uncomfortable, you are free to leave questions blank.
+As with any smartphone app, use your common sense and follow prevailing laws about when and where you use your iPhone. Just as you would not text while driving, do not interact with the app while driving or doing any other activities which could result in injury. You can always wait until you are in a safe place to perform any app-related tasks.
+Please see the sections on “Protecting Your Privacy” to learn more. Study participation may involve risks that are not known at this time.
+What are the possible benefits from being in this research study?
+ResearchLine analyzes your data to provide personalized insights and feedback to help you understand how your health behaviors (e.g., cognitive and emotional functions) can influence your glucose values. This may help you understand your cognitive functional status.
+More generally, patients with Alzheimer’s disease may ultimately benefit from this research, because ResearchLine and its research study will create an unprecedented crowd-sourced database of health behaviors and glucose values from people like you. Studying all this real-world data will help researchers better understand the relationships between cognitive/emotional function, diet, exercise, and glucose control in real-world people. (Traditionally, these studies are done by asking people to fill out very long questionnaires on paper every few years.) It will also help explore how the iPhone or smartphones can enable new kinds of clinical research.
+By combining a personal app and a research study, ResearchLine will help explore how the iPhone can enable new kinds of clinical research.
+This study may also help researchers better understand what strategies in smartphone apps are well received among users, encourage more durable use of the app, and are most effective in reinforcing healthy behaviors.
+Can I still get medical care with Partners if I don’t take part in this research study, or if I stop taking part?
+Yes. Regardless of where you get your medical care, your decision to participate or not will not change the medical care you get at a Partners hospital or anywhere else. Taking part in this research study is up to you.
+What should I do if I want to stop taking part in the study?
+If you start the research study but later wish to drop out, simply use the “Leave Study” link in the Profile (this action cannot be undone), or contact the study investigators through the app. You may choose to leave the study at any time. Your decision will not result in any penalty or affect your medical care through your usual physicians or providers. Afterwards, you are free to delete the app from your smartphone.
+The study investigators may also withdraw you from the study without your consent at any time for any reason, including if the study is cancelled.
+Will I be paid to take part in this research study?
+There is no compensation or payment for taking part in this study.
+What will I have to pay for if I take part in this research study?
+Participation in this study does not require you to change anything related to your iPhone account or data plan. The app can use either an existing mobile data plan or WiFi connections; you may configure the app to use only WiFi connections if you wish to limit impact on your data usage.
+What happens if I am injured as a result of taking part in this research study?
+This study does not provide any health or medical care to participants, or compensation. Because this is a nationwide study that does not provide any health care to users, in the unlikely event that you are injured as a direct result of your participation in this study, users are advised to first seek medical treatment locally. The study investigators can also be contacted through the app or through the information below to assist in obtaining appropriate medical treatment. Your medical insurance, managed care plan, other benefits program, or other third parties, if appropriate, will be billed for this treatment. You will be responsible for any associated co-payments or deductibles as required by your insurance. If costs of care related to such an injury are not covered by your medical insurance or benefits program, you may be responsible for these costs. The study sponsors will not pay charges that your insurance does not cover. Neither the offer to provide medical assistance or any actual provision of medical services shall be construed as an admission of negligence or acceptance of liability.
+Unanticipated injuries sometime occur in research even when no one is at fault. There are no plans to pay you or give you other compensation for an injury, should one occur. However, you are not giving up any of your legal rights by signing this form.
+If you think you have been injured or have experienced a medical problem as a result of taking part in this study, contact study investigators through the app or through the information below as soon as possible.
+If I have questions or concerns about this research study, whom can I call?
+If you have any questions about the study, your participation in the study, or concerns or complaints about the research, a member of our research team is available to communicate with you. You can contact the study investigator team through the app, or at the following email:
+Email:help@researchline.net
+You can also contact the principal investigator as below:
+Dr. Janet Hsiao
+Hong Kong University
+Phone: +852 3917 4874
+If I take part in this research study, how will you protect my privacy?
+We are committed to protecting your privacy. We take several steps to protect your privacy and the privacy of your app data.
+For security, ResearchLine requires that your iPhone be protected either by a passcode or the Apple Touch ID fingerprint sensor. This ensures that only you can enter and use the app. 
+To certify that you consent to participate in the study, the app asks you to enter your name and an email address. This allows study investigators to have a record of who participates in the study, and to email a copy of the signed consent form to you.
+Your name and email are only used for the consent process, and are not associated with data collected from the app. Your identity (name, email) will be separated from your app data and kept as confidential as possible. Your app data will be associated only with a randomized study code that bears no relation to any identifiable information. This random code is stored completely separately from any personally identifying information. Only select individuals that are part of the research study will know the identities of people who participate in the study. These steps ensure that researchers analyzing the coded study data will not be able to connect it to any individual user.
+Whenever app data is transferred to a research study computer, it will be encrypted so that others cannot interpret the data or associate it back to you.
+Encrypted app data (stripped of personal identifiers, and associated only with a random code) will be sent to secure data servers used for the ResearchLine research study. ResearchLine uses Amazon Web Services (AWS) Cloud enhanced computational capacity to securely store ResearchLine data. AWS poses no additional security concerns over existing traditional local computer cluster environments. All communications are encrypted when transmitting data or commands to and from the AWS. (Further information about data security within AWS can be found at https://aws.amazon.com/security/#features)
+Study investigators will analyze coded app data from everyone who agrees to participate in the ResearchLine study, but they will be unable to connect it back to any individual user.
+The results of this research may be published in a scientific or medical research journal, or presented at a medical research conference, so that others can learn from this study. Results will never be publicly presented in a way that would allow data to be associated with individual users.
+After this study is completed, other researchers who are not part of the original study may request access to the coded study data (already stripped of personal identifiers such as your name or email), so that it can be analyzed in a new way to benefit medical research, or help guide development of future apps. Those requesting data must agree to use the data for research purposes responsibly and ethically, and in accordance with applicable regulations. Qualified researchers must agree to not attempt to re-identify any individuals. Criteria for qualified researchers will be set by the ResearchLine investigators. Such criteria may include, but are not restricted to, being associated with an accredited research institution or not-for profit research institution, or submitting proof of IRB approval for their intended data use. Data sharing requests will be reviewed by a group of ResearchLine study investigators. 
+
+During the consent process, you will have the option to choose whether you agree to:
+(i) share your coded study data with qualified researchers (as described in the above paragraph), or
+(ii) share your coded study data only with the ResearchLine team and its research partners; if you choose this option, your coded study data will be accessible only to the ResearchLine team and its research partners, and will not be made available to other outside researchers.
+Your choice will not affect your ability to participate in the ResearchLine study.
+Study data will never be sold to any third party.
+If required by law, your data (study data and account information), and the signed consent form may be disclosed to:
+The US National Institute of Health, Department of Health and Human Services agencies, Office for Human Research Protection, and other agencies as required,
+the Institutional Review Board at Hong Kong University that monitors the safety, and conduct of human research,
+Others, if the law requires
+Informed Consent and Authorization
+Statement of Person Giving Informed Consent and Authorization
+I have read about this research study and this consent form, including potential risks and benefits (if any).
+I have had the opportunity to ask questions about the study and my part in it
+I understand the information presented to me
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-VG-dRj">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <animations/>
@@ -913,27 +973,18 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gnq-ql-lIg" firstAttribute="top" secondItem="Nhm-mi-qxr" secondAttribute="bottom" constant="8" id="B5P-g2-e4j"/>
-                            <constraint firstAttribute="trailing" secondItem="Gnq-ql-lIg" secondAttribute="trailing" constant="24" id="DmJ-BH-cIN"/>
                             <constraint firstAttribute="trailing" secondItem="ogW-9G-Dhy" secondAttribute="trailing" id="Ds9-Mn-QqX"/>
-                            <constraint firstItem="Nhm-mi-qxr" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="F8E-9n-vQk"/>
-                            <constraint firstItem="Nhm-mi-qxr" firstAttribute="top" secondItem="hsP-5O-for" secondAttribute="bottom" constant="9" id="HU6-ax-Zlc"/>
                             <constraint firstItem="4VZ-VG-dRj" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" id="Iw3-kT-Ute"/>
                             <constraint firstItem="XTo-ms-8jD" firstAttribute="top" secondItem="gO4-1c-GZJ" secondAttribute="bottom" constant="24" id="JNn-AS-FJR"/>
                             <constraint firstItem="eWi-nR-ZUP" firstAttribute="top" secondItem="4VZ-VG-dRj" secondAttribute="bottom" id="JhW-Qt-cpE"/>
-                            <constraint firstItem="hsP-5O-for" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="Or2-qf-Vqe"/>
-                            <constraint firstAttribute="trailing" secondItem="Bav-yq-CXn" secondAttribute="trailing" constant="24" id="PXt-UY-d7X"/>
                             <constraint firstAttribute="trailing" secondItem="4VZ-VG-dRj" secondAttribute="trailing" id="RLb-ZM-muC"/>
+                            <constraint firstItem="sbS-I0-eX4" firstAttribute="top" secondItem="ogW-9G-Dhy" secondAttribute="bottom" id="Rk9-uL-ffh"/>
                             <constraint firstItem="ogW-9G-Dhy" firstAttribute="top" secondItem="8Tm-eW-1e4" secondAttribute="bottom" constant="23" id="S4L-p5-Pnf"/>
                             <constraint firstItem="ogW-9G-Dhy" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" id="Shx-AY-k0A"/>
-                            <constraint firstItem="Bav-yq-CXn" firstAttribute="top" secondItem="Gnq-ql-lIg" secondAttribute="bottom" constant="23" id="Wha-Ex-Jaj"/>
+                            <constraint firstItem="sbS-I0-eX4" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leadingMargin" id="Vw3-9P-C6f"/>
                             <constraint firstItem="8Tm-eW-1e4" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="XIU-Bo-jtF"/>
                             <constraint firstItem="XTo-ms-8jD" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="ZaX-Ag-6pn"/>
-                            <constraint firstItem="Gnq-ql-lIg" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="a4b-PM-EAL"/>
-                            <constraint firstItem="Bav-yq-CXn" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="dtX-H4-mdt"/>
-                            <constraint firstAttribute="trailing" secondItem="Nhm-mi-qxr" secondAttribute="trailing" constant="24" id="fca-Tk-fga"/>
-                            <constraint firstAttribute="trailing" secondItem="hsP-5O-for" secondAttribute="trailing" constant="24" id="fmc-tV-S0S"/>
-                            <constraint firstItem="hsP-5O-for" firstAttribute="top" secondItem="ogW-9G-Dhy" secondAttribute="bottom" constant="24" id="kwD-UD-lxh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbS-I0-eX4" secondAttribute="trailing" id="hCH-Tt-7yg"/>
                             <constraint firstAttribute="trailing" secondItem="XTo-ms-8jD" secondAttribute="trailing" constant="24" id="kzk-bm-1Tq"/>
                             <constraint firstItem="gO4-1c-GZJ" firstAttribute="top" secondItem="EQS-oj-pUN" secondAttribute="bottom" constant="32" id="paw-ty-9Pr"/>
                             <constraint firstAttribute="trailing" secondItem="8Tm-eW-1e4" secondAttribute="trailing" constant="24" id="raz-d3-R8s"/>
@@ -941,6 +992,7 @@
                             <constraint firstItem="8Tm-eW-1e4" firstAttribute="top" secondItem="XTo-ms-8jD" secondAttribute="bottom" constant="13" id="wFb-fB-Xyw"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Consent" id="KAb-MG-wT2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdj-zt-gWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1204,21 +1256,21 @@
                                     <action selector="touchUpInsideGotItButton:" destination="XXV-mc-P9l" eventType="touchUpInside" id="kDP-lJ-Gi0"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o29-tF-yfF">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o29-tF-yfF">
                                 <rect key="frame" x="276" y="104" width="51" height="31"/>
                                 <animations/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What to Expect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-sf-iae">
-                                <rect key="frame" x="192" y="167" width="217" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-sf-iae">
+                                <rect key="frame" x="240" y="123" width="120" height="39"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxV-KX-gwL">
-                                <rect key="frame" x="54" y="263" width="492" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxV-KX-gwL">
+                                <rect key="frame" x="54" y="220" width="492" height="82"/>
                                 <animations/>
-                                <string key="text">On the next screen, you will be prompted to grant GlucoSuccess access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again </string>
+                                <string key="text">On the next screen, you will be prompted to grant ResearchLine access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1255,11 +1307,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-e3-GLa">
-                                <rect key="frame" x="20" y="80" width="560" height="520"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-e3-GLa">
+                                <rect key="frame" x="20" y="80" width="560" height="3909"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">About this consent form
+The following pages explain important information about the ResearchLine app, and how the app is part of a research study.
+Please read this form carefully.
+Taking part in this research study is voluntary and is up to you. If you decide to take part in this research study, you must sign this form to show that you want to take part. We will give you a signed copy of this form to keep. If you have any questions about the research or about this form, please ask us.
+People who agree to take part in research studies are called “subjects”. This term will be used throughout this consent form. Partners HealthCare System is made up of Partners institutions (including Hong Kong University, where this study originates), health care providers, and researchers. In the rest of this consent form, we refer to the Partners system simply as “Partners”.
+This study is sponsored by Hong Kong University. 
+Why is this research study being done? 
+Alzheimer’s disease is one of the most devastating diseases, affecting 35 million people worldwide. It is a chronic neurodegenerative disease. 
+
+Today’s mobile phones (especially smartphones) are becoming powerful platforms for communicating, computing and sensing. We are investigating ways to help people make use of the capabilities of their smartphones to improve their health.
+
+This study will make available to the public a free app (ResearchLine) that users can install on their smartphones. The app will provide a variety of services to help users track their daily behaviors. 
+By analyzing this coded data across all app users, researchers can better understand the relationships between the variables and eventually prevent Alzheimer’s disease. 
+
+The goals of this research study are: 
+Monitor and diagnose cognitive decline (blood analytics, psychological behavioral tests, GPS, accelerometer, gyroscope) 
+Early diagnose mild cognitive impairment
+Prevent Alzheimer’s disease 
+
+How long will I take part in this research study?
+If you choose to participate, this study lasts for one year. You are free to continue using the app for the personal insights if you wish. 
+Entering information and responding to surveys should take on average 10-20 minutes each day. Occasionally, tasks may take a little longer.
+What will happen in this research study?
+This study will ask you to perform tasks and respond to surveys.
+When users first launch the app, they will be asked to review a series of phone screens that describe the study and the relevant risks and benefits (“informed consent” process) so they can decide whether or not they wish to participate in the research study (participation in the research study is required in order to use the app); if they wish to participate, users will certify their agreement with the informed consent by entering their name and an email address (the email address is only used to enable users to receive a copy of the completed informed consent document – this document – in their email. Name and email will not be associated with any app data).
+ResearchLine will ask you to:
+Answer survey questions about your health and health behaviors
+Perform cognitive and emotional tests provided everyday
+The app sends occasional reminders to complete study activities.
+ResearchLine uses the iPhone’s built-in accelerometer to passively keep track of physical activity (“passive” because this happens automatically and you do not need to enter any information). The app interprets accelerometer data as steps taken, or as different intensity levels of activity.
+For these activity measures to be accurate, you should carry the iPhone on your person as much as possible (e.g., in your pocket, or clipped to your waist). For instance, if the iPhone is resting on a table when you go for a walk, it will not be able to detect this activity.
+
+Occasionally, there will also be longer surveys that evaluate aspects such as your quality of life, or your sleep duration and quality.
+
+ResearchLine provides personalized feedback in the form of graphs and text on the smartphone to display your progress, and provide insights into your health behaviors. The app summarizes data about how cognitive or emotional patterns are associated with your glucose values. These insights may help you understand your health behaviors better, and help you monitor your cognitive function. Viewing the graphs and text is optional but may be useful or interesting to you.
+In your Profile within ResearchLine, you can set reminders for yourself to complete app activities. In general, more data entered in the app results in more accurate and informative insights.
+What are the risks and possible discomforts from being in this research study?
+There are possible risks, discomforts and inconveniences associated with any research study. This study does not involve testing any new drugs or therapies, so we do not expect any medical side effects from participating.
+The app is not designed to give medical advice, nor make suggestions related to Alzheimer’s disease treatment or medications.
+Any information you provide is completely up to you. You can decline to answer survey questions or participate in the app’s tasks. If a survey question makes you feel uncomfortable, you are free to leave questions blank.
+As with any smartphone app, use your common sense and follow prevailing laws about when and where you use your iPhone. Just as you would not text while driving, do not interact with the app while driving or doing any other activities which could result in injury. You can always wait until you are in a safe place to perform any app-related tasks.
+Please see the sections on “Protecting Your Privacy” to learn more. Study participation may involve risks that are not known at this time.
+What are the possible benefits from being in this research study?
+ResearchLine analyzes your data to provide personalized insights and feedback to help you understand how your health behaviors (e.g., cognitive and emotional functions) can influence your glucose values. This may help you understand your cognitive functional status.
+More generally, patients with Alzheimer’s disease may ultimately benefit from this research, because ResearchLine and its research study will create an unprecedented crowd-sourced database of health behaviors and glucose values from people like you. Studying all this real-world data will help researchers better understand the relationships between cognitive/emotional function, diet, exercise, and glucose control in real-world people. (Traditionally, these studies are done by asking people to fill out very long questionnaires on paper every few years.) It will also help explore how the iPhone or smartphones can enable new kinds of clinical research.
+By combining a personal app and a research study, ResearchLine will help explore how the iPhone can enable new kinds of clinical research.
+This study may also help researchers better understand what strategies in smartphone apps are well received among users, encourage more durable use of the app, and are most effective in reinforcing healthy behaviors.
+Can I still get medical care with Partners if I don’t take part in this research study, or if I stop taking part?
+Yes. Regardless of where you get your medical care, your decision to participate or not will not change the medical care you get at a Partners hospital or anywhere else. Taking part in this research study is up to you.
+What should I do if I want to stop taking part in the study?
+If you start the research study but later wish to drop out, simply use the “Leave Study” link in the Profile (this action cannot be undone), or contact the study investigators through the app. You may choose to leave the study at any time. Your decision will not result in any penalty or affect your medical care through your usual physicians or providers. Afterwards, you are free to delete the app from your smartphone.
+The study investigators may also withdraw you from the study without your consent at any time for any reason, including if the study is cancelled.
+Will I be paid to take part in this research study?
+There is no compensation or payment for taking part in this study.
+What will I have to pay for if I take part in this research study?
+Participation in this study does not require you to change anything related to your iPhone account or data plan. The app can use either an existing mobile data plan or WiFi connections; you may configure the app to use only WiFi connections if you wish to limit impact on your data usage.
+What happens if I am injured as a result of taking part in this research study?
+This study does not provide any health or medical care to participants, or compensation. Because this is a nationwide study that does not provide any health care to users, in the unlikely event that you are injured as a direct result of your participation in this study, users are advised to first seek medical treatment locally. The study investigators can also be contacted through the app or through the information below to assist in obtaining appropriate medical treatment. Your medical insurance, managed care plan, other benefits program, or other third parties, if appropriate, will be billed for this treatment. You will be responsible for any associated co-payments or deductibles as required by your insurance. If costs of care related to such an injury are not covered by your medical insurance or benefits program, you may be responsible for these costs. The study sponsors will not pay charges that your insurance does not cover. Neither the offer to provide medical assistance or any actual provision of medical services shall be construed as an admission of negligence or acceptance of liability.
+Unanticipated injuries sometime occur in research even when no one is at fault. There are no plans to pay you or give you other compensation for an injury, should one occur. However, you are not giving up any of your legal rights by signing this form.
+If you think you have been injured or have experienced a medical problem as a result of taking part in this study, contact study investigators through the app or through the information below as soon as possible.
+If I have questions or concerns about this research study, whom can I call?
+If you have any questions about the study, your participation in the study, or concerns or complaints about the research, a member of our research team is available to communicate with you. You can contact the study investigator team through the app, or at the following email:
+Email:help@researchline.net
+You can also contact the principal investigator as below:
+Dr. Janet Hsiao
+Hong Kong University
+Phone: +852 3917 4874
+If I take part in this research study, how will you protect my privacy?
+We are committed to protecting your privacy. We take several steps to protect your privacy and the privacy of your app data.
+For security, ResearchLine requires that your iPhone be protected either by a passcode or the Apple Touch ID fingerprint sensor. This ensures that only you can enter and use the app. 
+To certify that you consent to participate in the study, the app asks you to enter your name and an email address. This allows study investigators to have a record of who participates in the study, and to email a copy of the signed consent form to you.
+Your name and email are only used for the consent process, and are not associated with data collected from the app. Your identity (name, email) will be separated from your app data and kept as confidential as possible. Your app data will be associated only with a randomized study code that bears no relation to any identifiable information. This random code is stored completely separately from any personally identifying information. Only select individuals that are part of the research study will know the identities of people who participate in the study. These steps ensure that researchers analyzing the coded study data will not be able to connect it to any individual user.
+Whenever app data is transferred to a research study computer, it will be encrypted so that others cannot interpret the data or associate it back to you.
+Encrypted app data (stripped of personal identifiers, and associated only with a random code) will be sent to secure data servers used for the ResearchLine research study. ResearchLine uses Amazon Web Services (AWS) Cloud enhanced computational capacity to securely store ResearchLine data. AWS poses no additional security concerns over existing traditional local computer cluster environments. All communications are encrypted when transmitting data or commands to and from the AWS. (Further information about data security within AWS can be found at https://aws.amazon.com/security/#features)
+Study investigators will analyze coded app data from everyone who agrees to participate in the ResearchLine study, but they will be unable to connect it back to any individual user.
+The results of this research may be published in a scientific or medical research journal, or presented at a medical research conference, so that others can learn from this study. Results will never be publicly presented in a way that would allow data to be associated with individual users.
+After this study is completed, other researchers who are not part of the original study may request access to the coded study data (already stripped of personal identifiers such as your name or email), so that it can be analyzed in a new way to benefit medical research, or help guide development of future apps. Those requesting data must agree to use the data for research purposes responsibly and ethically, and in accordance with applicable regulations. Qualified researchers must agree to not attempt to re-identify any individuals. Criteria for qualified researchers will be set by the ResearchLine investigators. Such criteria may include, but are not restricted to, being associated with an accredited research institution or not-for profit research institution, or submitting proof of IRB approval for their intended data use. Data sharing requests will be reviewed by a group of ResearchLine study investigators. 
+
+During the consent process, you will have the option to choose whether you agree to:
+(i) share your coded study data with qualified researchers (as described in the above paragraph), or
+(ii) share your coded study data only with the ResearchLine team and its research partners; if you choose this option, your coded study data will be accessible only to the ResearchLine team and its research partners, and will not be made available to other outside researchers.
+Your choice will not affect your ability to participate in the ResearchLine study.
+Study data will never be sold to any third party.
+If required by law, your data (study data and account information), and the signed consent form may be disclosed to:
+The US National Institute of Health, Department of Health and Human Services agencies, Office for Human Research Protection, and other agencies as required,
+the Institutional Review Board at Hong Kong University that monitors the safety, and conduct of human research,
+Others, if the law requires
+Informed Consent and Authorization
+Statement of Person Giving Informed Consent and Authorization
+I have read about this research study and this consent form, including potential risks and benefits (if any).
+I have had the opportunity to ask questions about the study and my part in it
+I understand the information presented to me</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

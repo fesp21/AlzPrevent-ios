@@ -23,7 +23,7 @@ class ItemSpanFowardActivityViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBAction func clickStartButton(sender: AnyObject) {
         numberLabel.hidden = false
-        enterButton.hidden = false
+        enterButton.hidden = true
         startButton.hidden = true
         descriptionText.hidden = true
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
@@ -80,6 +80,7 @@ class ItemSpanFowardActivityViewController: UIViewController {
     internal func latency(){
         latencyTimer?.invalidate()
         numberLabel.hidden = true
+        enterButton.hidden = true
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
@@ -91,11 +92,14 @@ class ItemSpanFowardActivityViewController: UIViewController {
         repeatCount = 0
         correct = ""
         correctTextField.text = ""
+        enterButton.hidden = true
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     @IBAction func touchUpInsideEnterButton(sender: UIButton) {
+        enterButton.hidden = true
+        
         if correctTextField.text == correct {
             successCount++
             resultTrials.append(true)
