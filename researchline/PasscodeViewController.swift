@@ -17,16 +17,19 @@ class PasscodeViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
     
+    var answer: String? = nil;
     var passcode = "";
     
     @IBAction func clickStartButton(sender: AnyObject) {
+        if(answer == nil){
+            Constants.userDefaults.setObject(passcodeText.text!, forKey: "passcode")
+        }
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         let controller = storyboard.instantiateViewControllerWithIdentifier("RootTabBarController")
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
     @IBAction func passcodeChanged(sender: AnyObject) {
-        let answer = Constants.userDefaults.stringForKey("passcode")
         var sizeOfCode = passcodeText.text!.characters.count
         
         let passwordText: String = passcodeText.text!
@@ -45,7 +48,10 @@ class PasscodeViewController: UIViewController {
         }
         
         if(sizeOfCode == 4){
-            if(answer == self.passcode){
+            if(answer == nil){
+                startButton.enabled = true
+                alertText.hidden = true
+            }else if(answer == self.passcode){
                 startButton.enabled = true
                 alertText.hidden = true
             }else{
@@ -63,6 +69,11 @@ class PasscodeViewController: UIViewController {
 
         alertText.hidden = true
         startButton.enabled = false
+        
+        answer = Constants.userDefaults.stringForKey("passcode")
+        if(answer == nil){
+            startButton.setTitle("Setup", forState: UIControlState.Normal)
+        }
         
         // Do any additional setup after loading the view.
     }

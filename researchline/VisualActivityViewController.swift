@@ -56,6 +56,8 @@ class VisualActivityViewController: UIViewController {
         
         failTextView.hidden = true
         failTextView.borderStyle = UITextBorderStyle.None
+        successLabel.text = "Reaction time: 0"
+        failureLabel.hidden = true
     }
     
     internal func startReaction(){
@@ -92,8 +94,6 @@ class VisualActivityViewController: UIViewController {
             finish()
         }
         
-        successLabel.text = "Success: \(successCount)"
-        failureLabel.text = "Failure: \(failureCount)"
     }
     
     internal func validation(){
@@ -104,6 +104,7 @@ class VisualActivityViewController: UIViewController {
             isStart = 2
             let interval = NSDate().timeIntervalSinceDate(startDate!)
             resultTimeMap[trial] = interval
+            successLabel.text = "Reaction time: timeout"
             
             trial += 1
             debugPrint("\(trial)th trial result is failure while \(interval)")
@@ -115,8 +116,10 @@ class VisualActivityViewController: UIViewController {
             isStart = 2
             let interval = NSDate().timeIntervalSinceDate(startDate!)
             resultTimeMap[trial] = interval
-            
+            let roundInterval = round(interval * 100) / 100
+            successLabel.text = "Reaction time: \(roundInterval) sec"
             trial += 1
+            
             debugPrint("\(trial)th trial result is success while \(interval)")
             resultTrials.append(true)
             successCount += 1
@@ -127,6 +130,7 @@ class VisualActivityViewController: UIViewController {
             reactionImageView.hidden = true
             failTextView.hidden = false
             resultTimeMap[trial] = 0
+            successLabel.text = "Reaction time: too fast"
             
             debugPrint("\(trial)th trial result is fail")
             resultTrials.append(false)
@@ -151,7 +155,8 @@ class VisualActivityViewController: UIViewController {
     internal func finish(){
         let sum = resultTimeMap.values.reduce(0, combine: +)
         let average = sum / Double(resultTimeMap.count)
-        descriptionText.text = "Your average reaction time is \(average)."
+        let roundAverage = round(average * 100)/100
+        descriptionText.text = "Your average reaction time is \(roundAverage) sec."
         descriptionText.hidden = false
         reactionImageView.hidden = true
         failTextView.hidden = true

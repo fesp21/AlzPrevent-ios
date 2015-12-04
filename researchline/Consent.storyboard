@@ -747,11 +747,11 @@
                                         <rect key="frame" x="0.0" y="327" width="600" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H8R-ZQ-gZm" id="j54-9r-Cjj">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Share my data with The ResearchLine team and qualified researchers world wide." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYF-O4-8g6">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="112"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="112.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -770,11 +770,11 @@
                                         <rect key="frame" x="0.0" y="440" width="600" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ni6-u3-gVX" id="Jkb-W4-GBr">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Only share my data with The ResearchLine team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="muV-Z0-5TB">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="112"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="112.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -817,40 +817,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO4-1c-GZJ">
-                                <rect key="frame" x="249" y="96" width="102" height="39"/>
+                                <rect key="frame" x="249" y="96" width="102" height="38.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Review the from below, and tap Agree if you're ready to continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTo-ms-8jD">
-                                <rect key="frame" x="24" y="159" width="552" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review the from below, and tap Agree if you're ready to continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTo-ms-8jD">
+                                <rect key="frame" x="24" y="158" width="552" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hongkong University Research Consent From" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-eW-1e4">
-                                <rect key="frame" x="24" y="192" width="552" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hongkong University Research Consent From" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-eW-1e4">
+                                <rect key="frame" x="24" y="192" width="552" height="19.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-9G-Dhy" userLabel="Line View">
-                                <rect key="frame" x="0.0" y="235" width="600" height="1"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-9G-Dhy" userLabel="Line View">
+                                <rect key="frame" x="0.0" y="234" width="600" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="LKm-kc-3hb"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-I0-eX4">
-                                <rect key="frame" x="20" y="237" width="560" height="3000"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-VG-dRj">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Disagree" id="sqN-Zv-uua"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7gu-3o-ODq"/>
+                                    <barButtonItem title="Agree" id="Whg-6a-6Zy">
+                                        <connections>
+                                            <segue destination="MjP-fM-gnB" kind="show" id="atc-Bp-dJI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-I0-eX4">
+                                <rect key="frame" x="20" y="235.5" width="560" height="320.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="3000" id="9Cw-K0-SAB"/>
-                                </constraints>
                                 <string key="text">ResearchLine Consent Form
 Protocol Title:
 Smartphone app for management of cognitive function
@@ -956,19 +966,6 @@ I understand the information presented to me
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-VG-dRj">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <animations/>
-                                <items>
-                                    <barButtonItem title="Disagree" id="sqN-Zv-uua"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7gu-3o-ODq"/>
-                                    <barButtonItem title="Agree" id="Whg-6a-6Zy">
-                                        <connections>
-                                            <segue destination="MjP-fM-gnB" kind="show" id="atc-Bp-dJI"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -984,6 +981,7 @@ I understand the information presented to me
                             <constraint firstItem="sbS-I0-eX4" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leadingMargin" id="Vw3-9P-C6f"/>
                             <constraint firstItem="8Tm-eW-1e4" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="XIU-Bo-jtF"/>
                             <constraint firstItem="XTo-ms-8jD" firstAttribute="leading" secondItem="puz-pU-712" secondAttribute="leading" constant="24" id="ZaX-Ag-6pn"/>
+                            <constraint firstItem="4VZ-VG-dRj" firstAttribute="top" secondItem="sbS-I0-eX4" secondAttribute="bottom" id="ZmE-MV-FYq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sbS-I0-eX4" secondAttribute="trailing" id="hCH-Tt-7yg"/>
                             <constraint firstAttribute="trailing" secondItem="XTo-ms-8jD" secondAttribute="trailing" constant="24" id="kzk-bm-1Tq"/>
                             <constraint firstItem="gO4-1c-GZJ" firstAttribute="top" secondItem="EQS-oj-pUN" secondAttribute="bottom" constant="32" id="paw-ty-9Pr"/>
@@ -994,6 +992,9 @@ I understand the information presented to me
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Consent" id="KAb-MG-wT2"/>
+                    <connections>
+                        <outlet property="textView" destination="sbS-I0-eX4" id="6Fp-Zh-TJq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdj-zt-gWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1150,14 +1151,14 @@ I understand the information presented to me
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please sign using your finger on the line below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-yH-K7J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign using your finger on the line below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-yH-K7J">
                                 <rect key="frame" x="24" y="140" width="552" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXd-fm-62P">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXd-fm-62P">
                                 <rect key="frame" x="247" y="392" width="106" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Clear Signature"/>
@@ -1165,7 +1166,7 @@ I understand the information presented to me
                                     <action selector="touchUpInsideClearSignatureButton:" destination="J8i-6u-8qT" eventType="touchUpInside" id="0bC-4g-VYi"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43k-C1-t7G" userLabel="Signature View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43k-C1-t7G" userLabel="Signature View">
                                 <rect key="frame" x="24" y="193" width="552" height="190"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQC-p4-D32">
@@ -1175,7 +1176,7 @@ I understand the information presented to me
                                         <color key="textColor" red="0.86066344895287961" green="0.86066344895287961" blue="0.86066344895287961" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-qJ-Ikt" userLabel="Line View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-qJ-Ikt" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="108" width="552" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.9400359948" green="0.9400359948" blue="0.9400359948" alpha="1" colorSpace="calibratedRGB"/>

@@ -9,6 +9,7 @@
 import UIKit
 
 class ConsentReviewViewController: UIViewController {
+    @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ class ConsentReviewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        textView.setContentOffset(CGPointZero, animated: false)
+    }
 
     /*
     // MARK: - Navigation

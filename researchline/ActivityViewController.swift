@@ -29,7 +29,7 @@ class ActivityViewController: UIViewController {
         Alamofire.request(.POST, Constants.glucoseLogin, headers: [
             "deviceKey": Constants.deviceKey,
             "deviceType": Constants.deviceType,
-            "signKey": ""],
+            "signKey": Constants.signKey()],
             parameters:[
                 "email": email!,
                 "password": password!
@@ -43,13 +43,23 @@ class ActivityViewController: UIViewController {
                         
                     }else{
                         let alert = UIAlertController(title: "Alert", message: "Fail to glucose login.", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: { action in
+                            
+                            self.navigationController?.popViewControllerAnimated(true)
+                        }))
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     debugPrint(json)
                     break
                 case.Failure(let error):
                     debugPrint(error)
+                    
+                    let alert = UIAlertController(title: "Alert", message: "Elemark server has some problems. Please try again after few minutes.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: { action in
+
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }))
+                    self.presentViewController(alert, animated: true, completion: nil)
                     break
                 }
                 

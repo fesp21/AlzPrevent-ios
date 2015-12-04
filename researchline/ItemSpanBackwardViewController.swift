@@ -62,6 +62,7 @@ class ItemSpanBackwardActivityViewController: UIViewController {
         if repeatCount < 3 {
             numberLabel.hidden = false
             enterButton.hidden = true
+            correctTextField.enabled = false
             correctTextField.hidden = true
             let number = String(Int(arc4random_uniform(UInt32(8))) + 1)
             correct += number
@@ -133,6 +134,7 @@ class ItemSpanBackwardActivityViewController: UIViewController {
         numberLabel.hidden = true
         enterButton.hidden = false
         correctTextField.hidden = false
+        correctTextField.enabled = true
         correctTextField.becomeFirstResponder()
     }
     

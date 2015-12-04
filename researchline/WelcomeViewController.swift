@@ -54,6 +54,11 @@ class WelcomeViewController: UIViewController, UICollectionViewDelegate, UIColle
   }
 
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    return collectionView.dequeueReusableCellWithReuseIdentifier(String(indexPath.item), forIndexPath: indexPath)
+     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(String(indexPath.item), forIndexPath: indexPath)
+     return cell;
   }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
 }

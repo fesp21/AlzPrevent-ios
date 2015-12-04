@@ -61,6 +61,7 @@ class RegistrationViewController: UIViewController {
             formData.appendBodyPart(data: (Constants.firstName() ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "firstName")
             formData.appendBodyPart(data: (Constants.lastName() ?? "").dataUsingEncoding(NSUTF8StringEncoding)!, name: "lastName")
             formData.appendBodyPart(data: sex.dataUsingEncoding(NSUTF8StringEncoding)!, name: "sex")
+            formData.appendBodyPart(data: (Constants.studyName).dataUsingEncoding(NSUTF8StringEncoding)!, name: "studyName")
             }, encodingCompletion: { (result: Manager.MultipartFormDataEncodingResult) -> Void in
                 switch result {
                 case .Success(let upload, _, _):

@@ -9,9 +9,11 @@
 import UIKit
 
 class Constants: NSObject {
+    static let studyName = "HKU AD"
+    
     // URLs
     static let host = "https://researchline.net/"
-//    static let host = "http://192.168.0.12:9001/"
+//    static let host = "http://172.18.99.11:9001/"
 //    static let host = "http://localhost:9001/"
     static let login = host + "login_process"
     static let glucoseLogin = host + "api/glucose/auth"

@@ -8,20 +8,16 @@
 
 import UIKit
 
-class ReadConsentDocumentViewController: UIViewController, UIScrollViewDelegate {
-
-    @IBOutlet weak var scrollView: UIScrollView!
+class ReadConsentDocumentViewController: UIViewController {
+    
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBarHidden = false
-        scrollView.delegate = self
-    }
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return imageView
+        
+        let request = NSURLRequest(URL: NSURL(string: Constants.urlFileConsent)!)
+        webView.loadRequest(request)
     }
 }

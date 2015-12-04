@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Welcome View Controller-->
@@ -466,27 +465,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY3-Mu-eQg">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-y7-PBx">
+                                <rect key="frame" x="150" y="164" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D8y-eS-Mxt"/>
+                                    <constraint firstAttribute="width" constant="300" id="yXg-c4-9uL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-Fp-Fuu">
+                                <rect key="frame" x="200" y="264" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RNA-yY-YzB"/>
+                                    <constraint firstAttribute="width" constant="200" id="rTY-3l-Lca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Submit"/>
                                 <connections>
-                                    <outlet property="delegate" destination="r0L-f9-opk" id="WGx-vF-Fd0"/>
+                                    <action selector="clickSubmit:" destination="dby-qM-Zbg" eventType="touchUpInside" id="Wlz-23-oxW"/>
                                 </connections>
-                            </webView>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wY3-Mu-eQg" firstAttribute="leading" secondItem="r0L-f9-opk" secondAttribute="leading" id="Ao5-qb-wNl"/>
-                            <constraint firstItem="h3E-fa-IeO" firstAttribute="top" secondItem="wY3-Mu-eQg" secondAttribute="bottom" id="LqM-pD-ldC"/>
-                            <constraint firstItem="wY3-Mu-eQg" firstAttribute="top" secondItem="prg-ZN-baK" secondAttribute="bottom" id="c60-76-Iyf"/>
-                            <constraint firstAttribute="trailing" secondItem="wY3-Mu-eQg" secondAttribute="trailing" id="zf5-T7-967"/>
+                            <constraint firstItem="1QN-y7-PBx" firstAttribute="centerX" secondItem="r0L-f9-opk" secondAttribute="centerX" id="PfV-8b-c2G"/>
+                            <constraint firstItem="Jnz-Fp-Fuu" firstAttribute="top" secondItem="1QN-y7-PBx" secondAttribute="bottom" constant="50" id="WLa-Uv-fsC"/>
+                            <constraint firstItem="Jnz-Fp-Fuu" firstAttribute="centerX" secondItem="r0L-f9-opk" secondAttribute="centerX" id="eh6-We-B5r"/>
+                            <constraint firstItem="1QN-y7-PBx" firstAttribute="top" secondItem="prg-ZN-baK" secondAttribute="bottom" constant="100" id="uFU-yi-iRZ"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Forgot Password" id="gm6-QW-wgY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="webView" destination="wY3-Mu-eQg" id="znb-f7-gVG"/>
+                        <outlet property="emailText" destination="1QN-y7-PBx" id="dDH-Uw-l3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KS-tJ-VvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -505,34 +519,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="2" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbf-Sg-T3Z">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BBB_ConsentForm" translatesAutoresizingMaskIntoConstraints="NO" id="e7w-Oi-Ymv">
-                                        <rect key="frame" x="0.0" y="0.0" width="612" height="792"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="e7w-Oi-Ymv" secondAttribute="bottom" id="MYS-Oi-gma"/>
-                                    <constraint firstItem="e7w-Oi-Ymv" firstAttribute="top" secondItem="Cbf-Sg-T3Z" secondAttribute="top" id="Qbz-I6-S2d"/>
-                                    <constraint firstAttribute="trailing" secondItem="e7w-Oi-Ymv" secondAttribute="trailing" id="csy-yF-uvk"/>
-                                    <constraint firstItem="e7w-Oi-Ymv" firstAttribute="leading" secondItem="Cbf-Sg-T3Z" secondAttribute="leading" id="sOP-48-dfe"/>
-                                </constraints>
-                            </scrollView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tH9-I6-r5T">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Cbf-Sg-T3Z" firstAttribute="leading" secondItem="50X-OW-f7t" secondAttribute="leading" id="028-Wm-YfN"/>
-                            <constraint firstAttribute="trailing" secondItem="Cbf-Sg-T3Z" secondAttribute="trailing" id="lB7-LJ-hqM"/>
-                            <constraint firstItem="Cbf-Sg-T3Z" firstAttribute="top" secondItem="50X-OW-f7t" secondAttribute="topMargin" id="pAn-42-OhS"/>
-                            <constraint firstItem="KEw-pT-0RX" firstAttribute="top" secondItem="Cbf-Sg-T3Z" secondAttribute="bottom" id="zbl-eC-FBQ"/>
+                            <constraint firstItem="tH9-I6-r5T" firstAttribute="top" secondItem="3gh-KW-hTD" secondAttribute="bottom" id="UKY-rJ-Yje"/>
+                            <constraint firstItem="tH9-I6-r5T" firstAttribute="leading" secondItem="50X-OW-f7t" secondAttribute="leading" id="WX0-gC-T5V"/>
+                            <constraint firstAttribute="trailing" secondItem="tH9-I6-r5T" secondAttribute="trailing" id="dCC-ec-pvR"/>
+                            <constraint firstItem="KEw-pT-0RX" firstAttribute="top" secondItem="tH9-I6-r5T" secondAttribute="bottom" id="puM-a9-POB"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="imageView" destination="e7w-Oi-Ymv" id="K1b-he-jbd"/>
-                        <outlet property="scrollView" destination="Cbf-Sg-T3Z" id="YZb-Wv-3BQ"/>
+                        <outlet property="webView" destination="tH9-I6-r5T" id="4eA-vy-g1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cw7-Fp-0fG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,7 +675,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BBB_ConsentForm" width="612" height="792"/>
         <image name="LogoWide" width="274" height="60"/>
     </resources>
 </document>

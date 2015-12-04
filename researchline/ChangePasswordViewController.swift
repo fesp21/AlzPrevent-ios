@@ -20,12 +20,14 @@ class ChangePasswordViewController: UIViewController {
             .responseString { (response: Response) -> Void in
                 
                 debugPrint(response)
+                
+                func completionHandler(action: UIAlertAction) {
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
                     
                 let alert = UIAlertController(title: "Alert", message: "Send a email for changing password. Please check your email.", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion:{ () -> Void in
-                        self.navigationController?.popViewControllerAnimated(true)
-                    })
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: completionHandler))
+                self.presentViewController(alert, animated: true, completion: nil)
         }
     }
 
