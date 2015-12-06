@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChangeEmailViewController: UIViewController {
 
@@ -14,9 +15,38 @@ class ChangeEmailViewController: UIViewController {
     
     
     @IBAction func done(sender: AnyObject) {
-        let emailStr = emailLabel.text
-        Constants.userDefaults.setObject(emailStr, forKey: "email")
-        navigationController!.popViewControllerAnimated(true)
+        let originalEmail = Constants.userDefaults.stringForKey("email")!
+        let newEmail = emailLabel.text!
+        debugPrint("Original : \(originalEmail), New : \(newEmail)")
+        
+        Alamofire.request(.GET, Constants.changeEmail,
+            parameters: [
+                "originalEmail": originalEmail,
+                "newEmail": newEmail
+            ],
+            headers: [
+                "deviceKey": Constants.deviceKey,
+                "deviceType": Constants.deviceType
+            ])
+            .responseJSON { (response: Response) -> Void in
+                debugPrint(response)
+                
+                switch response.result {
+                case .Success:
+                    Constants.userDefaults.setObject(newEmail, forKey: "email")
+                    self.navigationController!.popViewControllerAnimated(true)
+
+                    break
+                case .Failure:
+                    
+                    let alert = UIAlertController(title: "Alert", message: "Fail to change email address. New address is using now.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
+                    break
+                }
+        }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

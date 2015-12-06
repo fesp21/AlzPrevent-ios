@@ -13,7 +13,10 @@ class EmailVerificationViewController: UIViewController {
 
     @IBOutlet weak var emailText: UILabel!
     
+    @IBOutlet weak var resendVerificationEmailButton: UIButton!
+    
     @IBAction func clickContinue(sender: AnyObject) {
+        
         let email = Constants.userDefaults.stringForKey("email")
         
         Alamofire.request(.GET, Constants.checkVerifyingEmail,
@@ -68,6 +71,9 @@ class EmailVerificationViewController: UIViewController {
     }
 
     internal func verifyingEmail(){
+        self.resendVerificationEmailButton.enabled = false
+        self.resendVerificationEmailButton.setTitle("Sending Verification Email...", forState: UIControlState.Normal)
+        
         let email = Constants.userDefaults.stringForKey("email")
         if(email == nil){
             return
@@ -81,7 +87,10 @@ class EmailVerificationViewController: UIViewController {
                 "email": email!
             ])
             .responseJSON { (response: Response) -> Void in
-                    
+                
+                self.resendVerificationEmailButton.enabled = true
+                self.resendVerificationEmailButton.setTitle("Resend Verification Email", forState: UIControlState.Normal)
+                
                 switch response.result {
                 case.Success:
                     debugPrint(response)
@@ -92,6 +101,9 @@ class EmailVerificationViewController: UIViewController {
                     debugPrint(response)
                     print("Fail sending verification email.")
                     
+                    let alert = UIAlertController(title: "Alert", message: "Sorry, Fail to send varification email. Please contact to contact@bbbtech.com", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
                     break
                 }
           

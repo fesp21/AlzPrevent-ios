@@ -61,12 +61,17 @@
                                             <segment title="Male"/>
                                             <segment title="Female"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeSex:" destination="gsR-PB-u1R" eventType="touchUpInside" id="tlZ-zA-5NX"/>
+                                            <action selector="editSex:" destination="gsR-PB-u1R" eventType="editingChanged" id="ot0-sC-Rsk"/>
+                                            <action selector="valueSex:" destination="gsR-PB-u1R" eventType="valueChanged" id="UyV-ee-iZI"/>
+                                        </connections>
                                     </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Real Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vro-E9-8Jq">
                                         <rect key="frame" x="0.0" y="16" width="552" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <action selector="editChangedTextField:" destination="gsR-PB-u1R" eventType="editingChanged" id="wrv-m1-93d"/>
                                         </connections>
@@ -376,18 +381,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4-digit password id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y68-Nq-IxX">
-                                <rect key="frame" x="226" y="164" width="148" height="21"/>
+                                <rect key="frame" x="226" y="164" width="148" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ydr-nk-2tc">
-                                <rect key="frame" x="70" y="285" width="460" height="50"/>
+                                <rect key="frame" x="70" y="284" width="460" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VIL-Dl-knE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordChange:" destination="Msa-zq-sGO" eventType="editingChanged" id="cH7-NV-Jzq"/>
                                 </connections>
@@ -492,7 +497,7 @@
                                         <rect key="frame" x="24" y="16" width="552" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHa-xf-OOu" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="48" width="600" height="1"/>
@@ -563,22 +568,22 @@
                                     <segue destination="8wo-dz-7R0" kind="show" id="zHS-DF-pZM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResearchLine has sent a verification email at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du2-ZL-4zJ">
-                                <rect key="frame" x="32" y="96" width="536" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResearchLine has sent a verification email at" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du2-ZL-4zJ">
+                                <rect key="frame" x="32" y="96" width="536" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alex.r.cram@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-Fw-Osq">
-                                <rect key="frame" x="205" y="136" width="192" height="20"/>
+                                <rect key="frame" x="204" y="135.5" width="191.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once verified, tab below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yat-JD-CqR">
-                                <rect key="frame" x="207" y="207" width="186" height="21"/>
+                                <rect key="frame" x="207" y="207" width="186" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -632,7 +637,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tw-yK-8Og">
-                                <rect key="frame" x="269" y="247" width="62" height="30"/>
+                                <rect key="frame" x="269" y="246.5" width="62" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
@@ -663,11 +668,28 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailText" destination="y8K-Fw-Osq" id="39s-XY-gOa"/>
+                        <outlet property="resendVerificationEmailButton" destination="1ad-cw-Jkw" id="EIG-GU-cxA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gl2-GS-iS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3413" y="358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jmx-eW-7h7">
+            <objects>
+                <navigationController storyboardIdentifier="EmailVerificationNavigationController" id="AXc-D5-HcZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="04y-ie-v7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f5t-v6-vTf" kind="relationship" relationship="rootViewController" id="ZBv-FH-cQ4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSf-f6-9fx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="1071"/>
         </scene>
         <!--All Set View Controller-->
         <scene sceneID="hd5-ma-Eab">
@@ -760,4 +782,7 @@
             <point key="canvasLocation" x="4177" y="358"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZBv-FH-cQ4"/>
+    </inferredMetricsTieBreakers>
 </document>

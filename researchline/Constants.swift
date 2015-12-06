@@ -12,8 +12,8 @@ class Constants: NSObject {
     static let studyName = "HKU AD"
     
     // URLs
-    static let host = "https://researchline.net/"
-//    static let host = "http://172.18.99.11:9001/"
+//    static let host = "https://researchline.net/"
+    static let host = "http://172.18.99.11:9001/"
 //    static let host = "http://localhost:9001/"
     static let login = host + "login_process"
     static let glucoseLogin = host + "api/glucose/auth"
@@ -27,9 +27,9 @@ class Constants: NSObject {
     static let statistics = host + "api/statistics"
     static let requestVerifyingEmail = host + "support/request/verifying"
     static let checkVerifyingEmail = host + "support/check/verifying"
-    static let sendConsentEmail = host + "/support/mail/consent"
-    
+    static let sendConsentEmail = host + "support/mail/consent"
     static let urlChangePassword = host + "support/reset/password"
+    static let changeEmail = host + "support/change/email"
     static let urlFileConsent = host + "file/consent.pdf"
 
     static var signFileData: UIImage?

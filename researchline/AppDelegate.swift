@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("AdditionalNavigationController")
         } else if Constants.registerStep() == Constants.STEP_EMAIL_VERIFICATION {
             storyboard = UIStoryboard(name: "Session", bundle: nil)
-            self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("EmailVerificationViewController")
+            self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("EmailVerificationNavigationController")
         }
         
         self.window!.makeKeyAndVisible()

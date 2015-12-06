@@ -20,6 +20,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var joinBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var sexSegmentedControl: UISegmentedControl!
 
+    @IBAction func valueSex(sender: AnyObject) {
+        let sex = sexSegmentedControl.selectedSegmentIndex == 0 ? "male" : "female"
+        Constants.userDefaults.setObject(sex, forKey: "sex")
+    }
+    
     @IBAction func editChangedTextField(sender: UITextField) {
         if(!emailTextField.text!.isEmpty && !realNameTextField.text!.isEmpty && !passwordTextField.text!.isEmpty){
             joinBarButtonItem.enabled = true

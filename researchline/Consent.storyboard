@@ -1037,7 +1037,7 @@ I understand the information presented to me
                                             <constraint firstAttribute="height" constant="32" id="QXe-xC-0GK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <action selector="editingChangedTextLabel:" destination="MjP-fM-gnB" eventType="editingChanged" id="dEJ-iI-5eI"/>
                                         </connections>
@@ -1058,7 +1058,7 @@ I understand the information presented to me
                                             <constraint firstAttribute="height" constant="32" id="VjF-5h-Suq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <action selector="editingChangedTextLabel:" destination="MjP-fM-gnB" eventType="editingChanged" id="uVZ-1v-KbA"/>
                                         </connections>
