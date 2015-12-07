@@ -936,7 +936,7 @@
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.ios.ResearchLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbbtech.researchline.hku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -956,7 +956,7 @@
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bbb.ios.ResearchLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbbtech.researchline.hku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
