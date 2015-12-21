@@ -19,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        let deviceToken = Constants.userDefaults.stringForKey("deviceToken")
+        if(deviceToken != nil){
+            Alamofire.request(.POST, Constants.token,
+                parameters: [
+                    "deviceKey": Constants.deviceKey,
+                    "deviceType": Constants.deviceType,
+                    "token": deviceToken!
+                ])
+                .responseJSON { (response) -> Void in
+                    debugPrint(response)
+            }
+        }
+        
         var storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         self.window?.rootViewController = storyboard.instantiateInitialViewController()
         if Constants.signKey() == "" || Constants.registerStep() == Constants.STEP_READY {
@@ -56,6 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.deviceToken = deviceTokenString
         print(deviceToken)
+        Constants.userDefaults.setObject(deviceTokenString, forKey: "deviceToken")
+        
         Alamofire.request(.POST, Constants.token,
             parameters: [
                 "deviceKey": Constants.deviceKey,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nNN-hC-atu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nNN-hC-atu">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -21,7 +21,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMr-Dc-8aw">
                                 <rect key="frame" x="260" y="389" width="80" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Get Started"/>
                                 <connections>
                                     <segue destination="UzX-nv-MqU" kind="show" id="8Xn-y8-BEu"/>
@@ -29,7 +28,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgp-UM-sSa">
                                 <rect key="frame" x="189" y="327" width="223" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Learn more about this study first"/>
                                 <connections>
                                     <segue destination="xFq-tY-Vjf" kind="show" id="q8P-OU-qvu"/>
@@ -37,21 +35,18 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0o-ML-4M4">
                                 <rect key="frame" x="238" y="182" width="124" height="36"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3Y-h3-ROg">
                                 <rect key="frame" x="66" y="234" width="468" height="61"/>
-                                <animations/>
                                 <string key="text">The simple walkthrough will help you to understand the study, the impact it will have on your life, and will allow you to provide consent to participate.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A3Y-h3-ROg" firstAttribute="top" secondItem="f0o-ML-4M4" secondAttribute="bottom" constant="16" id="EJe-2S-U7M"/>
@@ -85,7 +80,6 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S6J-3P-Yra">
                                 <rect key="frame" x="0.0" y="64" width="600" height="414"/>
-                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BIf-W6-GDl">
                                     <size key="itemSize" width="600" height="414"/>
@@ -103,7 +97,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="BUJ-hd-Ut6">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="360" id="YYJ-eh-F19"/>
                                                         <constraint firstAttribute="width" constant="240" id="a1e-pc-gQi"/>
@@ -117,23 +110,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eL-4k-VpL">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-xe-rq4">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="BUJ-hd-Ut6" firstAttribute="centerX" secondItem="IGl-BC-hy8" secondAttribute="centerX" id="9ix-9c-1kK"/>
                                             <constraint firstItem="BUJ-hd-Ut6" firstAttribute="top" secondItem="IGl-BC-hy8" secondAttribute="top" constant="24" id="V21-nH-aAJ"/>
@@ -154,7 +143,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="v6K-yq-Qup">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="Iak-oJ-eqp"/>
                                                         <constraint firstAttribute="height" constant="360" id="hWH-aK-HrP"/>
@@ -168,23 +156,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzg-cp-QoJ">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D7-oK-Hmu">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="3D7-oK-Hmu" firstAttribute="top" secondItem="gzg-cp-QoJ" secondAttribute="bottom" constant="16" id="8Vi-DO-f9V"/>
                                             <constraint firstAttribute="trailing" secondItem="3D7-oK-Hmu" secondAttribute="trailing" constant="36" id="CpB-R2-k2d"/>
@@ -205,7 +189,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-F8-Qvi">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="360" id="OEY-Rc-Ki0"/>
                                                         <constraint firstAttribute="width" constant="240" id="Vgw-Mg-Hvc"/>
@@ -219,23 +202,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-mZ-EzF">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-g6-zH4">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="TX6-F8-Qvi" firstAttribute="centerX" secondItem="9QC-lf-FyI" secondAttribute="centerX" id="33X-cM-hp1"/>
                                             <constraint firstItem="5oG-g6-zH4" firstAttribute="top" secondItem="Azz-mZ-EzF" secondAttribute="bottom" constant="16" id="DgR-Gk-9M3"/>
@@ -256,7 +235,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="rU8-6O-6on">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="Bwy-gD-yMT"/>
                                                         <constraint firstAttribute="width" secondItem="rU8-6O-6on" secondAttribute="height" multiplier="31:18" id="ibi-j6-KVu"/>
@@ -270,23 +248,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKJ-hX-Olc">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsa-HU-iou">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Tsa-HU-iou" secondAttribute="trailing" constant="36" id="9nj-Bc-bSu"/>
                                             <constraint firstItem="rU8-6O-6on" firstAttribute="top" secondItem="S4p-xa-FX9" secondAttribute="top" constant="24" id="YZO-e2-SCo"/>
@@ -307,7 +281,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="g3F-nT-6aT">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="360" id="5CU-dE-2ej"/>
                                                         <constraint firstAttribute="width" constant="240" id="kGh-TT-bJR"/>
@@ -321,23 +294,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7X-aN-97m">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-S7-sU7">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="g3F-nT-6aT" firstAttribute="centerX" secondItem="KJZ-D4-9To" secondAttribute="centerX" id="1FN-MZ-beb"/>
                                             <constraint firstItem="Y7X-aN-97m" firstAttribute="centerX" secondItem="KJZ-D4-9To" secondAttribute="centerX" id="610-Np-iDm"/>
@@ -358,7 +327,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="w4J-PS-dhD">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="5WR-ob-3mT"/>
                                                         <constraint firstAttribute="width" secondItem="w4J-PS-dhD" secondAttribute="height" multiplier="31:18" id="Sio-5a-bbh"/>
@@ -372,23 +340,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-nK-5Pq">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qak-uc-cj8">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="Dea-nK-5Pq" firstAttribute="top" secondItem="w4J-PS-dhD" secondAttribute="bottom" constant="24" id="5Er-9J-1mS"/>
                                             <constraint firstAttribute="trailing" secondItem="qak-uc-cj8" secondAttribute="trailing" constant="36" id="BpP-rr-mSf"/>
@@ -409,7 +373,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-OL-kBZ">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="6Xj-b1-wJm"/>
                                                         <constraint firstAttribute="width" secondItem="gHh-OL-kBZ" secondAttribute="height" multiplier="31:18" id="BYH-IY-oDx"/>
@@ -423,23 +386,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-dV-ESX">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Xm-vjs">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="gHh-OL-kBZ" firstAttribute="centerX" secondItem="NsI-Op-Uko" secondAttribute="centerX" id="FJz-GQ-UkY"/>
                                             <constraint firstItem="hS2-Xm-vjs" firstAttribute="top" secondItem="dKr-dV-ESX" secondAttribute="bottom" constant="16" id="GII-bi-whd"/>
@@ -460,7 +419,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="JeF-Hq-540">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="360" id="LYb-vT-t4y"/>
                                                         <constraint firstAttribute="width" secondItem="JeF-Hq-540" secondAttribute="height" multiplier="31:18" id="gYu-uM-PbU"/>
@@ -474,23 +432,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1J-JR-93c">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuN-Am-D0d">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="j1J-JR-93c" firstAttribute="centerX" secondItem="4OA-RO-Jb4" secondAttribute="centerX" id="3sW-C8-ofn"/>
                                             <constraint firstItem="JeF-Hq-540" firstAttribute="centerX" secondItem="4OA-RO-Jb4" secondAttribute="centerX" id="474-uN-AAH"/>
@@ -511,7 +465,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="NIn-AT-CVu">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="NIn-AT-CVu" secondAttribute="height" multiplier="31:18" id="JWy-CM-h6e"/>
                                                         <constraint firstAttribute="height" constant="360" id="d0o-7O-Guj"/>
@@ -525,23 +478,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhh-C8-GTt">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-Z8-a5d">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="bzl-Z8-a5d" firstAttribute="top" secondItem="yhh-C8-GTt" secondAttribute="bottom" constant="16" id="6Dj-FB-Tbk"/>
                                             <constraint firstAttribute="trailing" secondItem="bzl-Z8-a5d" secondAttribute="trailing" constant="36" id="Pob-U0-TwA"/>
@@ -562,7 +511,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="i4H-We-nSU">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="i4H-We-nSU" secondAttribute="height" multiplier="31:18" id="PzJ-Ad-gXg"/>
                                                         <constraint firstAttribute="height" constant="360" id="cS3-DM-Uc8"/>
@@ -576,23 +524,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byP-NT-S4o">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbl-g4-fCF">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="i4H-We-nSU" firstAttribute="top" secondItem="h3K-Lc-c5b" secondAttribute="top" constant="24" id="DDa-Y7-YYa"/>
                                             <constraint firstItem="nbl-g4-fCF" firstAttribute="top" secondItem="byP-NT-S4o" secondAttribute="bottom" constant="16" id="IdX-Tx-B7Q"/>
@@ -613,7 +557,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_Activities_to_SensorData" translatesAutoresizingMaskIntoConstraints="NO" id="MEb-cc-7UI">
                                                     <rect key="frame" x="180" y="24" width="240" height="139"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="MEb-cc-7UI" secondAttribute="height" multiplier="31:18" id="BLK-gr-fA9"/>
                                                         <constraint firstAttribute="width" constant="240" id="EFI-hX-F6a"/>
@@ -627,23 +570,19 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-fA-Mf5">
                                                     <rect key="frame" x="240" y="187" width="121" height="36"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This study will ask you to perform tasks and respond to surveys" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdQ-Rv-Ay7">
                                                     <rect key="frame" x="36" y="239" width="528" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="MEb-cc-7UI" firstAttribute="centerX" secondItem="bjn-XE-XRa" secondAttribute="centerX" id="0XX-GB-4vO"/>
                                             <constraint firstItem="hdQ-Rv-Ay7" firstAttribute="top" secondItem="y8K-fA-Mf5" secondAttribute="bottom" constant="16" id="F9L-sx-8el"/>
@@ -663,14 +602,12 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avC-Uk-cbO">
                                 <rect key="frame" x="284" y="520" width="32" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="PB8-LW-6ub" kind="show" id="gx5-R4-iyF"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rgX-a4-jcg" firstAttribute="top" secondItem="avC-Uk-cbO" secondAttribute="bottom" constant="50" id="1LK-bM-4za"/>
@@ -697,7 +634,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sGI-4N-YFQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="fJJ-78-o3X">
                             <rect key="frame" x="0.0" y="64" width="600" height="263"/>
@@ -705,27 +641,23 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharing Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEs-Lw-rdR">
                                     <rect key="frame" x="172" y="47" width="256" height="43"/>
-                                    <animations/>
                                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The ResearchLine team will recieve your study data from your participation in this study" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Di-7U-e8j">
                                     <rect key="frame" x="-33" y="114" width="667" height="41"/>
-                                    <animations/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharing your coded study data more broadly (without information such as your name) may benefit this and future research." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-6r-AaO">
                                     <rect key="frame" x="24" y="175" width="552" height="41"/>
-                                    <animations/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="0Di-7U-e8j" firstAttribute="leading" secondItem="fJJ-78-o3X" secondAttribute="leading" constant="24" id="F8d-yj-UEe"/>
@@ -747,21 +679,18 @@
                                         <rect key="frame" x="0.0" y="327" width="600" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H8R-ZQ-gZm" id="j54-9r-Cjj">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Share my data with The ResearchLine team and qualified researchers world wide." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYF-O4-8g6">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="112.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="112"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <segue destination="leB-EE-9Ia" kind="show" id="wTc-Oq-7cE"/>
                                         </connections>
@@ -770,21 +699,18 @@
                                         <rect key="frame" x="0.0" y="440" width="600" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ni6-u3-gVX" id="Jkb-W4-GBr">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Only share my data with The ResearchLine team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="muV-Z0-5TB">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="112.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="112"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <segue destination="leB-EE-9Ia" kind="show" id="3Rw-Wz-4GH"/>
                                         </connections>
@@ -817,29 +743,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO4-1c-GZJ">
-                                <rect key="frame" x="249" y="96" width="102" height="38.5"/>
-                                <animations/>
+                                <rect key="frame" x="249" y="96" width="102" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review the from below, and tap Agree if you're ready to continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTo-ms-8jD">
-                                <rect key="frame" x="24" y="158" width="552" height="20.5"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Review the from below, and tap Agree if you're ready to continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTo-ms-8jD">
+                                <rect key="frame" x="24" y="158" width="552" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hongkong University Research Consent From" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-eW-1e4">
-                                <rect key="frame" x="24" y="192" width="552" height="19.5"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hongkong University Research Consent From" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-eW-1e4">
+                                <rect key="frame" x="24" y="192" width="552" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-9G-Dhy" userLabel="Line View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-9G-Dhy" userLabel="Line View">
                                 <rect key="frame" x="0.0" y="234" width="600" height="1"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="LKm-kc-3hb"/>
@@ -847,7 +769,6 @@
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-VG-dRj">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <animations/>
                                 <items>
                                     <barButtonItem title="Disagree" id="sqN-Zv-uua"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7gu-3o-ODq"/>
@@ -858,8 +779,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-I0-eX4">
-                                <rect key="frame" x="20" y="235.5" width="560" height="320.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-I0-eX4">
+                                <rect key="frame" x="20" y="236" width="560" height="321"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">ResearchLine Consent Form
 Protocol Title:
@@ -967,7 +888,6 @@ I understand the information presented to me
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ogW-9G-Dhy" secondAttribute="trailing" id="Ds9-Mn-QqX"/>
@@ -1014,7 +934,6 @@ I understand the information presented to me
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Di-cQ-yrj">
                                 <rect key="frame" x="244" y="108" width="112" height="36"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1024,7 +943,6 @@ I understand the information presented to me
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-nW-SSN" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="0.0" width="552" height="1"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.94003599476439792" green="0.94003599476439792" blue="0.94003599476439792" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="5SP-uC-VbF"/>
@@ -1032,7 +950,6 @@ I understand the information presented to me
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7U-xN-IOQ">
                                         <rect key="frame" x="0.0" y="13" width="552" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="QXe-xC-0GK"/>
                                         </constraints>
@@ -1044,7 +961,6 @@ I understand the information presented to me
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-32-JTE" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="57" width="552" height="1"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.9400359948" green="0.9400359948" blue="0.9400359948" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Dz5-fc-AaQ"/>
@@ -1053,7 +969,6 @@ I understand the information presented to me
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-os-8Ul">
                                         <rect key="frame" x="0.0" y="70" width="552" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="VjF-5h-Suq"/>
                                         </constraints>
@@ -1065,7 +980,6 @@ I understand the information presented to me
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fr8-C1-xEp" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="114" width="552" height="1"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.9400359948" green="0.9400359948" blue="0.9400359948" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="9Oc-kN-RZ3"/>
@@ -1074,7 +988,6 @@ I understand the information presented to me
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Fr8-C1-xEp" secondAttribute="bottom" id="9D0-N6-G1j"/>
@@ -1096,7 +1009,6 @@ I understand the information presented to me
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C5i-sr-M7r" firstAttribute="leading" secondItem="WwE-AK-mL8" secondAttribute="leading" constant="24" id="9B4-i3-Ljf"/>
@@ -1138,7 +1050,6 @@ I understand the information presented to me
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-JV-Iu6">
                                 <rect key="frame" x="282" y="534" width="37" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="touchUpInsideDoneButton:" destination="J8i-6u-8qT" eventType="touchUpInside" id="2de-j0-kOi"/>
@@ -1146,39 +1057,34 @@ I understand the information presented to me
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-4J-f60">
                                 <rect key="frame" x="233" y="94" width="135" height="39"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign using your finger on the line below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-yH-K7J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please sign using your finger on the line below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-yH-K7J">
                                 <rect key="frame" x="24" y="140" width="552" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXd-fm-62P">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXd-fm-62P">
                                 <rect key="frame" x="247" y="392" width="106" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Clear Signature"/>
                                 <connections>
                                     <action selector="touchUpInsideClearSignatureButton:" destination="J8i-6u-8qT" eventType="touchUpInside" id="0bC-4g-VYi"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43k-C1-t7G" userLabel="Signature View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43k-C1-t7G" userLabel="Signature View">
                                 <rect key="frame" x="24" y="193" width="552" height="190"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQC-p4-D32">
                                         <rect key="frame" x="5" y="80" width="80" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.86066344895287961" green="0.86066344895287961" blue="0.86066344895287961" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-qJ-Ikt" userLabel="Line View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-qJ-Ikt" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="108" width="552" height="1"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.9400359948" green="0.9400359948" blue="0.9400359948" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="2HG-xC-Ri1"/>
@@ -1187,10 +1093,8 @@ I understand the information presented to me
                                     </view>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-cj-fUP" userLabel="Draw Image View" customClass="DrawImageView" customModule="researchline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="552" height="190"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="oPf-cj-fUP" firstAttribute="leading" secondItem="43k-C1-t7G" secondAttribute="leading" id="7Oc-Lq-IaL"/>
@@ -1212,7 +1116,6 @@ I understand the information presented to me
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aKv-yH-K7J" firstAttribute="leading" secondItem="1Tg-sM-zKL" secondAttribute="leading" constant="24" id="2dz-jx-2fw"/>
@@ -1251,7 +1154,6 @@ I understand the information presented to me
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIs-el-r2O">
                                 <rect key="frame" x="281" y="518" width="38" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Got It"/>
                                 <connections>
                                     <action selector="touchUpInsideGotItButton:" destination="XXV-mc-P9l" eventType="touchUpInside" id="kDP-lJ-Gi0"/>
@@ -1259,25 +1161,21 @@ I understand the information presented to me
                             </button>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o29-tF-yfF">
                                 <rect key="frame" x="276" y="104" width="51" height="31"/>
-                                <animations/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-sf-iae">
                                 <rect key="frame" x="240" y="123" width="120" height="39"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxV-KX-gwL">
                                 <rect key="frame" x="54" y="220" width="492" height="82"/>
-                                <animations/>
                                 <string key="text">On the next screen, you will be prompted to grant ResearchLine access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wxi-sf-iae" firstAttribute="top" secondItem="o29-tF-yfF" secondAttribute="bottom" constant="32" id="1oQ-gJ-otk"/>
@@ -1310,7 +1208,6 @@ I understand the information presented to me
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-e3-GLa">
                                 <rect key="frame" x="20" y="80" width="560" height="3909"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">About this consent form
 The following pages explain important information about the ResearchLine app, and how the app is part of a research study.
@@ -1408,7 +1305,6 @@ I understand the information presented to me</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qZN-e3-GLa" firstAttribute="leading" secondItem="xND-SV-6T4" secondAttribute="leading" constant="20" id="6SY-vl-ckr"/>

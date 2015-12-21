@@ -260,24 +260,28 @@ class ActivitiesViewController: UITableViewController {
                                 if _response.statusCode < 300 {
                                     let storybard = UIStoryboard(name: "Activities", bundle: nil)
                                     let controller = storybard.instantiateViewControllerWithIdentifier("GlucoseSuccessViewController") as! GlucoseSuccessViewController
+                                    
                                     if json["data"]!!["hasDone"] as! Int > 0{
                                         controller.success = true
                                         controller.score = json["data"]!!["value"] as! String
-//                                        let alert = UIAlertController(title: "Alert", message: "Success to Take Glucose Blood Sample.", preferredStyle: UIAlertControllerStyle.Alert)
-//                                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-//                                        self.presentViewController(alert, animated: true, completion: nil)
                                     }else{
                                         controller.success = false
-//                                        let alert = UIAlertController(title: "Alert", message: "Fail to Take Glucose Blood Sample.", preferredStyle: UIAlertControllerStyle.Alert)
-//                                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-//                                        self.presentViewController(alert, animated: true, completion: nil)
                                     }
                                     self.navigationController?.pushViewController(controller, animated: true)
                                 }else{
                                     let storybard = UIStoryboard(name: "Activities", bundle: nil)
                                     let controller = storybard.instantiateViewControllerWithIdentifier("ActivityViewController")
-                                    
+
                                     self.navigationController?.pushViewController(controller, animated: true)
+                                    
+                                    
+                                    // for glucose test
+//                                    let storybard = UIStoryboard(name: "Activities", bundle: nil)
+//                                    let controller = storybard.instantiateViewControllerWithIdentifier("GlucoseSuccessViewController") as! GlucoseSuccessViewController
+//                                    controller.success =  true
+//                                    controller.score = "300"
+//                                    self.navigationController?.pushViewController(controller, animated: true)
+                                    // /////////////
                                 }
                             }
                             break

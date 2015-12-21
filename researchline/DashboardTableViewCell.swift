@@ -26,12 +26,20 @@ class DashboardTableViewCell: UITableViewCell, BEMSimpleLineGraphDataSource, BEM
         let myGraph = BEMSimpleLineGraphView(frame: frame)
         myGraph.dataSource = self
         myGraph.delegate = self
-        myGraph.enableBezierCurve = false;
+        myGraph.enableBezierCurve = true;
         myGraph.colorTop = UIColor.clearColor()
         myGraph.colorBottom = UIColor.clearColor()
         myGraph.colorPoint = UIColor.blackColor()
         myGraph.colorLine = UIColor.grayColor()
         myGraph.enableYAxisLabel = true
+        myGraph.enableTouchReport = true
+        myGraph.enablePopUpReport = true
+        myGraph.autoScaleYAxis = true
+        myGraph.alwaysDisplayDots = false
+        myGraph.enableReferenceYAxisLines = true
+        myGraph.enableReferenceXAxisLines = true
+        myGraph.enableReferenceAxisFrame = true
+        
         self.contentGraphView.addSubview(myGraph)
     }
     
@@ -58,7 +66,7 @@ class DashboardTableViewCell: UITableViewCell, BEMSimpleLineGraphDataSource, BEM
             let value = NSNumberFormatter().numberFromString(valueStr)
             return CGFloat(value!)
         }else{
-            return 0
+            return CGFloat(0.0)
         }
     }
     
