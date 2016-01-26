@@ -1,6 +1,5 @@
 //
 //  ActivitiesTableViewCell.swift
-//  researchline
 //
 //  Created by jknam on 2015. 11. 22..
 //  Copyright © 2015년 bbb. All rights reserved.

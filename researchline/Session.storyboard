@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Registration (7/10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbM-EF-rlV">
+                                <rect key="frame" x="171" y="84" width="260" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg6-eH-TlV" userLabel="Form View">
-                                <rect key="frame" x="24" y="88" width="552" height="186"/>
+                                <rect key="frame" x="24" y="163" width="552" height="186"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3y-Dh-7Tm" userLabel="Line View">
                                         <rect key="frame" x="0.0" y="49" width="552" height="1"/>
@@ -116,8 +122,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Dg6-eH-TlV" secondAttribute="trailing" constant="24" id="2e6-Ut-HSU"/>
                             <constraint firstItem="Dg6-eH-TlV" firstAttribute="leading" secondItem="0i6-Sq-8Mg" secondAttribute="leading" constant="24" id="9Vd-ZT-ZHF"/>
+                            <constraint firstItem="Dg6-eH-TlV" firstAttribute="top" secondItem="fbM-EF-rlV" secondAttribute="bottom" constant="40" id="Vl3-el-QCl"/>
                             <constraint firstItem="Dg6-eH-TlV" firstAttribute="top" secondItem="BBg-nY-MvX" secondAttribute="bottom" constant="24" id="YN1-dS-lA3"/>
+                            <constraint firstItem="fbM-EF-rlV" firstAttribute="top" secondItem="BBg-nY-MvX" secondAttribute="bottom" constant="20" id="mfi-gJ-L3v"/>
+                            <constraint firstItem="fbM-EF-rlV" firstAttribute="centerX" secondItem="0i6-Sq-8Mg" secondAttribute="centerX" id="zMf-iU-j79"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YN1-dS-lA3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="ayJ-hf-zYT">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Join" id="215-ey-aN4">
@@ -371,14 +385,14 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4-digit password id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y68-Nq-IxX">
-                                <rect key="frame" x="226" y="164" width="148" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4-digit password id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y68-Nq-IxX">
+                                <rect key="frame" x="226" y="150" width="148" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ydr-nk-2tc">
-                                <rect key="frame" x="70" y="284" width="460" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ydr-nk-2tc">
+                                <rect key="frame" x="70" y="271" width="460" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VIL-Dl-knE"/>
                                 </constraints>
@@ -388,13 +402,21 @@
                                     <action selector="passwordChange:" destination="Msa-zq-sGO" eventType="editingChanged" id="cH7-NV-Jzq"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identification (9/10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-wo-tOD">
+                                <rect key="frame" x="162" y="30" width="276" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ydr-nk-2tc" firstAttribute="top" secondItem="Yfy-VM-Wws" secondAttribute="bottom" constant="100" id="1qH-Eh-gIx"/>
-                            <constraint firstItem="y68-Nq-IxX" firstAttribute="top" secondItem="Yfy-VM-Wws" secondAttribute="bottom" constant="100" id="INW-0X-9hP"/>
+                            <constraint firstItem="y68-Nq-IxX" firstAttribute="top" secondItem="Yfy-VM-Wws" secondAttribute="bottom" constant="150" id="INW-0X-9hP"/>
                             <constraint firstItem="y68-Nq-IxX" firstAttribute="centerX" secondItem="Jgd-GE-6fG" secondAttribute="centerX" id="SCa-jy-rTe"/>
+                            <constraint firstItem="BzU-wo-tOD" firstAttribute="top" secondItem="Yfy-VM-Wws" secondAttribute="bottom" constant="30" id="V1S-Oi-XK8"/>
                             <constraint firstItem="Ydr-nk-2tc" firstAttribute="top" secondItem="y68-Nq-IxX" secondAttribute="bottom" constant="100" id="fCi-Rz-OsW"/>
+                            <constraint firstItem="BzU-wo-tOD" firstAttribute="centerX" secondItem="Jgd-GE-6fG" secondAttribute="centerX" id="mAU-Ao-kag"/>
                             <constraint firstItem="Ydr-nk-2tc" firstAttribute="leading" secondItem="Jgd-GE-6fG" secondAttribute="leadingMargin" constant="50" id="ovr-lW-ubb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ydr-nk-2tc" secondAttribute="trailing" constant="50" id="p8g-2x-idD"/>
                             <constraint firstItem="Ydr-nk-2tc" firstAttribute="top" secondItem="Yfy-VM-Wws" secondAttribute="bottom" constant="200" id="pXs-Dz-0Uc"/>
@@ -533,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="3413" y="-353"/>
         </scene>
-        <!--Email Verification-->
+        <!--Email Verification (10/10)-->
         <scene sceneID="ept-sp-mw7">
             <objects>
                 <viewController storyboardIdentifier="EmailVerificationViewController" id="f5t-v6-vTf" customClass="EmailVerificationViewController" customModule="researchline" customModuleProvider="target" sceneMemberID="viewController">
@@ -552,7 +574,7 @@
                                     <segue destination="8wo-dz-7R0" kind="show" id="zHS-DF-pZM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResearchLine has sent a verification email at" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du2-ZL-4zJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlzPrevent has sent a verification email at" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du2-ZL-4zJ">
                                 <rect key="frame" x="32" y="96" width="536" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -639,7 +661,7 @@
                             <constraint firstItem="bvc-Nn-dB7" firstAttribute="leading" secondItem="L8U-WW-bmY" secondAttribute="leading" id="ylZ-4t-cSP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Email Verification" id="fZS-B1-kNE"/>
+                    <navigationItem key="navigationItem" title="Email Verification (10/10)" id="fZS-B1-kNE"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailText" destination="y8K-Fw-Osq" id="39s-XY-gOa"/>
@@ -697,7 +719,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ResearchLine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0A-y9-rVY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AlzPrevent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0A-y9-rVY">
                                 <rect key="frame" x="245" y="178" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -750,6 +772,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBv-FH-cQ4"/>
+        <segue reference="VHQ-dS-szY"/>
     </inferredMetricsTieBreakers>
 </document>

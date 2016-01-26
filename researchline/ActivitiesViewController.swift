@@ -1,6 +1,5 @@
 //
 //  ActivitiesViewController.swift
-//  researchline
 //
 //  Created by riverleo on 2015. 11. 8..
 //  Copyright © 2015년 bbb. All rights reserved.
@@ -15,8 +14,18 @@ class ActivitiesViewController: UITableViewController {
     var checkedCircleImage: UIImage = UIImage(named: "valid_icon")!
     var failCircleImage: UIImage = UIImage(named: "redcircle_X")!
     
+    @IBOutlet weak var loadingBarView: UIView!
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    var progressTimer: NSTimer?
+    
     var data = []
     var yesterdayData = []
+    
+    func updateProgress() {
+        progressView.progress += 0.025
+    }
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -25,7 +34,7 @@ class ActivitiesViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
-        
+
         Alamofire.request(.GET, Constants.profile,
             headers: [
                 "deviceKey": Constants.deviceKey,
@@ -35,6 +44,7 @@ class ActivitiesViewController: UITableViewController {
                 debugPrint(response)
                 switch response.result{
                 case.Success(let json):
+                    
                     if(json["success"] as? Int == 0){
                         break
                     }
@@ -56,6 +66,10 @@ class ActivitiesViewController: UITableViewController {
     }
     
     func refresh(){
+        progressView.progress = 0
+        progressView.hidden = false
+        progressTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
+        
         var finishToday = 0
         var finishYesterday = 0
         Alamofire.request(.GET, Constants.todayActivity, headers: [
@@ -89,6 +103,8 @@ class ActivitiesViewController: UITableViewController {
                     
                     finishToday = 1
                     if(finishYesterday > 0){
+                        self.progressTimer?.invalidate()
+                        self.loadingBarView.hidden = true
                         self.tableView.reloadData()
                         self.refreshControl?.endRefreshing()
                     }
@@ -117,6 +133,8 @@ class ActivitiesViewController: UITableViewController {
                     self.yesterdayData = (json["data"]! as? NSArray)!
                     finishYesterday = 1
                     if(finishToday > 0){
+                        self.progressTimer?.invalidate()
+                        self.loadingBarView.hidden = true
                         self.tableView.reloadData()
                         self.refreshControl?.endRefreshing()
                     }

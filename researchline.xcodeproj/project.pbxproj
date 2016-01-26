@@ -68,6 +68,7 @@
 		30D519DA1BEF6ADD00306B1A /* ConsentSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519D91BEF6ADD00306B1A /* ConsentSlideViewController.swift */; };
 		30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D519DB1BEF6F5E00306B1A /* ChangeEmailViewController.swift */; };
 		30F81E621BFDFFE200861611 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F81E611BFDFFE200861611 /* Constants.swift */; };
+		BC09AB111C53422B00879FF8 /* ReviewPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09AB101C53422B00879FF8 /* ReviewPrivacyViewController.swift */; };
 		BC0B30AB1C025BAA00E42526 /* ActivitiesTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */; };
 		BC0B30AF1C02623600E42526 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */; };
 		BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */; };
@@ -184,6 +185,7 @@
 		30F81E611BFDFFE200861611 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B653A1581DAD6C773D9491C /* Pods_researchline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_researchline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.debug.xcconfig"; sourceTree = "<group>"; };
+		BC09AB101C53422B00879FF8 /* ReviewPrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewPrivacyViewController.swift; sourceTree = "<group>"; };
 		BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell2.swift; sourceTree = "<group>"; };
 		BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesterdayTableViewCell.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				30BFD4791BEF3414002E52E4 /* ProfileViewController.swift */,
 				30C58E3A1C01F04800510C3C /* ChangePasswordViewController.swift */,
 				30C58E3C1C01F05200510C3C /* ReviewConsentViewController.swift */,
+				BC09AB101C53422B00879FF8 /* ReviewPrivacyViewController.swift */,
 				BC97E9B01C07412D00245F5F /* SexTableViewController.swift */,
 				BC97E9B21C08154900245F5F /* HeightTableViewController.swift */,
 				BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */,
@@ -751,6 +754,7 @@
 				BC62816F1C0B9CC6001AB929 /* ColorDashboardTableViewCell.swift in Sources */,
 				301B39A51BFE474400499C14 /* VisualActivityViewController.swift in Sources */,
 				30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */,
+				BC09AB111C53422B00879FF8 /* ReviewPrivacyViewController.swift in Sources */,
 				BC97E9B31C08154900245F5F /* HeightTableViewController.swift in Sources */,
 				30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */,
 				30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */,
@@ -930,7 +934,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9917BC1BA6AB900061E027FE /* Pods-researchline.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: BBB (FRWJ8P5Q79)";
@@ -950,7 +954,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: BBB (FRWJ8P5Q79)";

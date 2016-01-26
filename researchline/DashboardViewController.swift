@@ -27,8 +27,9 @@ class DashboardViewController: UITableViewController {
         
         mFormat = NSNumberFormatter(); // use one decimal
         mFormat!.numberStyle = .PercentStyle
-
-        // TODO : First Start Error Happen
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         if(Constants.userDefaults.stringForKey("dateString") != nil){
             dateTextLabel.text = "Today, \(Constants.userDefaults.stringForKey("dateString")!)"
         }else{
@@ -59,9 +60,7 @@ class DashboardViewController: UITableViewController {
                     break
                 }
         }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+        
         let doRate = Constants.userDefaults.doubleForKey("completion")
         
         let xVals = ["Done", "To Do"]
@@ -81,14 +80,16 @@ class DashboardViewController: UITableViewController {
         let white = UIColor(red: CGFloat(240.0/255), green: CGFloat(240.0/255), blue: CGFloat(240.0/255), alpha: 1)
         
         pieChartDataSet.colors = [green, white]
+        pieChartDataSet.drawValuesEnabled = false
         pieChartData.setValueFormatter(mFormat)
         pieChartView.data = pieChartData
-        pieChartView.drawCenterTextEnabled = false
+        pieChartView.drawCenterTextEnabled = true
         pieChartView.drawMarkers = false
         pieChartView.drawSliceTextEnabled = false
         pieChartView.highlightValue(xIndex: 0, dataSetIndex: 0, callDelegate: false)
         pieChartView.descriptionText = ""
         pieChartView.centerTextRadiusPercent = 10.0
+        pieChartView.centerText = String(format: "%.0f%%", 100*doRate)
         pieChartView.userInteractionEnabled = false
     }
     
@@ -102,37 +103,45 @@ class DashboardViewController: UITableViewController {
         case 0:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("GlucoseDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 200
             break
         case 1:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("MemoryDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         case 2:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("ColorDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         case 3:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("CountingDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         case 4:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("VisualDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         case 5:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("ItemForwordDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         case 6:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("ItemBackwordDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         default:
             thisTableView = tableView.dequeueReusableCellWithIdentifier("MemoryDashboardTableViewCell", forIndexPath: indexPath) as? DashboardTableViewCell
             thisTableView!.data = self.data
+            thisTableView!.scale = 5
             break
         }
-
+        thisTableView!.drawGraph()
         return thisTableView!
     }
     

@@ -84,7 +84,7 @@ class VisualActivityViewController: UIViewController {
         
         let random = Float.init(arc4random_uniform(UInt32(500)))
         
-        let randomSecond = 1.0 + (random / 500)
+        let randomSecond = 1.0 + (random / 150.0)
         
         // next reaction
         if(trial < 5){
@@ -115,15 +115,24 @@ class VisualActivityViewController: UIViewController {
             // started reaction
             isStart = 2
             let interval = NSDate().timeIntervalSinceDate(startDate!)
-            resultTimeMap[trial] = interval
-            let roundInterval = round(interval * 100) / 100
-            successLabel.text = "Reaction time: \(roundInterval) sec"
-            trial += 1
-            
-            debugPrint("\(trial)th trial result is success while \(interval)")
-            resultTrials.append(true)
-            successCount += 1
-            finishReaction()
+            if(interval < 0.1){
+                // To fast, It means user predict the image was happen.
+                // In this case, testing again for correct testing.
+                let roundInterval = round(interval * 100) / 100
+                successLabel.text = "Reaction time: too fast (\(roundInterval) sec)"
+                debugPrint("\(trial)th trial result is too fast while \(interval)")
+                finishReaction()
+            }else{
+                resultTimeMap[trial] = interval
+                let roundInterval = round(interval * 100) / 100
+                successLabel.text = "Reaction time: \(roundInterval) sec"
+                trial += 1
+                
+                debugPrint("\(trial)th trial result is success while \(interval)")
+                resultTrials.append(true)
+                successCount += 1
+                finishReaction()
+            }
         }else if(isStart == 0){
             // be patient
             isStart = 2
@@ -139,7 +148,7 @@ class VisualActivityViewController: UIViewController {
         }
     }
     
-    @IBAction func click(sender: AnyObject) {
+    @IBAction func touchDown(sender: AnyObject) {
         if(!startFlag){
             // before start reaction
             return
@@ -197,6 +206,13 @@ class VisualActivityViewController: UIViewController {
                 }
                 
         }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        debugPrint("View did disappear, So all of timers should be invalidate.")
+        timeoutTimer?.invalidate()
+        finishReactionTimer?.invalidate()
+        reactionTimer?.invalidate()
     }
 
     /*

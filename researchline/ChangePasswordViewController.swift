@@ -1,6 +1,5 @@
 //
 //  ChangePasswordViewController.swift
-//  researchline
 //
 //  Created by Leo Kang on 11/22/15.
 //  Copyright © 2015 bbb. All rights reserved.

@@ -1,6 +1,5 @@
 //
 //  ColorReadingViewController.swift
-//  researchline
 //
 //  Created by Leo Kang on 11/20/15.
 //  Copyright © 2015 bbb. All rights reserved.
@@ -40,6 +39,7 @@ class ColorReadingActivityViewController: UIViewController {
         descriptionText.hidden = true
         startButton.hidden = true
         startFlag = true
+        answerFlag = true
     }
     
     

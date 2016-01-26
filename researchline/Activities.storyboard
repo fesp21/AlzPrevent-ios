@@ -167,6 +167,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="9Df-ks-iy6">
+                            <rect key="frame" x="0.0" y="332" width="600" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" restorationIdentifier="progressView" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="i2p-8l-cdz">
+                                    <rect key="frame" x="175" y="18" width="250" height="11"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="2P3-jH-oLf"/>
+                                        <constraint firstAttribute="width" constant="250" id="Fjq-Bp-9my"/>
+                                    </constraints>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="i2p-8l-cdz" firstAttribute="centerY" secondItem="9Df-ks-iy6" secondAttribute="centerY" id="9kq-ij-cvc"/>
+                                <constraint firstItem="i2p-8l-cdz" firstAttribute="centerX" secondItem="9Df-ks-iy6" secondAttribute="centerX" id="PAO-tf-QeL"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="YesterdayTableViewCell" rowHeight="60" id="dUQ-eS-XXj" customClass="YesterdayTableViewCell" customModule="researchline" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="60"/>
@@ -329,6 +347,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Activities" id="obk-bc-OfK"/>
+                    <connections>
+                        <outlet property="loadingBarView" destination="9Df-ks-iy6" id="rJP-Vf-TYq"/>
+                        <outlet property="progressView" destination="i2p-8l-cdz" id="g1O-9M-BOy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hY0-Uw-7bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

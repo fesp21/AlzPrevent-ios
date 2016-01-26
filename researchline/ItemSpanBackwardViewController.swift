@@ -64,7 +64,12 @@ class ItemSpanBackwardActivityViewController: UIViewController {
             enterButton.hidden = true
             correctTextField.enabled = false
             correctTextField.hidden = true
-            let number = String(Int(arc4random_uniform(UInt32(8))) + 1)
+            
+            var number: String
+            repeat {
+                number = String(Int(arc4random_uniform(UInt32(8))) + 1)
+            }while((correct.rangeOfString(number)) != nil)
+            
             correct += number
             numberLabel.text = number
             debugPrint(correct)

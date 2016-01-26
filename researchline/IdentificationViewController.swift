@@ -18,7 +18,7 @@ class IdentificationViewController: UIViewController {
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
     @IBAction func passwordChange(sender: AnyObject) {
-        let sizeOfCode = password.text!.characters.count
+        var sizeOfCode = password.text!.characters.count
 
         let passwordText: String = password.text!
         let toNumber = Int(passwordText)
@@ -30,6 +30,7 @@ class IdentificationViewController: UIViewController {
         
         if(sizeOfCode > 4){
             password.text = self.passcode
+            sizeOfCode = password.text!.characters.count
         }else{
             self.passcode = password.text!
         }

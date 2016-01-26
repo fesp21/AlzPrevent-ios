@@ -31,6 +31,7 @@ class Constants: NSObject {
     static let urlChangePassword = host + "support/reset/password"
     static let changeEmail = host + "support/change/email"
     static let urlFileConsent = host + "file/consent.pdf"
+    static let urlFilePrivacy = host + "file/privacy.pdf"
 
     static var signFileData: UIImage?
     

@@ -55,6 +55,7 @@ class MemoryActivityViewController: UIViewController {
         self.activityId = Constants.userDefaults.stringForKey(activityKey)
         debugPrint(activityId)
         
+        // The images that pre-defined 11 kind
         let baseballImage: UIImage = UIImage(named: "baseball")!
         let bookImage: UIImage = UIImage(named: "book")!
         let cakeImage: UIImage = UIImage(named: "cake")!
@@ -65,7 +66,8 @@ class MemoryActivityViewController: UIViewController {
         let pencilImage: UIImage = UIImage(named: "pencil")!
         let shoesImage: UIImage = UIImage(named: "shoes")!
         let spoonImage: UIImage = UIImage(named: "spoon")!
-
+        
+        // Add all images to image map for use with index
         renderingImageMap[0] = baseballImage
         renderingImageMap[1] = bookImage
         renderingImageMap[2] = cakeImage
@@ -77,6 +79,7 @@ class MemoryActivityViewController: UIViewController {
         renderingImageMap[8] = shoesImage
         renderingImageMap[9] = spoonImage
         
+        // Success and Failure counting map
         resultCorrectMap[0] = 0
         resultCorrectMap[1] = 0
         
@@ -89,6 +92,10 @@ class MemoryActivityViewController: UIViewController {
         
     }
     
+    /**
+     * When This activity start, all order of images are pre-defined.
+     * This function generate order and store that index to answerOrder list object in this class.
+     */
     internal func generateAnswerOrder(){
         var answerPosition = [Bool]()
         
@@ -154,13 +161,17 @@ class MemoryActivityViewController: UIViewController {
     var trial = 0;
     var clicked = 0;
     var start: NSDate? = nil
+    // Location is the order of image on each states.
+    // Every suffle time, location is increase by 1.
     var location = 0;
     
     internal func suffle(){
         if finished > 0{
             return
         }
-        if(location >= totalCount){
+        // Checking finish status only if all of order was finished or all answers was found.
+        let sumOfResults = resultCorrectMap[0]! + resultCorrectMap[1]!
+        if(location >= totalCount || sumOfResults >= 3){
             self.finish()
             return
         }
@@ -212,6 +223,7 @@ class MemoryActivityViewController: UIViewController {
         
     }
     
+    // After all of checking is finished on each step, this function should be called.
     internal func resultHide(){
         if finished > 0 || location >= totalCount{
             return

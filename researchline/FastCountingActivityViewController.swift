@@ -48,6 +48,12 @@ class FastCountingActivityViewController: UIViewController {
     @IBOutlet weak var successLabel: UILabel!
     @IBOutlet weak var failureLabel: UILabel!
     
+    // Show O or X image when user does trial.
+    @IBOutlet weak var successImage: UIImageView!
+    
+    var resultFailImage: UIImage = UIImage(named: "X")!
+    var resultSuccessImage: UIImage = UIImage(named: "O")!
+    
     var timer1: NSTimer?
     var timer2: NSTimer?
     var pointCount: Int?
@@ -76,12 +82,14 @@ class FastCountingActivityViewController: UIViewController {
         failureLabel.hidden = false
         
         startFlag = true
+        self.touchUpFlag = true
         
         timer2?.invalidate()
         timer1 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "suffle", userInfo: nil, repeats: false)
     }
     
     internal func finish(){
+        successImage.hidden = true
         descriptionText.text = "Test is finished. Your success score is \(successCount)."
         descriptionText.hidden = false
 //        renderedWord.hidden = true
@@ -144,6 +152,8 @@ class FastCountingActivityViewController: UIViewController {
         point5View.hidden = true
         point6View.hidden = true
         point7View.hidden = true
+        
+        successImage.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -169,10 +179,14 @@ class FastCountingActivityViewController: UIViewController {
             successCount++
             result = "correct"
             resultTrials.append(true)
+            successImage.image = resultSuccessImage
+            successImage.hidden = false
         } else {
             failureCount++
             result = "fail"
             resultTrials.append(false)
+            successImage.image = resultFailImage
+            successImage.hidden = false
         }
         
         successLabel.text = "Success: \(successCount)"
@@ -195,6 +209,8 @@ class FastCountingActivityViewController: UIViewController {
             finish()
             return
         }
+        containerView.hidden = false
+        successImage.hidden = true
         touchUpFlag = false
         descriptionText.hidden = true
         usedTops.removeAll()
@@ -265,6 +281,9 @@ class FastCountingActivityViewController: UIViewController {
     
     internal func timeout() {
         timer2?.invalidate()
+        successImage.image = resultFailImage
+        successImage.hidden = false
+        containerView.hidden = true
         descriptionText.text = "This trial was timeout!."
         descriptionText.hidden = false
         
