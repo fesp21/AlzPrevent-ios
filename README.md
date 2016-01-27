@@ -1,5 +1,23 @@
 # AlzPrevent
 
+AlzPrevent Service - Mobile platform for Brain Health
+
+The world 1st mobile clinical research platform for Alzheimer's disease
+
+* iOS mobile app
+* Apple Health integration
+* Seamless patient recruitment and retention tool
+* Research data management and analysis support 
+* Simple to use for researchers and participants
+* Administrative dashboard and reporting tool for researchers
+
+AlzPrevent is powered by Apple's new ResearchKit, allowing the patients to 
+participate in a medical research study. Our first study partnered with Hong 
+Kong University is focused on Alzheimer's disease and mild cognitive 
+impairment. AlzPrevent will not only accelerate understanding of various 
+diseases, but also it helps the patients to gain insights of how the behaviors 
+affect their health.
+
 License
 =======
 
