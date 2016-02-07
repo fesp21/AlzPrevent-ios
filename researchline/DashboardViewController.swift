@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Charts
 import Alamofire
+import ResearchKit
 
 class DashboardViewController: UITableViewController {
 
@@ -16,7 +16,7 @@ class DashboardViewController: UITableViewController {
 
 
     @IBOutlet weak var dateTextLabel: UILabel!
-    @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var pieChartView: ORKPieChartView!
     
     var mFormat: NSNumberFormatter? = nil
     var sizeOfGraph = 0
@@ -45,7 +45,6 @@ class DashboardViewController: UITableViewController {
                 "activity": "Test1,Memory,Color Reading,Fast Counting,Visual Activity,Item Span Forward,Item Span Backward",
                 "size": 5
             ]).responseJSON { (response:Response) -> Void in
-                debugPrint(response)
                 switch response.result{
                 case.Success(let json):
                     if(json["success"] as? Int == 0){
@@ -62,35 +61,23 @@ class DashboardViewController: UITableViewController {
         }
         
         let doRate = Constants.userDefaults.doubleForKey("completion")
-        
-        let xVals = ["Done", "To Do"]
-        let data = [doRate, 1-doRate]
-        
-        var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<xVals.count {
-            let dataEntry = ChartDataEntry(value: data[i], xIndex: i)
-            dataEntries.append(dataEntry)
+        let doRate100 = doRate * 100
+        var pieData = [1-doRate, doRate]
+        if doRate == 0.0  {
+           pieData = [1]
         }
+
         
-        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "")
-        let pieChartData = PieChartData(xVals: xVals, dataSet: pieChartDataSet)
+        let dataSource = PieChartViewDataSource()
+        dataSource.values = pieData
         
-        let green = UIColor(red: CGFloat(180.0/255), green: CGFloat(230.0/255), blue: CGFloat(180.0/255), alpha: 1)
-        let white = UIColor(red: CGFloat(240.0/255), green: CGFloat(240.0/255), blue: CGFloat(240.0/255), alpha: 1)
-        
-        pieChartDataSet.colors = [green, white]
-        pieChartDataSet.drawValuesEnabled = false
-        pieChartData.setValueFormatter(mFormat)
-        pieChartView.data = pieChartData
-        pieChartView.drawCenterTextEnabled = true
-        pieChartView.drawMarkers = false
-        pieChartView.drawSliceTextEnabled = false
-        pieChartView.highlightValue(xIndex: 0, dataSetIndex: 0, callDelegate: false)
-        pieChartView.descriptionText = ""
-        pieChartView.centerTextRadiusPercent = 10.0
-        pieChartView.centerText = String(format: "%.0f%%", 100*doRate)
-        pieChartView.userInteractionEnabled = false
+        pieChartView.dataSource = dataSource
+        pieChartView.title = String(format: "%.0f%%", doRate100)
+        pieChartView.lineWidth = 14
+        pieChartView.showsPercentageLabels = false
+        pieChartView.showsTitleAboveChart = false
+        pieChartView.noDataText = "0%%"
+        pieChartView.animateWithDuration(0)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

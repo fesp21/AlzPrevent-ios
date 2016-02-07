@@ -5,8 +5,7 @@ target 'researchline' do
   use_frameworks!
 
   pod 'Alamofire'
-  pod 'BEMSimpleLineGraph'
-  pod 'Charts'
+  pod 'ResearchKit', '~> 1.0'
 end
 
 target 'researchlineTests' do

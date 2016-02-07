@@ -29,7 +29,6 @@
 		308ABCAF1BEF296C00968C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308ABCAD1BEF296C00968C7D /* LaunchScreen.storyboard */; };
 		308ABCBA1BEF296C00968C7D /* researchlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCB91BEF296C00968C7D /* researchlineTests.swift */; };
 		308ABCC51BEF296C00968C7D /* researchlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ABCC41BEF296C00968C7D /* researchlineUITests.swift */; };
-		30963D7D1BF3AB6E0090E7A9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30963D7C1BF3AB6E0090E7A9 /* HealthKit.framework */; };
 		30963D831BF3C4DF0090E7A9 /* Consent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30963D821BF3C4DF0090E7A9 /* Consent.storyboard */; };
 		30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD4421BEF2FF9002E52E4 /* StoryboardController.swift */; };
 		30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFD44E1BEF315E002E52E4 /* WelcomeViewController.swift */; };
@@ -72,6 +71,10 @@
 		BC0B30AB1C025BAA00E42526 /* ActivitiesTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */; };
 		BC0B30AF1C02623600E42526 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */; };
 		BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */; };
+		BC59E0C11C6443A900533D4F /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0C01C6443A900533D4F /* HealthDataStepViewController.swift */; };
+		BC59E0CA1C6444E200533D4F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0C91C6444E200533D4F /* ConsentDocument.swift */; };
+		BC59E0CC1C64480800533D4F /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0CB1C64480800533D4F /* HealthDataStep.swift */; };
+		BC59E0CE1C6489DC00533D4F /* TaskListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0CD1C6489DC00533D4F /* TaskListRow.swift */; };
 		BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */; };
 		BC62816B1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816A1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift */; };
 		BC62816D1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816C1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift */; };
@@ -88,6 +91,7 @@
 		BC6620281C0DA0E800ECDCAB /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6620271C0DA0E800ECDCAB /* PasscodeViewController.swift */; };
 		BC68B0CD1C10CD940024A2AC /* SymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC68B0CC1C10CD940024A2AC /* SymptomsViewController.swift */; };
 		BC68B0CF1C10CDE00024A2AC /* LifeAndDebatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC68B0CE1C10CDE00024A2AC /* LifeAndDebatesViewController.swift */; };
+		BC7B52CB1C67CE9B00E9AD89 /* PieChartViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B52CA1C67CE9B00E9AD89 /* PieChartViewDataSource.swift */; };
 		BC97E9B11C07412D00245F5F /* SexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B01C07412D00245F5F /* SexTableViewController.swift */; };
 		BC97E9B31C08154900245F5F /* HeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B21C08154900245F5F /* HeightTableViewController.swift */; };
 		BC97E9B51C084CCA00245F5F /* WeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */; };
@@ -111,6 +115,19 @@
 			remoteInfo = researchline;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC59E0C81C64443B00533D4F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2DB756B132A676EB104F656D /* Pods-researchline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-researchline.release.xcconfig"; path = "Pods/Target Support Files/Pods-researchline/Pods-researchline.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +206,10 @@
 		BC0B30AA1C025BAA00E42526 /* ActivitiesTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell2.swift; sourceTree = "<group>"; };
 		BC0B30AE1C02623600E42526 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		BC0B30B01C02624600E42526 /* YesterdayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesterdayTableViewCell.swift; sourceTree = "<group>"; };
+		BC59E0C01C6443A900533D4F /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
+		BC59E0C91C6444E200533D4F /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		BC59E0CB1C64480800533D4F /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
+		BC59E0CD1C6489DC00533D4F /* TaskListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListRow.swift; sourceTree = "<group>"; };
 		BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		BC62816A1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryDashboardTableViewCell.swift; sourceTree = "<group>"; };
 		BC62816C1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDashboardTableViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +226,7 @@
 		BC6620271C0DA0E800ECDCAB /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		BC68B0CC1C10CD940024A2AC /* SymptomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomsViewController.swift; sourceTree = "<group>"; };
 		BC68B0CE1C10CDE00024A2AC /* LifeAndDebatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeAndDebatesViewController.swift; sourceTree = "<group>"; };
+		BC7B52CA1C67CE9B00E9AD89 /* PieChartViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewDataSource.swift; sourceTree = "<group>"; };
 		BC97E9B01C07412D00245F5F /* SexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexTableViewController.swift; sourceTree = "<group>"; };
 		BC97E9B21C08154900245F5F /* HeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightTableViewController.swift; sourceTree = "<group>"; };
 		BC97E9B41C084CCA00245F5F /* WeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightTableViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +238,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30963D7D1BF3AB6E0090E7A9 /* HealthKit.framework in Frameworks */,
 				CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +349,7 @@
 		308ABCA01BEF296B00968C7D /* researchline */ = {
 			isa = PBXGroup;
 			children = (
+				BC59E0BF1C64434D00533D4F /* Step */,
 				30BFD4461BEF304A002E52E4 /* Servant */,
 				30BFD4441BEF303C002E52E4 /* Controllers */,
 				308ABCA11BEF296B00968C7D /* AppDelegate.swift */,
@@ -433,6 +455,7 @@
 				BC6281721C0B9CEC001AB929 /* ItemForwordDashboardTableViewCell.swift */,
 				BC6281741C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift */,
 				BC6281761C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift */,
+				BC7B52CA1C67CE9B00E9AD89 /* PieChartViewDataSource.swift */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -475,6 +498,7 @@
 				30BFD4571BEF31DA002E52E4 /* ForgotPasswordViewController.swift */,
 				30BFD4511BEF31A8002E52E4 /* ReadConsentDocumentViewController.swift */,
 				30BFD4531BEF31B1002E52E4 /* EmailConsentDocumentViewController.swift */,
+				BC59E0CD1C6489DC00533D4F /* TaskListRow.swift */,
 			);
 			name = Welcome;
 			sourceTree = "<group>";
@@ -515,6 +539,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BC59E0BF1C64434D00533D4F /* Step */ = {
+			isa = PBXGroup;
+			children = (
+				BC59E0CB1C64480800533D4F /* HealthDataStep.swift */,
+				BC59E0C01C6443A900533D4F /* HealthDataStepViewController.swift */,
+				BC59E0C91C6444E200533D4F /* ConsentDocument.swift */,
+			);
+			name = Step;
+			sourceTree = "<group>";
+		};
 		FB9027D3FEB347B650B98177 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +571,7 @@
 				308ABC9C1BEF296B00968C7D /* Resources */,
 				84CDAB0DEB715080CF1C8D32 /* Embed Pods Frameworks */,
 				8B269053C704F064CC44C74A /* Copy Pods Resources */,
+				BC59E0C81C64443B00533D4F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -755,6 +790,8 @@
 				301B39A51BFE474400499C14 /* VisualActivityViewController.swift in Sources */,
 				30BFD4701BEF33CC002E52E4 /* EmailVerificationViewController.swift in Sources */,
 				BC09AB111C53422B00879FF8 /* ReviewPrivacyViewController.swift in Sources */,
+				BC7B52CB1C67CE9B00E9AD89 /* PieChartViewDataSource.swift in Sources */,
+				BC59E0CA1C6444E200533D4F /* ConsentDocument.swift in Sources */,
 				BC97E9B31C08154900245F5F /* HeightTableViewController.swift in Sources */,
 				30BFD44F1BEF315E002E52E4 /* WelcomeViewController.swift in Sources */,
 				30D519DC1BEF6F5E00306B1A /* ChangeEmailViewController.swift in Sources */,
@@ -770,9 +807,11 @@
 				30BFD4431BEF2FF9002E52E4 /* StoryboardController.swift in Sources */,
 				30D519D61BEF55D500306B1A /* EligibilityResultViewController.swift in Sources */,
 				BC6620281C0DA0E800ECDCAB /* PasscodeViewController.swift in Sources */,
+				BC59E0C11C6443A900533D4F /* HealthDataStepViewController.swift in Sources */,
 				BC97E9B11C07412D00245F5F /* SexTableViewController.swift in Sources */,
 				30714CFC1BF850D700AC2C96 /* DrawImageView.swift in Sources */,
 				BC0B30B11C02624600E42526 /* YesterdayTableViewCell.swift in Sources */,
+				BC59E0CC1C64480800533D4F /* HealthDataStep.swift in Sources */,
 				308ABCA21BEF296B00968C7D /* AppDelegate.swift in Sources */,
 				30BFD4741BEF33F3002E52E4 /* LearnViewController.swift in Sources */,
 				30C58E3D1C01F05200510C3C /* ReviewConsentViewController.swift in Sources */,
@@ -789,6 +828,7 @@
 				30BFD46C1BEF339B002E52E4 /* AdditionInfoViewController.swift in Sources */,
 				BC6281771C0B9DBF001AB929 /* GlucoseDashboardTableViewCell.swift in Sources */,
 				BC6281751C0B9CFA001AB929 /* ItemBackwordDashboardTableViewCell.swift in Sources */,
+				BC59E0CE1C6489DC00533D4F /* TaskListRow.swift in Sources */,
 				BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */,
 				30BFD4621BEF3300002E52E4 /* ConsentFormViewController.swift in Sources */,
 			);
@@ -939,12 +979,13 @@
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: BBB (FRWJ8P5Q79)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbbtech.researchline.hku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6ad298d4-d5c9-43e9-a0d3-08fb2195e347";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -959,12 +1000,13 @@
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: BBB (FRWJ8P5Q79)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = researchline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bbbtech.researchline.hku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6ad298d4-d5c9-43e9-a0d3-08fb2195e347";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
