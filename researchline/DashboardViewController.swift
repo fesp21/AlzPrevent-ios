@@ -63,13 +63,18 @@ class DashboardViewController: UITableViewController {
         let doRate = Constants.userDefaults.doubleForKey("completion")
         let doRate100 = doRate * 100
         var pieData = [1-doRate, doRate]
+        var label = ["To Do", "Done"]
         if doRate == 0.0  {
-           pieData = [1]
+            pieData = [1]
+            label = ["To Do"]
+        } else if doRate == 1.0 {
+            pieData = [1]
+            label = ["Done"]
         }
 
-        
         let dataSource = PieChartViewDataSource()
         dataSource.values = pieData
+        dataSource.label = label
         
         pieChartView.dataSource = dataSource
         pieChartView.title = String(format: "%.0f%%", doRate100)

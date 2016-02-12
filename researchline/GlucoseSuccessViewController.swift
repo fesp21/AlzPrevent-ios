@@ -22,7 +22,7 @@ class GlucoseSuccessViewController: UIViewController {
         if(success){
             failureLabel.hidden = true
             successLabel.hidden = false
-            successLabel.text = "Glucose level : \(score)"
+            successLabel.text = "Glucose level : \(score) mg/dL"
             
             HealthManager.requestSavingGlucoseSample(Double(score)!, date: NSDate())
         }else{

@@ -9,7 +9,7 @@
 import ResearchKit
 
 class PieChartViewDataSource: NSObject, ORKPieChartViewDataSource {
-    let label = ["To Do", "Done"]
+    var label = ["To Do", "Done"]
     
     let colors = [
         UIColor(red: 217/225, green: 217/255, blue: 217/225, alpha: 1),
@@ -68,6 +68,9 @@ class LineGraphDataSource: NSObject, ORKGraphChartViewDataSource {
     }
     
     func maximumValueForGraphChartView(graphChartView: ORKGraphChartView) -> CGFloat {
+        if max == 0 {
+            return graphChartView.maximumValue
+        }
         return self.max
     }
     

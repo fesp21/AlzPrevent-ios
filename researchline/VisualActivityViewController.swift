@@ -76,6 +76,7 @@ class VisualActivityViewController: UIViewController {
     }
     
     internal func finishReaction(){
+        timeoutTimer?.invalidate()
         finishReactionTimer?.invalidate()
         isStart = 0
         failTextView.hidden = true
