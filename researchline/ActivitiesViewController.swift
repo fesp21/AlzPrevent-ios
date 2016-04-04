@@ -59,6 +59,44 @@ class ActivitiesViewController: UITableViewController {
                     break
                 }
         }
+        
+        if (Constants.signKey() != ""){
+            Alamofire.request(.GET, Constants.glucoseData,
+                headers: [
+                    "deviceKey": Constants.deviceKey,
+                    "deviceType": Constants.deviceType,
+                    "signKey": Constants.signKey()])
+                .responseJSON { (response) -> Void in
+                    switch response.result{
+                    case.Success(let json):
+                        
+                        if(json["success"] as? Int == 0){
+                            break
+                        }
+                        let data: NSArray = json["data"] as! NSArray
+                        for item in data {
+                            let dateStr: String = item["dateStr"] as! String
+                            let timeZone: String = item["timeZone"] as! String
+                            let formatter = NSDateFormatter()
+                            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                            formatter.timeZone = NSTimeZone(name: timeZone)
+                            let date = formatter.dateFromString(dateStr)
+                            let result = item["result"] as! Double
+                            let date_key = "glucose_"+dateStr
+                            if(Constants.userDefaults.valueForKey(date_key) != nil){
+                                debugPrint("Glucose data already stored at " + dateStr)
+                            }else{
+                                HealthManager.requestSavingGlucoseSample(result, date: date!, key: date_key)
+                            }
+                            
+                            
+                        }
+                        break
+                    default:
+                        break
+                    }
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -247,6 +285,7 @@ class ActivitiesViewController: UITableViewController {
         }
     }
     
+    var test1Flag = false
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(indexPath.row == 0){
             
@@ -262,6 +301,20 @@ class ActivitiesViewController: UITableViewController {
             let todayTask = cellData["todayTask"]! as? String
             
             if(activityName == "Test1"){
+                // for glucose test
+//                let storybard = UIStoryboard(name: "Activities", bundle: nil)
+//                let controller = storybard.instantiateViewControllerWithIdentifier("GlucoseSuccessViewController") as! GlucoseSuccessViewController
+//                controller.success =  true
+//                controller.score = "300"
+//                self.navigationController?.pushViewController(controller, animated: true)
+//                return
+                // /////////////
+                
+                if(self.test1Flag == true){
+                    return
+                }
+                self.test1Flag = true;
+
                 Alamofire.request(.POST, Constants.activity, headers: [
                     "deviceKey": Constants.deviceKey,
                     "deviceType": Constants.deviceType,
@@ -291,15 +344,7 @@ class ActivitiesViewController: UITableViewController {
                                     let controller = storybard.instantiateViewControllerWithIdentifier("ActivityViewController")
 
                                     self.navigationController?.pushViewController(controller, animated: true)
-                                    
-                                    
-                                    // for glucose test
-//                                    let storybard = UIStoryboard(name: "Activities", bundle: nil)
-//                                    let controller = storybard.instantiateViewControllerWithIdentifier("GlucoseSuccessViewController") as! GlucoseSuccessViewController
-//                                    controller.success =  true
-//                                    controller.score = "300"
-//                                    self.navigationController?.pushViewController(controller, animated: true)
-                                    // /////////////
+
                                 }
                             }
                             break
@@ -308,6 +353,7 @@ class ActivitiesViewController: UITableViewController {
                             break
                         }
                         
+                        self.test1Flag = false
                 }
             }else{
                 debugPrint("key : id_\(activityName!), value : \(activityId!)")

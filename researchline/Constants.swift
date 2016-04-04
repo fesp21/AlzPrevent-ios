@@ -17,6 +17,7 @@ class Constants: NSObject {
 //    static let host = "http://localhost:9001/"
     static let login = host + "login_process"
     static let glucoseLogin = host + "api/glucose/auth"
+    static let glucoseData = host + "api/glucose/data"
     static let profile = host + "api/profile"
     static let register = host + "api/register/all"
     static let token = host + "api/register/token"

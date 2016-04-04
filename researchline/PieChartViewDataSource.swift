@@ -79,7 +79,7 @@ class LineGraphDataSource: NSObject, ORKGraphChartViewDataSource {
     }
     
     func graphChartView(graphChartView: ORKGraphChartView, titleForXAxisAtPointIndex pointIndex: Int) -> String? {
-        let minusDate = self.count - pointIndex
+        let minusDate = self.count - pointIndex - 1
         let calendar = NSCalendar.currentCalendar()
         let date = calendar.dateByAddingUnit(.Day, value: -minusDate, toDate: NSDate(), options: [])
         let components = calendar.components(.Day, fromDate: date!)

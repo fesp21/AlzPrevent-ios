@@ -54,7 +54,7 @@ class HealthManager: NSObject {
     
     static var checkCount = 0
     
-    static func requestSavingGlucoseSample(glucoseSampleNumber:Double, date:NSDate){
+    static func requestSavingGlucoseSample(glucoseSampleNumber:Double, date:NSDate, key:String){
         
         let glucoseType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBloodGlucose)
 //        let milliUnit = HKUnit.moleUnitWithMetricPrefix(HKMetricPrefix.Milli, molarMass: HKUnitMolarMassBloodGlucose)
@@ -66,6 +66,7 @@ class HealthManager: NSObject {
         
         store.saveObject(glucoseSample, withCompletion: {(success, error) -> Void in
             if (success) {
+                Constants.userDefaults.setValue(glucoseSampleNumber, forKey: key)
                 debugPrint("success storing glucose")
             }else{
                 debugPrint(error)
@@ -75,11 +76,12 @@ class HealthManager: NSObject {
                 }else{
                     HealthManager.requestAuthorizationToShareTypes { (success, unavailables: [String]) -> Void in
                         if success {
-                            requestSavingGlucoseSample(glucoseSampleNumber, date: date)
+                            requestSavingGlucoseSample(glucoseSampleNumber, date: date, key: key)
                         } else {
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                UIAlertView(title: "Please...", message: String("You must %s authorize all types.", unavailables.joinWithSeparator(", ")), delegate: nil, cancelButtonTitle: "Okay").show()
-                            })
+                            // When this app doesn't have permission to access write glucose level.
+//                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                                UIAlertView(title: "Please...", message: String("You must %s authorize all types.", unavailables.joinWithSeparator(", ")), delegate: nil, cancelButtonTitle: "Okay").show()
+//                            })
                         }
                     }
                 }

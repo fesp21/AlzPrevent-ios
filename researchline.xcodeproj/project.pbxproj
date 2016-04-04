@@ -75,6 +75,7 @@
 		BC59E0CA1C6444E200533D4F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0C91C6444E200533D4F /* ConsentDocument.swift */; };
 		BC59E0CC1C64480800533D4F /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0CB1C64480800533D4F /* HealthDataStep.swift */; };
 		BC59E0CE1C6489DC00533D4F /* TaskListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59E0CD1C6489DC00533D4F /* TaskListRow.swift */; };
+		BC5D1A671C87D460006B02AC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30963D7C1BF3AB6E0090E7A9 /* HealthKit.framework */; };
 		BC6077A31C020AA4007FB2B9 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6077A21C020AA4007FB2B9 /* ActivitiesTableViewCell.swift */; };
 		BC62816B1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816A1C0B9AED001AB929 /* MemoryDashboardTableViewCell.swift */; };
 		BC62816D1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC62816C1C0B9CA3001AB929 /* VisualDashboardTableViewCell.swift */; };
@@ -239,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF688B1DC726D1E9CAF14544 /* Pods_researchline.framework in Frameworks */,
+				BC5D1A671C87D460006B02AC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,7 +979,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: BBB (FRWJ8P5Q79)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = researchline/Info.plist;
@@ -998,7 +1000,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = researchline/researchline.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: BBB (FRWJ8P5Q79)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = researchline/Info.plist;
